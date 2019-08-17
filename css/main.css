@@ -1146,7 +1146,7 @@ pre .javascript .function {
 .use-motion .site-subtitle {
   opacity: 0;
   position: relative;
-  top: -10px;
+  top: -5px;
 }
 .site-nav-toggle {
   display: none;
@@ -1942,7 +1942,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #139e52;
+  background: #85e262;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2809,9 +2809,6 @@ hr {
 }
 .use-motion .logo-line-after i {
   right: -100%;
-}
-.site-subtitle {
-  display: none;
 }
 .site-nav-toggle {
   position: static;
