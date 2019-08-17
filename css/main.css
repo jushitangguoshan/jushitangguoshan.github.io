@@ -1137,6 +1137,7 @@ pre .javascript .function {
   margin-top: 10px;
   font-size: 13px;
   color: #999;
+  margin-bottom: 0px;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1942,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85e262;
+  background: #d79a9d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3057,7 +3058,7 @@ body {
 }
 .main-inner {
   margin-top: 20px;
-  padding: 60px 0px 60px 0px;
+  padding: 0px 0px 0px 0px;
   background: #fff;
   opacity: 1;
   min-height: 500px;
