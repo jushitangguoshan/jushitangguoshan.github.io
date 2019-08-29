@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-08-17T17:54:15.534Z</updated>
+  <updated>2019-08-29T15:52:07.460Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本博客常用命令</title>
+    <link href="/2019/08/29/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>/2019/08/29/本博客常用命令/</id>
+    <published>2019-08-29T15:18:29.000Z</published>
+    <updated>2019-08-29T15:52:07.460Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h4><pre><code>清除缓存、生成资源、启动本地服务    hexo clear &amp;&amp; hexo g &amp;&amp; hexo s部署到线上    hhexo clear &amp;&amp; hexo d -g &amp;&amp; hexo s</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;hexo常用命令&quot;&gt;&lt;a href=&quot;#hexo常用命令&quot; class=&quot;headerlink&quot; title=&quot;hexo常用命令&quot;&gt;&lt;/a&gt;hexo常用命令&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;清除缓存、生成资源、启动本地服务
+    hexo clear &amp;amp;&amp;
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel-admin教程之安装（爬坑系列一）</title>
+    <link href="/2019/08/22/laravel-admin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>/2019/08/22/laravel-admin安装教程/</id>
+    <published>2019-08-22T14:54:48.000Z</published>
+    <updated>2019-08-29T15:51:09.310Z</updated>
+    
+    <content type="html"><![CDATA[<p>&lt;————————————————————————-<font size="3" style="background:limegreen;">Start</font>————————————————————————–&gt;</p><p>&emsp;&emsp;laravel-admin是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，能帮助你使用很少的代码，就实现功能完善的后台管理功能。<span style="font-size:0.8rem; background:yellow;">    特别注意：当前laravel-admin版本(v1.7.+)需要安装PHP 7+和Laravel 5.5+</span><font style="text-align:center;font-size:1rem;text-align:center;">    <center>Θ废话不多说，直接开爬</center></font></p><h4 id="1、搭建安装环境：安装composer"><a href="#1、搭建安装环境：安装composer" class="headerlink" title="1、搭建安装环境：安装composer"></a>1、搭建安装环境：安装composer</h4><p>&emsp;&emsp;如果没有安装composer请百度安装composer，此处默认已经安装composer,然后新建一个文件夹，名字任意取，此处文件夹名称为laravel_demo,然后进入该文件夹</p><h5 id="2、安装laravel框架："><a href="#2、安装laravel框架：" class="headerlink" title="2、安装laravel框架："></a>2、安装laravel框架：</h5><pre><code>--------在项目文件下的cmd窗口，执行下面命令-------1)首先：使用 Composer 下载 Laravel 的安装程序：    composer global require &quot;laravel/installer&quot;2)接着用laravel 用安装器这样执行一句命令(建一个名字叫laravel-admin的laravel框架项目)：    laravel new laravel-admin3)在根目录下的.env文件里面把数据库信息填写好建完之后,此时就已经是一个完整的laravel项目了，</code></pre><h5 id="3、正式安装laravel-admin"><a href="#3、正式安装laravel-admin" class="headerlink" title="3、正式安装laravel-admin"></a>3、正式安装laravel-admin</h5><pre><code>1)此时仍然是在项目文件下的cmd窗口，执行下面命令：    composer require encore/laravel-admin2)成功后继续执行下面的命令来发布资源：    php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;3)成功后继续执行：    php artisan admin:install</code></pre><p>&emsp;&emsp;执行到这里你就应该掉坑里面了，因为这个坑我也爬过，但是爬了一些不必要的时间，下面我就让你们正确一次性过这个坑(记得留言点个赞，爬坑不容易)</p><pre><code>若出现错误提示：SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long;              max key length is 1000 bytes (SQL: alter tableusersadd uniqueusers_email_unique(email))          解决办法：在app\Providers\AppServiceProvider.php添加默认值       &lt;?php              namespace App\Providers;              use Illuminate\Support\ServiceProvider;              use Illuminate\Support\Facades\Schema;              class AppServiceProvider extends ServiceProvider              {                  /**                   * Bootstrap any application services.                   * @return void                   */                  public function boot()//在这个方法里面加上这么一句就ok（完美来起）                  {                      Schema::defaultStringLength(191); //   &lt;--就是这一句(fuck)                  }              }       ?&gt;</code></pre><p>&emsp;&emsp;接下来就可以启动服务了，（此处作为一个laravel新手就不知道什么叫启动服务了，实不相瞒，我也是，不过幸好你遇到我）</p><pre><code>执行一下命令启动服务：php artisan serve</code></pre><p>&emsp;&emsp;接着你就可以打开<a href="http://127.0.0.1:8000来访问laravel-admin了" target="_blank" rel="noopener">http://127.0.0.1:8000来访问laravel-admin了</a></p><p>&emsp;&emsp;运行到此处就已经来起了（不过后面坑也跟着来了）</p><pre><code>1)进入laravel-admin后台：http://127.0.0.1:8000/admin/auth/login，初始账户and密码都为admin2)如果报错的话，很正常，因为我也报了很久的错（你们真好，一次性就能解决，我可是爬了很久的坑）    错误提示;SQLSTATE[HY000] [1045] Access denied for user &apos;root&apos;@&apos;localhos&apos;......    解决办法：        如果是本地运行phpstudy跑项目，那么直接进入mysql管理把账户密码都改为你的.env里面配置的密码        服务器上同上面的操作一样</code></pre><h5 id="然后大功告成！（去闯吧少年）"><a href="#然后大功告成！（去闯吧少年）" class="headerlink" title="然后大功告成！（去闯吧少年）"></a>然后大功告成！（去闯吧少年）</h5><p>&lt;————————————————————————-<font size="3" style="background:lightskyblue;">end</font>—————————————————————————&gt;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;lt;————————————————————————-
+&lt;font size=&quot;3&quot; style=&quot;background:limegreen;&quot;&gt;Start&lt;/font&gt;
+————————————————————————–&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;
+      
+    
+    </summary>
+    
+      <category term="php开发" scheme="/categories/php%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="laravel-admin" scheme="/tags/laravel-admin/"/>
+    
+      <category term="php后台框架" scheme="/tags/php%E5%90%8E%E5%8F%B0%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>最艰难的时候，你始终一人</title>
@@ -144,7 +200,7 @@
     <published>2019-07-27T10:35:45.000Z</published>
     <updated>2019-08-17T12:01:05.298Z</updated>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;一位非常美丽姑娘眼中的晚霞，取景于成都某地，当时看到她在朋友圈发了，觉得特别好看，当时就把其中一种用来作为自己的电脑桌面了(偷笑)，后来写了博客，就经她同意然后放到博客上(嘻嘻)，其实非常喜欢这样的晚霞跟自己曾经有一段时间有关。<br>&emsp;&emsp;我记得是高三毕业后的整整3个月，呆在老家，每天下午5、6点钟的时候都会去河边游泳，差不多到了7点钟的时候往回家走，就会看到很美的晚霞，那时候用着nokia手机(诺基亚5233)拍了整整3个月的晚霞，每次都是拍同一处，所以会对晚霞产生一种独特的感觉吧，因此想在这里放上几张距离我看到最近晚霞。</p><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://pvc4k6kjs.bkt.clouddn.com/qiniu_images/images/随笔分享20190727_1.jpg?imageView2/2/w/600"> <img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://pvc4k6kjs.bkt.clouddn.com/qiniu_images/images/随笔分享20190727_2.jpg?imageView2/2/w/600"><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://pvc4k6kjs.bkt.clouddn.com/qiniu_images/images/随笔分享20190727_3.jpg?imageView2/2/w/600"><p>&emsp;&emsp;个人最喜欢第四张，这张放眼望去有一种远景视角，层次分明，给人一种就像是色彩鲜明、朦朦胧胧的画面感，惹人心醉，因此也是我现在的电脑壁纸。后面会将此图作为博客的背景，哈哈哈哈，想想都好看，真是超级满足啦啦啦啦啦啦啦！</p><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://pvc4k6kjs.bkt.clouddn.com/qiniu_images/images/随笔分享20190727_4.jpg?imageView2/2/w/600"><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://pvc4k6kjs.bkt.clouddn.com/qiniu_images/images/随笔分享20190727_5.jpg?imageView2/2/w/600">]]></content>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;一位非常美丽姑娘眼中的晚霞，取景于成都某地，当时看到她在朋友圈发了，觉得特别好看，当时就把其中一种用来作为自己的电脑桌面了(偷笑)，后来写了博客，就经她同意然后放到博客上(嘻嘻)，其实非常喜欢这样的晚霞跟自己曾经有一段时间有关。<br>&emsp;&emsp;我记得是高三毕业后的整整3个月，呆在老家，每天下午5、6点钟的时候都会去河边游泳，差不多到了7点钟的时候往回家走，就会看到很美的晚霞，那时候用着nokia手机(诺基亚5233)拍了整整3个月的晚霞，每次都是拍同一处，所以会对晚霞产生一种独特的感觉吧，因此想在这里放上几张距离我看到最近晚霞。</p><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/随笔分享20190727_1.jpg?imageView2/2/w/600"> <img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/随笔分享20190727_2.jpg?imageView2/2/w/600"><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/随笔分享20190727_3.jpg?imageView2/2/w/600"><p>&emsp;&emsp;个人最喜欢第四张，这张放眼望去有一种远景视角，层次分明，给人一种就像是色彩鲜明、朦朦胧胧的画面感，惹人心醉，因此也是我现在的电脑壁纸。后面会将此图作为博客的背景，哈哈哈哈，想想都好看，真是超级满足啦啦啦啦啦啦啦！</p><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/随笔分享20190727_4.jpg?imageView2/2/w/600"><img title="成都某处的晚霞" alt="那姑娘眼中的晚霞" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/随笔分享20190727_5.jpg?imageView2/2/w/600">]]></content>
     
     <summary type="html">
     
