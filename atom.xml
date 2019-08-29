@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-08-29T15:52:07.460Z</updated>
+  <updated>2019-08-29T15:52:42.284Z</updated>
   <id>/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="/2019/08/29/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>/2019/08/29/本博客常用命令/</id>
     <published>2019-08-29T15:18:29.000Z</published>
-    <updated>2019-08-29T15:52:07.460Z</updated>
+    <updated>2019-08-29T15:52:42.284Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h4><pre><code>清除缓存、生成资源、启动本地服务    hexo clear &amp;&amp; hexo g &amp;&amp; hexo s部署到线上    hhexo clear &amp;&amp; hexo d -g &amp;&amp; hexo s</code></pre>]]></content>
+    <content type="html"><![CDATA[<h4 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h4><pre><code>清除缓存、生成资源、启动本地服务    hexo clear &amp;&amp; hexo g &amp;&amp; hexo s部署到线上    hhexo clear &amp;&amp; hexo d -g</code></pre>]]></content>
     
     <summary type="html">
     
