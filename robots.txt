@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://jushitangguoshan.github.io/sitemap.xml
-Sitemap: https://jushitangguoshan.github.io/baidusitemap.xml
+Sitemap: http://www.blog.heifengni.com/sitemap.xml
+Sitemap: http://www.blog.heifengni.com/baidusitemap.xml
