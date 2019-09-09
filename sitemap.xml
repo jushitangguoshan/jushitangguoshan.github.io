@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.heifengni.com/2019/08/22/laravel-admin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://blog.heifengni.com/2019/09/07/%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%AD%8C%E8%AF%8D%E3%80%8A%E6%99%B4%E5%A4%A9%E3%80%8B/</loc>
     
-    <lastmod>2019-09-01T11:12:27.800Z</lastmod>
+    <lastmod>2019-09-09T14:29:14.706Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.heifengni.com/2019/08/29/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
-    <lastmod>2019-09-01T11:10:54.397Z</lastmod>
+    <lastmod>2019-09-09T14:26:53.075Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.heifengni.com/2019/08/22/laravel-admin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2019-09-01T11:12:27.800Z</lastmod>
     
   </url>
   
