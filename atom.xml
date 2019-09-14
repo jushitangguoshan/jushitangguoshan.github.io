@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.heifengni.com/"/>
-  <updated>2019-09-09T14:29:14.706Z</updated>
+  <updated>2019-09-14T07:56:42.894Z</updated>
   <id>http://blog.heifengni.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker之安装搭建环境</title>
+    <link href="http://blog.heifengni.com/2019/09/09/Docker%E4%B9%8B%E5%AE%89%E8%A3%85%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/"/>
+    <id>http://blog.heifengni.com/2019/09/09/Docker之安装搭建环境/</id>
+    <published>2019-09-09T14:18:29.000Z</published>
+    <updated>2019-09-14T07:56:42.894Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><p>&emsp;&emsp;前提说明：Docker for Windows是一个Docker Community Edition（CE）应用程序。Docker for Windows安装包包含了在Windows系统上运行Docker所需的一切。如果你不想装虚拟机，想直接在你的Windows操作系统中安装与学习使用docker，那么你首先得查看你的系统是否满足Docker for Windows的安装与使用要求。</p><h2 id="Windows-中Docker安装应用"><a href="#Windows-中Docker安装应用" class="headerlink" title="Windows 中Docker安装应用"></a>Windows 中Docker安装应用</h2><h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h3><h4 id="emsp-emsp-简单介绍："><a href="#emsp-emsp-简单介绍：" class="headerlink" title="&emsp;&emsp;简单介绍："></a>&emsp;&emsp;简单介绍：</h4><p>   &emsp;&emsp;Docker for Windows的当前版本运行在64位Windows 10 Pro，专业版、企业版和教育版（1607年纪念更新，版本14393或更高版本）   上。Ps:家庭版是不行的，如果你是家庭版，那么一是升级到专业版，破解专业版推荐个地址：<a href="http://blog.csdn.net/SONGCHUNHON" target="_blank" rel="noopener">http://blog.csdn.net/SONGCHUNHON</a>   G/article/details/78006389，二是安装Docker Toolbox，自行网上百度<a href="http://blog.csdn.net/tina_ttl/article/details/" target="_blank" rel="noopener">http://blog.csdn.net/tina_ttl/article/details/</a>   51372604;   <br></p><h4 id="emsp-emsp-安装条件："><a href="#emsp-emsp-安装条件：" class="headerlink" title="&emsp;&emsp;安装条件："></a>&emsp;&emsp;安装条件：</h4><p>   &emsp;&emsp;如果你满足Docker for Windows的环境条件了，那么首先检查电脑的虚拟化开启了没有：进入任务管理器（ctrl+alt+delete），   点击性能-&gt;cpu ,查看虚拟化是否已启用，如果虚拟化是已禁用，那么你需要重启电脑进入bios开启虚拟化（我们一般的笔记本cpu都   是支持虚拟化的，重启时进入bios按esc -&gt; 再按f12 -&gt; 去开启虚拟化，你得开机进入BIOS里把Virtualization的选项变成Enabled   （不同机子的Virtualization可能在不同的选项下，去看一下advanced之类的））。</p><h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="emsp-emsp-检测cpu虚拟化"><a href="#emsp-emsp-检测cpu虚拟化" class="headerlink" title="&emsp;&emsp;检测cpu虚拟化"></a>&emsp;&emsp;检测cpu虚拟化</h4><p>   &emsp;&emsp;开启虚拟化重启后，打开任务管理器，点击cpu查看虚拟化是否已启用</p><img title="查看是否开启虚拟化" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/查看是否开启虚拟化.jpg?imageView2/2/w/800"><h4 id="emsp-emsp-Hyper配置"><a href="#emsp-emsp-Hyper配置" class="headerlink" title="&emsp;&emsp;Hyper配置"></a>&emsp;&emsp;Hyper配置</h4><p>   &emsp;&emsp;入电脑的控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;把Hyper-v勾上，启用后电脑会重启，后面就可以下载并安装                Docker for Windows了。</p><img title="windows勾选hyper" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/windows勾选hyper.jpg?imageView2/2/w/800"><h3 id="下载docker-for-windows"><a href="#下载docker-for-windows" class="headerlink" title="下载docker for windows"></a>下载docker for windows</h3><h4 id="emsp-emsp-下载并安装"><a href="#emsp-emsp-下载并安装" class="headerlink" title="&emsp;&emsp;下载并安装"></a>&emsp;&emsp;下载并安装</h4><p>   &emsp;&emsp;进入网址<a href="https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows" target="_blank" rel="noopener">https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows</a> 下载并安装,                安装过程直接下一步下一步就Ok了。</p><h4 id="emsp-emsp-注册登录启动"><a href="#emsp-emsp-注册登录启动" class="headerlink" title="&emsp;&emsp;注册登录启动"></a>&emsp;&emsp;注册登录启动</h4><p>   &emsp;&emsp;启动以后会出现在桌面的右下角区域，鼠标放上去以后显示Docker is running表示启动成功，第一次安装启用好像                是会弹出个Docker Cloud登录界面，去注册然后登录，使用和git有点类似，可以pull图像等等 </p><img title="登录docker" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/登录docker.jpg?imageView2/2/w/800"><h3 id="Docker使用前先测试环境"><a href="#Docker使用前先测试环境" class="headerlink" title="Docker使用前先测试环境"></a>Docker使用前先测试环境</h3><h4 id="emsp-emsp-检测检查Docker，Compose和Machine的版本"><a href="#emsp-emsp-检测检查Docker，Compose和Machine的版本" class="headerlink" title="&emsp;&emsp;检测检查Docker，Compose和Machine的版本"></a>&emsp;&emsp;检测检查Docker，Compose和Machine的版本</h4><p>   &emsp;&emsp;进入cmd窗口，检查Docker，Compose和Machine的版本，输入以下命令，不报错即可。</p><img title="docker使用前检测" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker使用前检测.jpg?imageView2/2/w/800"><h4 id="emsp-emsp-确保docker命令正常工作"><a href="#emsp-emsp-确保docker命令正常工作" class="headerlink" title="&emsp;&emsp;确保docker命令正常工作"></a>&emsp;&emsp;确保docker命令正常工作</h4>   <pre>输入cmd命令：docker ps</pre><h4 id="emsp-emsp-如果报以下错误（先稍等几十秒，有可能是docker正在启动）："><a href="#emsp-emsp-如果报以下错误（先稍等几十秒，有可能是docker正在启动）：" class="headerlink" title="&emsp;&emsp;如果报以下错误（先稍等几十秒，有可能是docker正在启动）："></a>&emsp;&emsp;如果报以下错误（先稍等几十秒，有可能是docker正在启动）：</h4><img title="docker检测版本报错_1" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker检测版本报错_1.jpg?imageView2/2/w/800">  <h4 id="emsp-emsp-解决方法："><a href="#emsp-emsp-解决方法：" class="headerlink" title="&emsp;&emsp;解决方法："></a>&emsp;&emsp;解决方法：</h4><pre><code> 一、确保开启cpu虚拟化、确认Hyper-V启动(上面Part1中2、3步) 二、进入cmd执行下面两行命令:    cd &quot;C:\Program Files\Docker\Docker&quot;    ./DockerCli.exe -SwitchDaemon    注：如果发现执行不了，那么你可以在windows左下角搜索PowerShell来执行</code></pre><h4 id="emsp-emsp-解决后再试一次："><a href="#emsp-emsp-解决后再试一次：" class="headerlink" title="&emsp;&emsp;解决后再试一次："></a>&emsp;&emsp;解决后再试一次：</h4>   <pre>输入cmd命令：docker ps</pre><h4 id="emsp-emsp-出现下面内容则成功："><a href="#emsp-emsp-出现下面内容则成功：" class="headerlink" title="&emsp;&emsp;出现下面内容则成功："></a>&emsp;&emsp;出现下面内容则成功：</h4>   <img title="解决docke_ps报错问题" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/解决docker_ps.jpg?imageView2/2/w/800"> <h3 id="开始测试"><a href="#开始测试" class="headerlink" title="开始测试"></a>开始测试</h3><h4 id="emsp-emsp-从Docker-Hub中拉取图像并启动容器"><a href="#emsp-emsp-从Docker-Hub中拉取图像并启动容器" class="headerlink" title="&emsp;&emsp;从Docker Hub中拉取图像并启动容器"></a>&emsp;&emsp;从Docker Hub中拉取图像并启动容器</h4>  <pre>在windows PowerShell输入cmd命令：docker ps</pre><h4 id="emsp-emsp-将会出现以下内容，等待下载完成即可"><a href="#emsp-emsp-将会出现以下内容，等待下载完成即可" class="headerlink" title="&emsp;&emsp;将会出现以下内容，等待下载完成即可"></a>&emsp;&emsp;将会出现以下内容，等待下载完成即可</h4><img title="运行docker-run-hello-world以测试从Docker-Hub中拉取图像并启动容器" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/测试从Docker_Hub中拉取图像并启动容器.jpg?imageView2/2/w/800"> <h4 id="emsp-emsp-接着成功之后出现以下内容："><a href="#emsp-emsp-接着成功之后出现以下内容：" class="headerlink" title="&emsp;&emsp;接着成功之后出现以下内容："></a>&emsp;&emsp;接着成功之后出现以下内容：</h4><img title="运行docker-run-hello-world以测试从Docker-Hub中拉取图像并启动容器完成后内容" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker_hub测试完成后内容.jpg?imageView2/2/w/800"> <h3 id="运行一个Ubuntu容器"><a href="#运行一个Ubuntu容器" class="headerlink" title="运行一个Ubuntu容器"></a>运行一个Ubuntu容器</h3><h4 id="emsp-emsp-在windows-PowerShell输入cmd命令："><a href="#emsp-emsp-在windows-PowerShell输入cmd命令：" class="headerlink" title="&emsp;&emsp;在windows PowerShell输入cmd命令："></a>&emsp;&emsp;在windows PowerShell输入cmd命令：</h4>   <pre>docker run -it ubuntu bash</pre><img title="运行一个Ubuntu容器" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/运行一个Ubuntu容器.jpg?imageView2/2/w/800"> <h4 id="emsp-emsp-启动Ubuntu容器成功之后"><a href="#emsp-emsp-启动Ubuntu容器成功之后" class="headerlink" title="&emsp;&emsp;启动Ubuntu容器成功之后"></a>&emsp;&emsp;启动Ubuntu容器成功之后</h4><img title="启动Ubuntu容器成功之后" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动Ubuntu容器成功之后.jpg?imageView2/2/w/800"> <h4 id="emsp-emsp-我们先结束这个容器"><a href="#emsp-emsp-我们先结束这个容器" class="headerlink" title="&emsp;&emsp;我们先结束这个容器"></a>&emsp;&emsp;我们先结束这个容器</h4>   <pre>在Ubuntu 容器里面直接输入： exit;</pre><h4 id="emsp-emsp-启动一个webserver-nginx-服务"><a href="#emsp-emsp-启动一个webserver-nginx-服务" class="headerlink" title="&emsp;&emsp;启动一个webserver nginx 服务"></a>&emsp;&emsp;启动一个webserver nginx 服务</h4><pre><code>在windows PowerShell输入cmd命令：docker run -d -p 80:80 --name webserver nginx 注：这一步时间可能有点长，耐心稍等！（特别注意：网上大部分教程有把&#39;... name...&#39;写成：&#39;... -name...&#39;，简直坑死了）</code></pre><p>&emsp;&emsp;启动一个Dockerized webserver 会下载nginx容器图像并启动它，然后再打开浏览器键入 </p><img title="启动webserver_nginx并检查状态" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动webserver_nginx并检查状态.jpg?imageView2/2/w/800"> <p>&emsp;&emsp;访问<a href="http://localhost时出现这个界面说明已经成功了" target="_blank" rel="noopener">http://localhost时出现这个界面说明已经成功了</a></p><img title="启动webserver_nginx成功界面" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动webserver_nginx成功界面.jpg?imageView2/2/w/800"> <h5 id="然后大功告成！（去闯吧少年）"><a href="#然后大功告成！（去闯吧少年）" class="headerlink" title="然后大功告成！（去闯吧少年）"></a>然后大功告成！（去闯吧少年）</h5>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;最近刚接触到docker，所以就边折腾边记录这个流程，便于自己或者他人参考，其中有可能会有些偏差，但都八九不离十，那就开始吧！
+    
+    </summary>
+    
+      <category term="技术分享" scheme="http://blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="Docker" scheme="http://blog.heifengni.com/tags/Docker/"/>
+    
+      <category term="php" scheme="http://blog.heifengni.com/tags/php/"/>
+    
+      <category term="项目管理" scheme="http://blog.heifengni.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>周杰伦歌词《晴天》</title>
@@ -150,13 +176,13 @@
       <category term="美文" scheme="http://blog.heifengni.com/categories/%E7%BE%8E%E6%96%87/"/>
     
     
-      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="美文" scheme="http://blog.heifengni.com/tags/%E7%BE%8E%E6%96%87/"/>
     
       <category term="七夕" scheme="http://blog.heifengni.com/tags/%E4%B8%83%E5%A4%95/"/>
     
       <category term="情人节" scheme="http://blog.heifengni.com/tags/%E6%83%85%E4%BA%BA%E8%8A%82/"/>
+    
+      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -183,9 +209,9 @@
       <category term="美文" scheme="http://blog.heifengni.com/categories/%E7%BE%8E%E6%96%87/"/>
     
     
-      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="美文" scheme="http://blog.heifengni.com/tags/%E7%BE%8E%E6%96%87/"/>
+    
+      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -213,9 +239,9 @@
       <category term="美文" scheme="http://blog.heifengni.com/categories/%E7%BE%8E%E6%96%87/"/>
     
     
-      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="美文" scheme="http://blog.heifengni.com/tags/%E7%BE%8E%E6%96%87/"/>
+    
+      <category term="分享" scheme="http://blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
