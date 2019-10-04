@@ -1,0 +1,16 @@
+<script>
+    <% if (theme.switch_banner){ %>
+    window.onload = function (){
+     document.getElementById("banner").style.backgroundImage = "url(/css/images/banner2.jpg)";
+        setInterval(function () {
+           var number_of_banners = 6;
+                   var randnum = Math.floor(Math.random() * number_of_banners + 1);
+                   document.getElementById("banner").style.backgroundImage = "url(/css/images/banner" + randnum + ".jpg)";
+        }, 5050);
+    }
+    <% } else { %>
+     window.onload = function (){
+        document.getElementById("banner").style.backgroundImage = "url(/css/images/banner.jpg)";
+     }
+    <% } %>
+</script>
