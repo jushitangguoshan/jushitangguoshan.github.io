@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Docker常用命令]]></title>
+    <url>%2F2019%2F10%2F03%2FDocker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[service docker start |stop |restart 启动 停止 重启 docker run 镜像名称:标签 运行容器 docker -i 交互式操作 docker -t terminal操作 --rm 退出就删除容器 --name 指定容器名称 举例：docker run -it --rm ubuntu:14.04 bash docker images 列出已经下载下来的镜像portcommit 根据仓库名列出镜像 docker images &#39;仓库名&#39; 列出特定的某个镜像，也就是说指定仓库名和标签 docker images &#39;仓库名:标签名&#39; docker pull 获取镜像 docker pull ubuntu:14.04 docker exec 进入容器 docker exec -it webserver bash docker build [选项] 生成的文件名 上下文(context) 构建镜像 例如 ： docker build -t nginx:v3 . -p &lt;宿主端口&gt;:&lt;容器端口&gt; docker rmi [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...] #docker rm 命令是删除容器， docker rm $(docker ps -a -q) 删除所有容器 【docker常见问题】 Docker CE 镜像源站 https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.d88d105oY5zrn Docker 镜像加速器 https://yq.aliyun.com/articles/29941 docker mysql设置初始密码(docker mysql启动马上就自动退出) docker run 加上环境变量参数 -e MYSQL_ROOT_PASSWORD=password1 docker redis 设置初始密码 Dockerfile CMD: &#39;redis-server --requirepass &quot;password1&quot;&#39; docker cron没有执行 Dockerfile CMD: service cron start docker cron 执行的时候时区不对 RUN echo &quot;Asia/Shanghai&quot; &gt; /etc/timezone 或者 同步主机时区 docker run -v /etc/localtime:/etc/localtime &lt;IMAGE:TAG&gt; 以上两种是网上搜索到的，我都没有成功，我目前的解决方案是将crontab -e配置中的时区都往前推8个小时。 例如：你本来是要1,9点运行的，设置为1,17 docker corn 获取不了环境变量 原因：corn的bash环境变量和docker容器的环境变量不是同一个。 解决： printenv |grep -v &quot;==&quot; | grep -v &quot; &quot; | sed &#39;s/^\(.*\)$/export \1/g&#39; &gt; /project_env.sh \ &amp;&amp; chmod +x /project_env.sh \ &amp;&amp; service cron start \ &amp;&amp; bash 两个grep -v 是为了反正docker-compose link的时候变量变量污染]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker之搭建项目环境]]></title>
     <url>%2F2019%2F09%2F15%2FDocker%E4%B9%8B%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%2F</url>
-    <content type="text"><![CDATA[切换到国内镜像 Windows Docker For Windows 在桌面右下角状态栏中右键 docker 图标，修改在 Docker Daemon 标签页中的 json ，把下面的地址: http://f1361db2.m.daocloud.io加到” registry-mirrors”的数组里。点击 Apply 。 macOS Docker For Mac 右键点击桌面顶栏的 docker 图标，选择 Preferences ，在 Daemon 标签（Docker 17.03 之前版本为 Advanced 标签）下的 Registry mirrors 列表中加入下面的镜像地址: http://f1361db2.m.daocloud.io点击 Apply &amp; Restart 按钮使设置生效。 Linux curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io该脚本可以将 –registry-mirror 加入到你的 Docker 配置文件 /etc/docker/daemon.json 中。适用于 Ubuntu14.04、Debian、CentOS6 、CentOS7、Fedora、Arch Linux、openSUSE Leap 42.1， 拉取镜像后台是 docker pull php:7.2 拉取redis最新版 docker pull redis:latest 查找官方镜像 docker search redis –filter “is-official=true” 查看已经拉取的镜像]]></content>
+    <content type="text"><![CDATA[完善中。。。。]]></content>
       <categories>
         <category>技术分享</category>
       </categories>
@@ -27,13 +39,13 @@
   <entry>
     <title><![CDATA[Docker之必读介绍篇]]></title>
     <url>%2F2019%2F09%2F07%2FDocker%E4%B9%8B%E5%BF%85%E8%AF%BB%E4%BB%8B%E7%BB%8D%E7%AF%87%2F</url>
-    <content type="text"><![CDATA[Docker是什么? Docker 最初是dotCloud公司创始人Solomon Hykes在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于2013年3月以Apache 2.0授权协议开源，主要项目 代码在GitHub上进行维护。Docker 项目后来还加入了 Linux 基金会并成立推动开放容器联盟（OCI）。 Docker 使用Google公司推出的Go语言 进行开发实现，基于Linux内核的cgroup，namespace，以及 AUFS类的Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进 程独立于宿主和其它的隔离的进程，因此也称其为容器。 Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简 化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整 操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没 有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。 Docker有什么用？Docker能带给我们什么？ 更高效的利用系统资源 由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。 无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟 机技术，一个相同配置的主机，往往可以运行更多数量的应用。 更快速的启动时间 传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核， 无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、 部署的时间。 一致的运行环境 开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有 些bug并未在开发过程中被发现。而Docker 的镜像提供了除内核外完整的运行时环境，确保了应用 运行环境一致性，从而不会再出现「这段代码在我机器上没问题啊」 这类问题。 持续交付和部署 通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试， 而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Depl oyment) 系统进行自动部署。 更轻松的迁移 由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行， 无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易 的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运 行的情况。 更轻松的维护和扩展 docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更 新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团 队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制， 大大的降低了应用服务的镜像制作成本。 对比传统虚拟机总结 特性 容器 虚拟机 启动 秒级 分钟级 硬盘使用 一般为 MB 一般为 GB 性能 接近原生 弱于 系统支持量 单机支持上千个容器 一般几十个 为什么要学习使用Docker？&emsp;&emsp;对于新手来说，可能仅仅是在工作中遇到，才会想到会学会使用，实不相瞒，我也是这样想的，所以就 这样了解了解，但是正因为作为一个新手，所以对一切都有非常浓厚的兴趣，于是想静下心来好好的去 认识这么一个知识点，说真的互联网知识体系庞大，唯有静下心来，慢慢欣赏这一路的风景，以此， 记录，一路的历程。当然也是作为提升自己的一个小小途径。 然后大功告成！（去闯吧少年）]]></content>
+    <content type="text"><![CDATA[Docker是什么? Docker 最初是dotCloud公司创始人Solomon Hykes在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于2013年3月以Apache 2.0授权协议开源，主要项目 代码在GitHub上进行维护。Docker 项目后来还加入了 Linux 基金会并成立推动开放容器联盟（OCI）。 Docker 使用Google公司推出的Go语言 进行开发实现，基于Linux内核的cgroup，namespace，以及 AUFS类的Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进 程独立于宿主和其它的隔离的进程，因此也称其为容器。 Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简 化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整 操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没 有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。 Docker有什么用？Docker能带给我们什么？ 更高效的利用系统资源 由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。 无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟 机技术，一个相同配置的主机，往往可以运行更多数量的应用。 更快速的启动时间 传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核， 无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、 部署的时间。 一致的运行环境 开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有 些bug并未在开发过程中被发现。而Docker 的镜像提供了除内核外完整的运行时环境，确保了应用 运行环境一致性，从而不会再出现「这段代码在我机器上没问题啊」 这类问题。 持续交付和部署 通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试， 而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Depl oyment) 系统进行自动部署。 更轻松的迁移 由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行， 无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易 的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运 行的情况。 更轻松的维护和扩展 docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更 新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团 队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制， 大大的降低了应用服务的镜像制作成本。 对比传统虚拟机总结 特性 容器 虚拟机 启动 秒级 分钟级 硬盘使用 一般为 MB 一般为 GB 性能 接近原生 弱于 系统支持量 单机支持上千个容器 一般几十个 为什么要学习使用Docker？&emsp;&emsp;对于新手来说，可能仅仅是在工作中遇到，才会想到会学会使用，实不相瞒，我也是这样想的，所以就 这样了解了解，但是正因为作为一个新手，所以对一切都有非常浓厚的兴趣，于是想静下心来好好的去 认识这么一个知识点，说真的互联网知识体系庞大，唯有静下心来，慢慢欣赏这一路的风景，以此， 记录，一路的历程。当然也是作为提升自己的一个小小途径。 &emsp;&emsp;其次，因为不管你用的是Windows、Mac还是Ubuntu。 如果生产环境也使用的Docker的话，你甚至可以直接打包一套环境，直接丢上去就可以运行了，再也不用担心开 发-生产环境之间的差异了，尝试错误解决更方便，不会动用正式服的环境，就可以放心大胆的测试因为环境而带来的问题。 &emsp;&emsp;“相见恨晚”用来形容我对docker的热爱再合适不过了,自从用了docker,开发环境也不安装了，系统想换就换了，部署更 是一键部署，再也不用担心在这台机器上跑的好好的 然后大功告成！（去闯吧少年）]]></content>
       <categories>
         <category>技术分享</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>项目管理</tag>
-        <tag>Docker介绍</tag>
       </tags>
   </entry>
   <entry>
