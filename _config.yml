@@ -30,15 +30,15 @@ skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
-default_layout: post
+default_layout: draft
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 # 是否打开预览草稿
-render_drafts: true
+render_drafts: false #线上开启草稿预览
 post_asset_folder: false
 relative_link: false
-future: true
+future: false
 
 # 代码高亮
 highlight:
