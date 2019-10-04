@@ -2,961 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c25428-ee09-4c56-b39d-ee62c5bbfcea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/07/27/致来者书/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/07/27/随笔分享2019-7-27/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/04/总以为你不会离开我/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/04/有些人，既享受孤独，又害怕孤独/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/09/那个梦啊/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/17/最艰难的时候，你始终一人/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/22/laravel-admin安装教程/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/08/29/本博客常用命令/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/09/07/Docker之必读介绍篇/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/09/07/周杰伦歌词《晴天》/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/09/09/Docker之安装/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/09/15/Docker之搭建项目环境/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/10/03/Docker常用命令/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_admin-config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/07/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/08/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/09/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/10/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/screenshot-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/screenshot-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/screenshot-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/atom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baidusitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/php开发/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/关于作者的博客/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/博客/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/技术分享/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/摄影/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/生活/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/美文/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dfasdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/algolia_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/alipay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/apple-touch-icon-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/body_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc-nd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc-sa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-sa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-zero.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon-16x16-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon-32x32-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/placeholder.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quote-l.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quote-r.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/searchicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wechat_header_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wechatpay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/affix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/algolia-search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/bai.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/exturl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/hook-duoshuo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/js.cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/love.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/motion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/post-details.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/schemes/pisces.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/scroll-cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/scrollspy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/font/han-space.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/font/han-space.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/font/han.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/font/han.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/font/han.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/han.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/han.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/han.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Han/dist/han.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/algolia-instant-search/instantsearch.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/algolia-instant-search/instantsearch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/canvas-nest/canvas-nest.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/canvas-ribbon/canvas-ribbon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/fancybox_loading@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/fancybox_sprite@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/fancybox_buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/jquery.fancybox-buttons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/jquery.fancybox-buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/jquery.fancybox-media.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/jquery.fancybox-thumbs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/helpers/jquery.fancybox-thumbs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/jquery.fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fancybox/source/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastclick/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastclick/README.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastclick/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastclick/lib/fastclick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastclick/lib/fastclick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery_lazyload/CONTRIBUTING.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery_lazyload/README.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery_lazyload/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery_lazyload/jquery.lazyload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery_lazyload/jquery.scrollstop.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/needsharebutton/font-embedded.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/needsharebutton/needsharebutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/needsharebutton/needsharebutton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-barber-shop.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-big-counter.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-bounce.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-center-atom.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-center-circle.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-center-radar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-center-simple.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-corner-indicator.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-fill-left.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-flash.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-loading-bar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-mac-osx.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace-theme-minimal.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pace/pace.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/three/canvas_lines.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/three/canvas_sphere.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/three/three-waves.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/three/three.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ua-parser-js/dist/ua-parser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ua-parser-js/dist/ua-parser.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f07.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/moc/chitose.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/moc/chitose.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_handwave.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_kime01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_kime02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/Epsilon2.1.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/Epsilon2.1.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f07.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f08.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/moc/Epsilon2.1.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/moc/Epsilon2.1.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_shake_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/Gantzert_Felixander.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/gf/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f07.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f08.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/flickHead_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/shake_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_09.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/flickHead_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/pinchIn_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/pinchOut_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/shake_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f07.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f08.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/flickHead_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/shake_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_09.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/flickHead_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/pinchIn_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/pinchOut_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/shake_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haru/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/haruto.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/haruto.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/moc/haruto.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/moc/haruto.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/09.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/hibiki.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/hibiki.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/moc/hibiki.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/moc/hibiki.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_03.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_04.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_05.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/hijiki.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/hijiki.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/moc/hijiki.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/moc/hijiki.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/01_happy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/02_angry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/03_fear.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/04_surprise.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/05_fun.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/06_love.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/07_bye.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/08_sad.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/09_yawn.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/10_yeah.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/11_muscle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/12_stagger.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/13_cry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/14_ sigh.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/15_joy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/16_menace.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/17_yes.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/18_no.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/19_walk.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/20_sleep.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nico/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/01_happy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/02_angry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/03_fear.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/04_surprise.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/05_fun.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/06_love.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/07_bye.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/08_sad.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/09_yawn.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/10_yeah.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/11_muscle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/12_stagger.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/13_cry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/14_ sigh.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/15_joy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/16_menace.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/17_yes.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/18_no.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/19_walk.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/20_sleep.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzche.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzsche.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzsche.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.2048/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/01_happy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/02_angry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/03_fear.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/04_surprise.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/05_fun.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/06_love.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/07_bye.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/08_sad.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/09_yawn.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/10_yeah.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/11_muscle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/12_stagger.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/13_cry.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/14_ sigh.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/15_joy.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/16_menace.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/17_yes.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/18_no.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/19_walk.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/20_sleep.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/nito/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.1024/texture_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/moc/shizuku.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/flickHead_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/flickHead_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/flickHead_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/idle_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchIn_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchIn_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchOut_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/pinchOut_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/shake_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/shake_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/shake_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/tapBody_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/tapBody_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/mtn/tapBody_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/shizuku.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/shizuku.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/shizuku.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/flickHead_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/flickHead_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/flickHead_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchIn_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchIn_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchIn_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchOut_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchOut_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/pinchOut_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/shake_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/shake_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/shake_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/tapBody_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/tapBody_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/assets/snd/tapBody_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/shizuku/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/moc/tororo.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/moc/tororo.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/00_idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/tororo.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/tororo.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F05.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F06.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F07.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F08.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F09.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F10.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.2048/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.2048/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/P01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_01_df.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_07.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_08.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_09.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_10.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_11.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_12.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_13.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_14.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_15.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_16.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_17.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_18.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_19.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_20.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_21.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_22.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_23.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_24.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/tsumiki.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/tsumiki.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/moc/wanko.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/moc/wanko.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/shake_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/shake_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_03.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_04.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_05.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_06.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/wanko.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/exp/f00.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.256/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.512/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/mtn/idle.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/z16.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/z16.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2d_models/z16/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/exp/f01.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/exp/f02.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/exp/f03.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/exp/f04.exp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.1024/texture_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/moc/shizuku.moc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/flickHead_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/flickHead_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/flickHead_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/idle_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/idle_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/idle_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchIn_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchIn_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchOut_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/pinchOut_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/shake_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/shake_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/shake_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/tapBody_00.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/tapBody_01.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/mtn/tapBody_02.mtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/shizuku.model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/shizuku.physics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/shizuku.pose.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/flickHead_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/flickHead_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/flickHead_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchIn_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchIn_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchIn_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchOut_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchOut_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/pinchOut_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/shake_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/shake_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/shake_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/tapBody_00.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/tapBody_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/assets/snd/tapBody_02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/live2dw/assets/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/body_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/docker_hub测试完成后内容.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/docker使用前检测.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/docker检测版本报错_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/docker检测版本报错ps.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/windows勾选hyper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/启动Ubuntu容器成功之后.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/启动webserver_nginx并检查状态.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/启动webserver_nginx成功界面.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/周杰伦-晴天.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/查看是否开启虚拟化.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/测试从Docker_Hub中拉取图像并启动容器.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/登录docker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/解决docker_ps.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qiniu_storage/images/images/运行一个Ubuntu容器.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffolds/draft.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffolds/page.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffolds/post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_drafts/Docker常用命令.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Docker之安装.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/周杰伦歌词《晴天》.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/总以为你不会离开我.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/最艰难的时候，你始终一人.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/有些人，既享受孤独，又害怕孤独.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/本博客常用命令.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/致来者书.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/那个梦啊.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/随笔分享2019-7-27.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/about/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/categories/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/wechat_header_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/imgshare.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/like.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/select_share.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style0_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style0_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style0_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style1_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style1_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style1_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style2_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style2_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style2_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/share_style4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/slide_share.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/css/weixin_popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_0_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_0_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_0_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_1_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_1_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_1_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_2_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_2_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/icons_2_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/l8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/pop_c.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/r8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/sc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/selectshare_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/img/share/share-search-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/base/class.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/base/tangram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/animate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/anticheat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/comm_tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/partners.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/pop_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/pop_dialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/pop_popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/pop_popup_slide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/component/qrcode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/conf/const.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/conf/define.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/api_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/combine_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/image_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/like_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/likeshare.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/select_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/share_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/share/slide_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/start/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/logger.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/trans.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/trans_bdxc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/trans_bdysc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/trans/trans_weixin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/image_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/like_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/select_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/share_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/slide_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/api/js/view/view_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/tags/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/imgshare.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/like.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/select_share.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style0_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style0_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style0_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style1_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style1_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style1_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style2_16.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style2_24.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style2_32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/share_style4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/slide_share.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/css/weixin_popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_0_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_0_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_0_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_1_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_1_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_1_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_2_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_2_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/icons_2_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/l8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/pop_c.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/r8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/sc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/selectshare_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/img/share/share-search-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/base/class.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/base/tangram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/animate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/anticheat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/comm_tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/partners.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/pop_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/pop_dialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/pop_popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/pop_popup_slide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/component/qrcode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/conf/const.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/conf/define.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/api_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/combine_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/image_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/like_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/likeshare.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/select_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/share_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/share/slide_api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/start/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/logger.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/trans.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/trans_bdxc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/trans_bdysc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/trans/trans_weixin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/image_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/like_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/select_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/share_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/slide_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/api/js/view/view_base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Docker/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/hexo/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/laravel-admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/php后台框架/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/七夕/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/作者/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/关于/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/分享/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/博客/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/心情/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/情人节/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/摄影/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/歌词/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/生活/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/美文/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/美景/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/记录/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/随笔/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/项目管理/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/de.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/default.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/es.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/fr.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ja.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ko.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/nl.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/no.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/pt.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ru.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/zh-CN.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/zh-TW.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/after-footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive-post.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/article.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/gauges-analytics.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/google-analytics.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/head.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/header.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/mobile-nav.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/category.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/date.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/gallery.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/nav.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/tag.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/title.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/sidebar.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/switch-banner.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/archive.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/category.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/recent_posts.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/tag.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/tagcloud.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/archive.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/category.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/layout.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/page.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/post.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/tag.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/scripts/fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_extend.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/archive.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/article.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/comment.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/footer.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/header.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/highlight.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/mobile.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-aside.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-bottom.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_util/grid.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_util/mixin.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_variables.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/images/banner6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/style.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/fancybox_loading@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/fancybox_sprite@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/fancybox_buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-media.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/landscape/source/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.bowerrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.bowerrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/CONTRIBUTING.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/browserstack_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.hound.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.hound.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.javascript_ignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.javascript_ignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.jshintrc" afterDir="false" />
@@ -1337,9 +395,6 @@
       <change beforePath="$PROJECT_DIR$/themes/yilia/source/mobile.992cbe.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/mobile.992cbe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/yilia/source/slider.e37972.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/slider.e37972.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/yilia/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waifu-tips.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/waifu-tips.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/waifu.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1353,12 +408,44 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="54">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_drafts/Docker常用命令.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-567" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_drafts/testqwe.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="124">
+                <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -1371,6 +458,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/source/_posts/本博客常用命令.md" />
+        <option value="$PROJECT_DIR$/source/_drafts/testqwe.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -1404,8 +493,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="jushitangguoshan.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jushitangguoshan.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="github_hexo_blog - 副本" type="b2602c69:ProjectViewProjectNode" />
+              <item name="github_hexo_blog - 副本" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1415,6 +504,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1442,25 +532,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570173314906</updated>
-      <workItem from="1570173316371" duration="138000" />
+      <workItem from="1570173316371" duration="473000" />
+      <workItem from="1570174709479" duration="472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138000" />
+    <option name="totallyTimeSpent" value="945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Regex Tester" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3561644" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -1468,21 +554,53 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="PHP Inspections" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1969178" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="PHP Inspections" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/_drafts/Docker常用命令.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_drafts/testqwe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="124">
+            <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-567" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
