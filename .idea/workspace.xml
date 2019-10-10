@@ -1,396 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c25428-ee09-4c56-b39d-ee62c5bbfcea" name="Default Changelist" comment="">
+    <list default="true" id="f9c25428-ee09-4c56-b39d-ee62c5bbfcea" name="Default Changelist" comment="thesmes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.bowerrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.bowerrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/CONTRIBUTING.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.github/browserstack_logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.hound.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.hound.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.javascript_ignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.javascript_ignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.jshintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/.stylintrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.stylintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/README.cn.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/README.cn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/gulpfile.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/gulpfile.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/de.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/de.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/default.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/fr-FR.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/fr-FR.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/id.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/id.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/it.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/it.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/ja.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/ja.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/ko.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/ko.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/nl-NL.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/nl-NL.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/pt-BR.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/pt-BR.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/pt.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/pt.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/ru.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/vi.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/vi.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/zh-Hans.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/zh-Hans.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/zh-hk.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/zh-hk.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/zh-tw.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/languages/zh-tw.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_custom/header.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_custom/header.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_custom/sidebar.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_custom/sidebar.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_layout.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_layout.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/post-collapse.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/post-collapse.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/post-copyright.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/post-copyright.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/reward.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/reward.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/wechat-subscriber.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/wechat-subscriber.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/comments.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/comments.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/footer.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/footer.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/head.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/head.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/head/custom-head.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/head/custom-head.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/head/external-fonts.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/head/external-fonts.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/header.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/header.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/page-header.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/page-header.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/pagination.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/pagination.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/search.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/search.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/search/localsearch.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/search/localsearch.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/search/swiftype.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/search/swiftype.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/search/tinysou.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/search/tinysou.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/add-this.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/share/add-this.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/baidushare.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/share/baidushare.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/duoshuo_share.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/share/duoshuo_share.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/jiathis.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/share/jiathis.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/boostrap.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/boostrap.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/commons.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/commons.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/pages/post-details.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/pages/post-details.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/schemes/gemini.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/schemes/gemini.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/schemes/pisces.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/schemes/pisces.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/vendors.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/vendors.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/analytics-with-widget.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/analytics-with-widget.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/application-insights.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/application-insights.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/baidu-analytics.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/baidu-analytics.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/busuanzi-counter.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/busuanzi-counter.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/cnzz-analytics.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/cnzz-analytics.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/facebook-sdk.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/facebook-sdk.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/firestore.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/firestore.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/google-analytics.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/google-analytics.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/index.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/index.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/lean-analytics.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/lean-analytics.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/tencent-analytics.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/tencent-analytics.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/tencent-mta.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/tencent-mta.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/vkontakte-api.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/vkontakte-api.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/changyan.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/changyan.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/disqus.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/disqus.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/duoshuo.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/duoshuo.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/gitment.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/gitment.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/hypercomments.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/hypercomments.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/index.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/index.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/livere.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/livere.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/valine.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/valine.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/youyan.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/comments/youyan.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/duoshuo-hot-articles.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/duoshuo-hot-articles.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/exturl.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/exturl.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/mathjax.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/mathjax.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/needsharebutton.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/needsharebutton.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/rating.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/rating.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/schedule.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/schedule.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/scroll-cookie.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/scroll-cookie.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/search/algolia-search/assets.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/search/algolia-search/assets.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/search/algolia-search/dom.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/search/algolia-search/dom.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/search/index.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/search/index.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/search/localsearch.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/search/localsearch.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/search/tinysou.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/search/tinysou.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_third-party/seo/baidu-push.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_third-party/seo/baidu-push.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/archive.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/archive.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/category.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/category.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/index.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/index.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/page.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/page.swig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/post.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/post.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/schedule.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/schedule.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/tag.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/tag.swig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/merge-configs.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/merge-configs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/merge.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/merge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/center-quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/center-quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/exturl.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/exturl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/full-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/full-image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/group-pictures.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/group-pictures.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/label.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/lazy-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/lazy-image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/note.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/tags/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/scripts/tags/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/back-to-top-sidebar.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/back-to-top-sidebar.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/back-to-top.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/back-to-top.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/buttons.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/buttons.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/comments.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/comments.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/components.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/components.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/footer/footer.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/footer/footer.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/header.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/header.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/headerband.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/headerband.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/menu.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/menu.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/site-meta.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/site-meta.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/site-nav.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/header/site-nav.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/diff.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/diff.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/highlight.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/highlight.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/theme.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/highlight/theme.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/archive.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/archive.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/categories.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/categories.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/pages.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/pages.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/post-detail.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/post-detail.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/schedule.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pages/schedule.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/pagination.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/pagination.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-button.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-button.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-collapse.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-collapse.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-copyright.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-copyright.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-eof.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-eof.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-expand.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-expand.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-gallery.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-gallery.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-meta.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-meta.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-nav.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-nav.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-reward.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-reward.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-rtl.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-rtl.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-tags.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-tags.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-title.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-title.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-type.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-type.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-widgets.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-widgets.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-author-links.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-author-links.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-author.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-author.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-blogroll.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-blogroll.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-dimmer.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-dimmer.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-feed-link.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-feed-link.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-nav.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-nav.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-toc.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-toc.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-toggle.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar-toggle.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/sidebar.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/site-state.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/sidebar/site-state.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tag-cloud.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tag-cloud.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/blockquote-center.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/blockquote-center.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/exturl.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/exturl.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/full-image.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/full-image.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/group-pictures.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/group-pictures.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/label.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/label.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/note-modern.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/note-modern.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/note.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/note.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/tabs.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/tabs.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/tags.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/tags/tags.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/algolia-search.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/algolia-search.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/baidushare.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/baidushare.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/busuanzi-counter.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/busuanzi-counter.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/duoshuo.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/duoshuo.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/gitment.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/gitment.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/han.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/han.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/jiathis.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/jiathis.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/localsearch.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/localsearch.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/needsharebutton.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/needsharebutton.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/third-party.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/components/third-party/third-party.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/outline/outline.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/outline/outline.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/base.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/helpers.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/helpers.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/mobile.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/mobile.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/normalize.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/normalize.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/scaffolding.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/scaffolding.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/tables.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/tables.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_mixins/Gemini.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_mixins/Gemini.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_mixins/Pisces.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_mixins/Pisces.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_mixins/base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_mixins/base.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Gemini/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Gemini/index.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_base.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_header.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_header.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_logo.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_logo.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_menu.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_menu.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_posts-expanded.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_posts-expanded.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_search.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_search.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/index.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/outline/outline.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/outline/outline.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/sidebar/sidebar-blogroll.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/sidebar/sidebar-blogroll.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_layout.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_layout.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_logo.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_logo.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_menu.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_menu.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_search.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/_search.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/index.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/sidebar/sidebar-blogroll.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Muse/sidebar/sidebar-blogroll.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_brand.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_brand.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_posts.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_posts.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/index.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/Gemini.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/Gemini.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/Mist.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/Mist.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/main.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/algolia_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/algolia_logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc-nd.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc-nd.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc-sa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc-sa.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by-nc.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by-nd.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by-nd.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by-sa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by-sa.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-by.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-by.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/cc-zero.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/cc-zero.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/quote-l.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/quote-l.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/images/quote-r.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/images/quote-r.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/affix.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/affix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/algolia-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/algolia-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/exturl.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/exturl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/hook-duoshuo.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/hook-duoshuo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/js.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/js.cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/motion.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/motion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/post-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/post-details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/schemes/pisces.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/schemes/pisces.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/scroll-cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/scroll-cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/scrollspy.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/scrollspy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/js/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/js/src/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han/dist/han.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/algolia-instant-search/instantsearch.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/algolia-instant-search/instantsearch.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/canvas-ribbon/canvas-ribbon.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/canvas-ribbon/canvas-ribbon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/fastclick/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/fastclick/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/fastclick/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/fastclick/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/fastclick/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/fastclick/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/fastclick/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/fastclick/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/fastclick/lib/fastclick.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/fastclick/lib/fastclick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/HELP-US-OUT.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/jquery.lazyload.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/jquery.lazyload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/jquery.scrollstop.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/jquery_lazyload/jquery.scrollstop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/font-embedded.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/font-embedded.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/needsharebutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/needsharebutton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/needsharebutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/needsharebutton/needsharebutton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/pace/pace.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/pace/pace.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/three/canvas_lines.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/three/canvas_lines.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/three/canvas_sphere.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/three/canvas_sphere.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/three/three-waves.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/three/three-waves.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/three/three.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/three/three.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/ua-parser-js/dist/ua-parser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/ua-parser-js/dist/ua-parser.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/ua-parser-js/dist/ua-parser.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/ua-parser-js/dist/ua-parser.pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/velocity/velocity.ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/test/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/test/.jshintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/test/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/test/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/test/intern.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/test/intern.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/yilia" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/yilia/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/yilia/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/default.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/fr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/fr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/nl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/nl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/no.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/no.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/ru.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/zh-CN.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/zh-CN.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/languages/zh-tw.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/languages/zh-tw.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/after-footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/after-footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/archive-post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/archive-post.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/archive.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/archive.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/article.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/article.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/aside.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/aside.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/baidu-analytics.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/baidu-analytics.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/google-analytics.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/google-analytics.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/head.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/left-col.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/left-col.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/mathjax.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/mathjax.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/mobile-nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/mobile-nav.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/category.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/category.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/changyan.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/changyan.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/date.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/date.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/duoshuo.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/duoshuo.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/gitment.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/gitment.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/nav.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/share.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/share.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/tag.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/tag.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/title.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/title.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/wangyiyun.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/post/wangyiyun.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/script.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/script.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/tools.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/tools.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/_partial/viewer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/_partial/viewer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/layout/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/layout/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/_core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/_function.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/_function.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/archive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/archive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/article-inner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/article-inner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/article-main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/article-main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/article-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/article-nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/article.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/aside.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/aside.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/comment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/comment.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_animation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_media-queries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_media-queries.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/core/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/highlight.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/highlight.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/left.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/left.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/mobile-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/mobile-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/mobile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/reward.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/reward.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/scroll.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/scroll.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/share.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/share.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/social.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/social.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/tags-cloud.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/tags-cloud.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/tags.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/tags.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/tools.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/tools.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/css/tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/css/tooltip.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/Q.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/Q.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/anm.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/anm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/aside.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/aside.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/fix.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/fix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/share.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/js/viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/js/viewer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source-src/script.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source-src/script.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source/fonts/iconfont.45d7ee.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/fonts/iconfont.45d7ee.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source/main.0cf68a.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/main.0cf68a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source/mobile.992cbe.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/mobile.992cbe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/source/slider.e37972.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/source/slider.e37972.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/yilia/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -406,42 +51,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_drafts/Docker常用命令.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/themes/landscape/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/landscape/_config.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="243">
-                <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-567" />
-              <second_editor />
+            <state relative-caret-position="81">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -463,6 +90,8 @@
         <option value="$PROJECT_DIR$/source/_drafts/testqwe.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" />
+        <option value="$PROJECT_DIR$/themes/next/.travis.yml" />
       </list>
     </option>
   </component>
@@ -495,19 +124,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="github_hexo_blog - 副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github_hexo_blog - 副本" type="462c0819:PsiDirectoryNode" />
+              <item name="github_hexo_blog_auto_git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="github_hexo_blog_auto_git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="github_hexo_blog - 副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github_hexo_blog - 副本" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="github_hexo_blog - 副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github_hexo_blog - 副本" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
+              <item name="github_hexo_blog_auto_git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="github_hexo_blog_auto_git" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -519,7 +142,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -547,19 +174,21 @@
       <updated>1570173314906</updated>
       <workItem from="1570173316371" duration="473000" />
       <workItem from="1570174709479" duration="1213000" />
+      <workItem from="1570257338711" duration="208000" />
+      <workItem from="1570721166825" duration="1008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1686000" />
+    <option name="totallyTimeSpent" value="2902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.94863015" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -570,7 +199,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18835616" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.7123288" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -583,29 +212,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="thesmes" />
+    <option name="LAST_COMMIT_MESSAGE" value="thesmes" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_drafts/testqwe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="124">
-            <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_drafts/testqwe.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-567" />
+          <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -613,6 +230,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -624,13 +251,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/themes/next/gulpfile.coffee">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/landscape/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/landscape/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/yilia/source-src/js/mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/test/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
