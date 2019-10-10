@@ -1,0 +1,56 @@
+// Custom styles.
+// 主页文章添加阴影效果
+ .post {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+  }
+@keyframes heartAnimate {
+    0%,100%{transform:scale(1);}
+    10%,30%{transform:scale(0.9);}
+    20%,40%,60%,80%{transform:scale(1.1);}
+    50%,70%{transform:scale(1.1);}
+}
+#heart {
+    animation: heartAnimate 1.33s ease-in-out infinite;
+}
+.with-love {
+    color: rgb(255, 113, 168);
+}
+
+
+	//背景图片
+body {
+
+    background:url(http://qiniu.storage.heifengni.com/qiniu_images/body_background.jpg);
+
+    background-repeat: no-repeat;
+
+    background-attachment:fixed;
+
+    background-position:50% 50%;
+
+}
+.main-inner {
+
+    margin-top: 20px;
+
+    padding: 0px 0px 0px 0px;
+
+    background: #fff;//背景色
+
+	  opacity: 1;//背景图片不透明度
+
+    min-height: 500px;
+}
+//.post { background: rgba(255,255,255,0.5);}  //虚化post类
+//.post-block {background: rgba(255,255,255,0.5);} // 虚化post-block class
+//标题居中
+.posts-expand .post-title, .posts-expand .post-meta {
+  text-align: center;
+}
+
+
+
