@@ -839,7 +839,7 @@ menusettings:
     badges: true #显示目录的文章数量
 
 # 网易云音乐链接
-music163player: //music.163.com/outchain/player?type=2&id=478507889&auto=1&height=66
+#music163player: //music.163.com/outchain/player?type=2&id=478507889&auto=1&height=66
 
 
 # 文章末尾添加“本文结束”标记
