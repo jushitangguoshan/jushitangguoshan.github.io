@@ -8,3 +8,7 @@ toc: true
 description: "&emsp;&emsp;本篇博文主要是以搭建一个linux+php+nginx+mysql+redis环境教程"
 ---
 完善中。。。。！！！
+
+npm install hexo --save
+npm install
+npm install hexo-deployer-git
