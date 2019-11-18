@@ -3,7 +3,7 @@ title: Docker之必读介绍篇
 tags:
   - Docker
   - 项目管理
-categories: 技术分享
+categories: [技术分享, Docker]
 keywords: Docker
 toc: true
 description: >-

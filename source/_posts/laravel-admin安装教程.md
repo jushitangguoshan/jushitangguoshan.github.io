@@ -2,7 +2,7 @@
 title: laravel-admin教程之安装（爬坑系列一）
 date: 2019-08-22 22:54:48
 tags: [laravel-admin, php后台框架]
-categories: php开发
+categories: [php开发, laravel-admin]
 keywords: laravel-admin
 toc: true
 description: 
