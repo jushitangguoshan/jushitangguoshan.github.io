@@ -8,3 +8,4 @@ toc: true
 description: "&emsp;&emsp;本篇博文主要是以搭建一个linux+php+nginx+mysql+redis环境教程"
 ---
 
+docker run -v D:\myphp_project\docker_project:/data/myphp_project/docker_project -p 9501:9501 -it --entrypoint /bin/sh hyperf/hyperf:7.2-alpine-cli
