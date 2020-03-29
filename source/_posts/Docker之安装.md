@@ -1,8 +1,8 @@
 ---
 title: Docker之安装
 date: 2019-09-09 22:18:29
-tags: [Docker, 项目管理]
-categories: [技术分享, Docker]
+tags: [Docker]
+categories: [项目管理]
 keywords: Docker
 toc: true
 description: "&emsp;&emsp;最近刚接触到docker，所以就边折腾边记录这个流程，便于自己或者他人参考，其中有可能会有些偏差，但都八九不离十，要声明一下，我这是第一次安装Docker，所以沿途遇到的美景都比较多，走的路也可能稍微弯了那么一点点，但还算好，结果跟过程一样在期望中，所以那就直接开始吧！"
@@ -87,6 +87,5 @@ description: "&emsp;&emsp;最近刚接触到docker，所以就边折腾边记录
 &emsp;&emsp;访问http://localhost时出现这个界面说明已经成功了
 {% qnimg 启动webserver_nginx成功界面.jpg title:启动webserver_nginx成功界面  'class:class1 class2' extend:?imageView2/2/w/1000 %} 
 ##### 然后大功告成！（去闯吧少年）  
-    
     
     

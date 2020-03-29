@@ -4,10 +4,401 @@
     <list default="true" id="f9c25428-ee09-4c56-b39d-ee62c5bbfcea" name="Default Changelist" comment="thesmes">
       <change beforePath="$PROJECT_DIR$/.deploy_git" beforeDir="false" afterPath="$PROJECT_DIR$/.deploy_git" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/chitose.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/exp/f07.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/moc/chitose.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/moc/chitose.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_handwave.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_kime01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/assets/mtn/chitose_kime02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/chitose/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/Epsilon2.1.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/Epsilon2.1.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f07.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/exp/f08.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/moc/Epsilon2.1.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/moc/Epsilon2.1.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/assets/mtn/Epsilon2.1_shake_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/epsilon2_1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/Gantzert_Felixander.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.2048/texture_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/moc/Gantzert_Felixander.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/assets/mtn/A_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/gf/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f07.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/exp/f08.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/haru01.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.1024/texture_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/moc/haru01.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/flickHead_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/idle_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/shake_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/mtn/tapBody_09.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/flickHead_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/pinchIn_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/pinchOut_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/shake_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_01.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/assets/snd/tapBody_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/01/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f07.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/exp/f08.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/haru02.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.1024/texture_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/moc/haru02.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/flickHead_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/idle_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/pinchIn_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/pinchOut_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/shake_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_00.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/mtn/tapBody_09.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/flickHead_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/pinchIn_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/pinchOut_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/shake_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_00.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_01.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/assets/snd/tapBody_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/02/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haru/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/haruto.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/haruto.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/moc/haruto.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/moc/haruto.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/09.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/assets/mtn/idle_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/haruto/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/exp/f06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/hibiki.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/hibiki.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/moc/hibiki.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/moc/hibiki.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/hibiki_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/mtn/idle_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_01.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_03.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_04.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/assets/snd/hibiki_05.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hibiki/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/hijiki.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/hijiki.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/moc/hijiki.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/moc/hijiki.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/assets/mtn/08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/hijiki/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.2048/texture_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/moc/nico.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/01_happy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/02_angry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/03_fear.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/04_surprise.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/05_fun.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/06_love.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/07_bye.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/08_sad.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/09_yawn.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/10_yeah.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/11_muscle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/12_stagger.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/13_cry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/14_ sigh.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/15_joy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/16_menace.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/17_yes.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/18_no.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/19_walk.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/mtn/20_sleep.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/assets/nico.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nico/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.2048/texture_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/moc/nietzsche.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/01_happy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/02_angry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/03_fear.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/04_surprise.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/05_fun.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/06_love.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/07_bye.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/08_sad.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/09_yawn.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/10_yeah.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/11_muscle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/12_stagger.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/13_cry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/14_ sigh.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/15_joy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/16_menace.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/17_yes.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/18_no.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/19_walk.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/mtn/20_sleep.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzche.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzsche.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/assets/nietzsche.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nietzsche/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.2048/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/moc/nito.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/01_happy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/02_angry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/03_fear.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/04_surprise.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/05_fun.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/06_love.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/07_bye.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/08_sad.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/09_yawn.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/10_yeah.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/11_muscle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/12_stagger.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/13_cry.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/14_ sigh.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/15_joy.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/16_menace.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/17_yes.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/18_no.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/19_walk.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/mtn/20_sleep.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/assets/nito.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/nito/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/moc/tororo.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/moc/tororo.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/00_idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/mtn/08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/tororo.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/assets/tororo.pose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tororo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F01.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F02.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F03.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F04.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F05.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F06.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F07.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F08.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F09.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/exp/F10.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.2048/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.2048/texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/moc/tsumiki.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/P01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_01_df.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_07.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_08.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_09.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_10.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_11.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_12.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_13.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_14.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_15.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_16.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_17.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_18.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_19.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_20.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_21.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_22.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_23.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/mtn/tsumiki_m_24.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/tsumiki.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/assets/tsumiki.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/tsumiki/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/moc/wanko.1024/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/moc/wanko.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/idle_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/shake_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/shake_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_01.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_02.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_03.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_04.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_05.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/mtn/touch_06.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/assets/wanko.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/wanko/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/exp/f00.exp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.1024/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.256/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.512/texture_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/moc/z16.moc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/mtn/idle.mtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/z16.model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/assets/z16.physics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/live2d_models/z16/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scaffolds/post.md" beforeDir="false" afterPath="$PROJECT_DIR$/scaffolds/post.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/source/CNAME" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Redis梳理-One.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Redis之命令篇.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Docker之安装.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Docker之安装.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Docker常用命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Docker常用命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Redis之命令篇.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Redis之命令篇.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Redis之开篇必读.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Redis之开篇必读.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/周杰伦歌词《晴天》.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/周杰伦歌词《晴天》.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/总以为你不会离开我.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/总以为你不会离开我.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/换电脑后如何继续写博客-hexo.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/换电脑后如何继续写博客-hexo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/最艰难的时候，你始终一人.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/最艰难的时候，你始终一人.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/有些人，既享受孤独，又害怕孤独.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/有些人，既享受孤独，又害怕孤独.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/本博客常用命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/本博客常用命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/致来者书.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/致来者书.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/那个梦啊.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/那个梦啊.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/随笔分享2019-7-27.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/随笔分享2019-7-27.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/add-this.swig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/baidushare.swig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/duoshuo_share.swig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/share/jiathis.swig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/yilia" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,37 +411,45 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/Redis之命令篇.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="91">
-                <caret line="140" column="22" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
+        <entry file="file://$PROJECT_DIR$/source/CNAME">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="89" column="69" lean-forward="true" selection-start-line="89" selection-start-column="69" selection-end-line="89" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="170">
-                <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              </first_editor>
-              <second_editor />
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -59,13 +458,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>render_drafts</find>
-      <find>qiniu_storage</find>
-      <find>fs</find>
-      <find>163</find>
-      <find>zrevrangebyscore</find>
-      <find>Redis梳理-One</find>
-      <find>font</find>
+      <find>删除</find>
+      <find>theme</find>
+      <find>scheme</find>
+      <find>links</find>
+      <find>google_analytics</find>
+      <find>symbols_count_time</find>
+      <find>symbols</find>
+      <find>充满仙气的大佬</find>
+      <find>language</find>
+      <find>footer</find>
+      <find>.post-button</find>
+      <find>.main-inner</find>
+      <find>content-wrap</find>
+      <find>gentie_productKey</find>
+      <find>网易云</find>
+      <find>music163player</find>
+      <find>rewardButton</find>
+      <find>reward_comment</find>
+      <find>nex</find>
+      <find>passage_end_tag</find>
+      <find>passage-end-tag</find>
+      <find>jsdelivr</find>
+      <find>live2dw</find>
+      <find>shizuku</find>
+      <find>live2d</find>
+      <find>baidushare</find>
+      <find>MathJax Support</find>
+      <find>per_page</find>
+      <find>Rss</find>
+      <find>git</find>
     </findStrings>
     <replaceStrings>
       <replace>Redis之命令篇</replace>
@@ -73,6 +495,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>D:\myphp_project\blogs\github_hexo_blog_auto_git</dir>
+      <dir>D:\myphp_project\blogs\hexo_blog\themes</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -85,23 +508,45 @@
         <option value="$PROJECT_DIR$/source/_drafts/testqwe.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/themes/next/.travis.yml" />
-        <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
         <option value="$PROJECT_DIR$/source/_drafts/Redis梳理-One.md" />
         <option value="$PROJECT_DIR$/source/_posts/Redis梳理-One.md" />
         <option value="$PROJECT_DIR$/source/_drafts/Redis之开篇必读.md" />
-        <option value="$PROJECT_DIR$/source/_posts/本博客常用命令.md" />
-        <option value="$PROJECT_DIR$/source/_posts/Redis之开篇必读.md" />
-        <option value="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" />
+        <option value="$PROJECT_DIR$/source/_posts/环境.md" />
+        <option value="$PROJECT_DIR$/source/_posts/MYSQL8.X安装后 phpMyAdmin无法登陆解决办法.md" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl" />
+        <option value="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" />
+        <option value="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" />
+        <option value="$PROJECT_DIR$/source/_posts/CentOS 7 彻底清理 Docker 环境.md" />
+        <option value="$PROJECT_DIR$/source/_posts/Docker之安装.md" />
+        <option value="$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md" />
+        <option value="$PROJECT_DIR$/source/_posts/Docker常用命令.md" />
+        <option value="$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md" />
+        <option value="$PROJECT_DIR$/source/_posts/phpMyAdmin无法登陆解决办法.md" />
         <option value="$PROJECT_DIR$/source/_posts/Redis之命令篇.md" />
+        <option value="$PROJECT_DIR$/source/_posts/Redis之开篇必读.md" />
+        <option value="$PROJECT_DIR$/source/_posts/周杰伦歌词《晴天》.md" />
+        <option value="$PROJECT_DIR$/source/_posts/总以为你不会离开我.md" />
+        <option value="$PROJECT_DIR$/source/_posts/换电脑后如何继续写博客-hexo.md" />
+        <option value="$PROJECT_DIR$/source/_posts/最艰难的时候，你始终一人.md" />
+        <option value="$PROJECT_DIR$/source/_posts/有些人，既享受孤独，又害怕孤独.md" />
+        <option value="$PROJECT_DIR$/source/_posts/本博客常用命令.md" />
+        <option value="$PROJECT_DIR$/source/_posts/致来者书.md" />
+        <option value="$PROJECT_DIR$/source/_posts/那个梦啊.md" />
+        <option value="$PROJECT_DIR$/source/_posts/随笔分享2019-7-27.md" />
+        <option value="$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md" />
+        <option value="$PROJECT_DIR$/scaffolds/post.md" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
+        <option value="$PROJECT_DIR$/source/CNAME" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="132" />
-    <option name="y" value="153" />
-    <option name="width" value="918" />
-    <option name="height" value="475" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="170" />
+    <option name="y" value="92" />
+    <option name="width" value="1026" />
+    <option name="height" value="554" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -109,6 +554,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,18 +562,53 @@
               <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="live2d_models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="_partials" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -139,6 +620,9 @@
       <recent name="D:\myphp_project\blogs\github_hexo_blog_auto_git\source\_posts" />
       <recent name="D:\myphp_project\blogs\github_hexo_blog_auto_git\qiniu_storage\images\image" />
       <recent name="D:\myphp_project\blogs\github_hexo_blog_auto_git\qiniu_storage\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myphp_project\blogs\hexo_blog\source\_posts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -176,7 +660,15 @@
       <workItem from="1574215503969" duration="784000" />
       <workItem from="1574216323259" duration="1198000" />
       <workItem from="1574228712882" duration="24433000" />
-      <workItem from="1575254218620" duration="5715000" />
+      <workItem from="1575254218620" duration="6170000" />
+      <workItem from="1584368920774" duration="2698000" />
+      <workItem from="1584864660485" duration="3311000" />
+      <workItem from="1585192308417" duration="1952000" />
+      <workItem from="1585206496874" duration="615000" />
+      <workItem from="1585208524123" duration="1933000" />
+      <workItem from="1585455128390" duration="5474000" />
+      <workItem from="1585474664926" duration="4630000" />
+      <workItem from="1585490588224" duration="4813000" />
     </task>
     <task id="LOCAL-00001" summary="2019-1118-2140">
       <created>1574084439966</created>
@@ -196,13 +688,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42376000" />
+    <option name="totallyTimeSpent" value="68257000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23298033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -215,19 +707,20 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.67808217" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.32020548" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.18686868" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.43664384" />
       <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.94863015" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="PHP Inspections" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Redis Servers" order="5" />
+      <window_info anchor="right" id="PHP Inspections" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="Redis Servers" order="5" weight="0.32980332" />
+      <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -240,7 +733,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.67808217" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.14726028" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.42424244" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.43664384" />
       <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.94863015" />
@@ -250,6 +743,7 @@
       <window_info anchor="right" id="PHP Inspections" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Redis Servers" order="5" />
+      <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,51 +756,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="conif" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_drafts/testqwe.md" />
-    <entry file="file://$PROJECT_DIR$/themes/next/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/yilia/source-src/js/mobile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/test/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/landscape/_config.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/.hound.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/gulpfile.coffee">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/landscape/.gitignore" />
     <entry file="file://$PROJECT_DIR$/node_modules/hexo-qiniu-sync/cmd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -314,72 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/Docker之安装.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="297">
-            <caret line="29" column="8" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_drafts/Docker常用命令.md" />
-    <entry file="file://$PROJECT_DIR$/source/_posts/换电脑后如何继续写博客-hexo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="54">
-            <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="843" selection-start-line="843" selection-end-line="843" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="146">
-            <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/Redis之开篇必读.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="85">
-            <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../docker_project/hyperf-test/app/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -394,11 +778,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/images/wechat_header_image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/MYSQL8.X安装后 phpMyAdmin无法登陆解决办法.md" />
+    <entry file="file://$PROJECT_DIR$/source/about/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="170">
-            <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/tags/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/robots.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/categories/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_custom/sidebar.swig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_posts-expanded.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="47" selection-start-line="47" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/Mist.styl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/components/footer/footer.styl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/outline.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_custom/custom.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/footer.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3480">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/reward.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/post.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="357" column="15" selection-start-line="357" selection-start-column="15" selection-end-line="357" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/CentOS 7 彻底清理 Docker 环境.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Docker之必读介绍篇.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/phpMyAdmin无法登陆解决办法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Docker常用命令.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" selection-start-line="4" selection-end-line="4" />
           </first_editor>
           <second_editor />
         </state>
@@ -407,17 +915,218 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/Redis之命令篇.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="91">
-            <caret line="140" column="22" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+          <first_editor relative-caret-position="60">
+            <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/总以为你不会离开我.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/最艰难的时候，你始终一人.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/有些人，既享受孤独，又害怕孤独.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Redis之开篇必读.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="65">
+            <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/周杰伦歌词《晴天》.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="15" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/laravel-admin安装教程.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/换电脑后如何继续写博客-hexo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/本博客常用命令.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/致来者书.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/那个梦啊.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/随笔分享2019-7-27.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/body_background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Docker之安装.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_drafts/Docker之搭建项目环境.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="140">
+            <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaffolds/page.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaffolds/post.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/share/baidushare.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/share/duoshuo_share.swig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/share/jiathis.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/swig-templates/lib/swig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="739" column="30" selection-start-line="739" selection-start-column="30" selection-end-line="739" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="89" column="69" lean-forward="true" selection-start-line="89" selection-start-column="69" selection-end-line="89" selection-end-column="69" />
+        <state relative-caret-position="24">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

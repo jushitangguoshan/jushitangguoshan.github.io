@@ -345,8 +345,8 @@ font:
 
 # MathJax Support
 mathjax:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
@@ -818,9 +818,9 @@ images: images
 version: 5.1.4
 
 # 打赏
-reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-wechatpay: /images/wechatpay.jpg
-alipay: /images/alipay.jpg
+#reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+#wechatpay: /images/wechatpay.jpg
+#alipay: /images/alipay.jpg
 
 # visitors count 访问者统计
 counter: true
@@ -840,9 +840,9 @@ menusettings:
 
 # 网易云音乐链接
 #music163player: //music.163.com/outchain/player?type=2&id=478507889&auto=1&height=66
-
+#
 
 # 文章末尾添加“本文结束”标记
 passage_end_tag:
-  enabled: true
+  enabled: false
 

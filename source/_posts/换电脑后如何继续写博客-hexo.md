@@ -1,11 +1,7 @@
 ---
 title: 换电脑后如何继续写博客-hexo
-tags:
-  - Hexo
-  - 博客
-categories:
-  - 博客
-  - hexo管理
+tags: [hexo, 博客]
+categories: [博客]
 keywords: Hexo、继续写博客、重装电脑
 toc: true
 description: >-

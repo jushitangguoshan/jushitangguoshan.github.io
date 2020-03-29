@@ -1,10 +1,7 @@
 ---
 title: Docker常用命令
-tags:
-  - Docker
-  - 项目管理
-categories:
-  - 技术分享
+tags: [Docker]
+categories: [项目管理]
 keywords: Docker
 toc: true
 description: '&emsp;&emsp;好记性不如烂笔头，笨鸟就要先飞，更何况不是很笨'

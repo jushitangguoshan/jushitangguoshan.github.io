@@ -1,8 +1,8 @@
 ---
 title: Redis之开篇必读
 date: 2019-11-27 16:40:56
-tags: [redis, php]
-categories: redis
+tags: [redis]
+categories: [redis]
 keywords: redis
 toc: ture
 description: "&emsp;&emsp;Redis是一个由Salvatore Sanfilippo写的key-value存储系统，是一个开源的使用 ANSI C语言编写、遵守BSD协议、支持

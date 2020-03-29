@@ -1,7 +1,7 @@
 ---
 title: Redis之命令篇
 date: 2019-11-26 21:50:45
-tags: [redis, php]
+tags: [redis]
 categories: [redis]
 keywords: redis命令
 toc: true
@@ -201,4 +201,3 @@ description: "&emsp;&emsp;本篇主要是梳理redis的常用的API、使用场�
        - LPUSH + RPOP = Queue（队列）
        - LPUSH + LTRIM = Capped Collection（上限集合-环形）
        - LPUSH + BRPOP = Message Queue(消息队列)
-       

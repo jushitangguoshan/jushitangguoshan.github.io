@@ -331,14 +331,14 @@
       {% endif  %}
     </div>
 
-    <!--文章结尾结束标志-->
+    <!--文章结尾结束标志
 
         {% if not is_index %}
         <div>
         {% include 'passage-end-tag.swig' %}
          </div>
         {% endif %}
-
+    -->
 
     {#####################}
     {### END POST BODY ###}
