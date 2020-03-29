@@ -558,7 +558,7 @@ busuanzi_count:
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>您是第：
   site_uv_footer: 位充满仙气的大佬
-  # custom pv span for the whole site
+  # custom pv span for the whole sitegentie_productKey
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>总访问量：
   site_pv_footer: (次)
