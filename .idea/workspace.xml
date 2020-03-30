@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c25428-ee09-4c56-b39d-ee62c5bbfcea" name="Default Changelist" comment="thesmes">
       <change beforePath="$PROJECT_DIR$/.deploy_git" beforeDir="false" afterPath="$PROJECT_DIR$/.deploy_git" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+              <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -251,7 +249,7 @@
       <workItem from="1585455128390" duration="5474000" />
       <workItem from="1585474664926" duration="4630000" />
       <workItem from="1585490588224" duration="8082000" />
-      <workItem from="1585575800742" duration="1795000" />
+      <workItem from="1585575800742" duration="2479000" />
     </task>
     <task id="LOCAL-00001" summary="2019-1118-2140">
       <created>1574084439966</created>
@@ -271,7 +269,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73321000" />
+    <option name="totallyTimeSpent" value="74005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="6" width="1936" height="1066" extended-state="6" />
@@ -689,7 +687,7 @@
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
         </state>
       </provider>
     </entry>
