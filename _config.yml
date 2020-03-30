@@ -87,7 +87,7 @@ deploy:
   #branch: master
   repo:
     github: git@github.com:jushitangguoshan/jushitangguoshan.github.io.git,master
-#    coding: git@git.coding.net:jushitangguoshan/blogs_hexo.git,master
+    coding: https://e.coding.net/jushitangguoshan/blogs_hexo.git,master
   branch: gitcafe-pages
   message: update
   # Live2D
