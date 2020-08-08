@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[MySQL系列之开发规范]]></title>
+    <url>%2F2020%2F04%2F28%2FMySQL%E7%B3%BB%E5%88%97%E4%B9%8B%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%2F</url>
+    <content type="text"><![CDATA[MySQL社区开发规范###命名规范 对象名称必须使用小写，多单词统一使用下划线分割 命名的单词必须做到顾名思义、简洁，表名长度不要超过16个字符，字段名称长度不要超过32个字符 禁止使用保留字并且尽量少用含有关键词来命名 临时表必须以tmp_开头、以日期结尾，备份表必须以bak_开头、以日期结尾 ###基础规范 尽可能地使用InnoDB作为表的存储引擎 在MySQL 5.6以后，InnoDB被设置成默认的存储引擎，支持事务和行级锁。 数据库和数据表统一使用UTF8MB4字符编码 UTF8MB4字符编码支持中文储存以及表情存储，兼容性杠杠的。 所有的表和字段必须添加注释 这个是好习惯的问题，即使做到了顾名思义，以防万一哪天健忘或理解错误，同时给后人留下后路，提高维护性。使用comment设定注释。 尽量控制表行数在500万以内 数据量越多，则查询的效率越低，同时会导致长时间占用高内存以及磁盘IO过高。数据量膨大建议采用分表、合理分区等方案。 尽可能采用冷热数据分离策略 在MySQL中，数据表列数最大限制为4096列 ，每条元祖数据总和大小不能超过65535字节，常用的字段与基本不常用的字段、细分不同业务的数据分开表设计存储，减小表宽度，保证热数据的内存缓存命中率，降低CPU使用率以及降低IO流。 禁止以图片、文件等二进制数据 MySQL虽然支持对文件对象的存储，但是开发人员是不允许、不推荐这样做的。文件通常是很大的，转成二进制数据将是一串很长的字符串，无疑占用数据库很大的存储空间，在数据库读写更是消耗内存和占用大量的IO流，最终导致查询的效率低下。一般文件是存放于文件服务器，将文件服务器的路径存储于数据库中。 ###行为与流程规范 禁止在线上做数据库的压力测试 对应的环境使用对应的数据库比如测试环境一定不能使用测试环境的数据库 super权限只能属于DBA，不能赋予项目程序 养成查看SQL运行性能的习惯，可以借用性能分析工具 譬如：EXPLAIN语句 | showprofile | mySQLsla等。 禁止在业务高峰期批量更新、查询数据 可以在流量比较低的凌晨跑批操作。 活动推广、系统上线以及平台上新务必对流量进行评估 防患于未然、否则可能造成数据库服务器流量瓶颈进而导致影响业务。 所有建表前都要确定字段的类型、长度以及索引方可建表 确保表结构设计为最优是前期数据库最大的优化 所有对表的结构、数据的修改务必经过DBA的审阅和同意 ###表设计规范 尽可能每张表的索引数量控制在5个以内 索引具有提高查询的效率的好处也有降低写操作效率的坏处，甚至会降低查询到的效率。同时索引也是占用内存空间的，因而应该合理控制索引的数量。 每一张InnoDB表都必须含有一个主键 InnoDB 是一种索引组织表：数据的存储的逻辑顺序和索引的顺序是相同的。每个表都可以有多个索引，但是表的存储顺序只能有一种 InnoDB是按照主键索引的顺序来组织表的。不要使用可能会更新的列作为主键，同时尽量不要使用UUID、MD5、HASH等无序的字符串作为主键。在没有特别的情况下，要使用自增的整型或发号器作为主键。 尽可能避免使用外键约束 外键可以保证数据的准确性、参照完整性，每次进行写操作时都会走校验数据知否正确的流程，将会有损写操作的性能，数据的参照完整性建议在业务层实现。倘若字表的写操作很少的情况下务必使用外键约束。 设置数据表架构应考虑后期扩展型 体验产品和架构师的交流和能力、对业务的熟悉度。 ###遵循范式与冗余平衡原则 第一范式：具有原子性 第二范式：主键列与非主键列遵循完全函数依赖关系 第三范式：非主键列之间没有传递函数依赖关系 合理的原则能够体验出数据库的可操作性、稳定性以及性能nice。范式设计是数据结构的一种思想，但是我们应当灵活使用，一味追求三范式无疑会影响程序的性能，适当的冗余是可以提高查询的效率的，前提要保证是主键的冗余。 控制每张表的字段在20以内，否则业务分表 数据表的宽度与内存占用的大小成正比，在进行读写操作时，数据库程序将表结构与数据载入内存，当表宽度越长消耗的内存越多、越占IO流，导致操作的效率下降。将可能将字段按照业务细分、冷热的条件进行分表设计。 ###字段设计规范 尽可能不要在表中建立顾名思义的扩展字段 比如ext、ext_1、extend_n，时间一长，好几个这样的字段，即使每一个都有comment，也会造成SQL的可读性，特别是在构建SQL语句的时候。 优先设置占存储空间最小的类型和长度 合理设置字段的类型和长度，可以节省MySQL的表空间，是性能优化的姿势之一。同时，索引列定义空间越大也会导致建立索引的所需空间也越大。应当严禁定义字段，譬如 IP应使用UNSUGNED或者INT结构类型，在PHP中可以使用long2ip与ip2long函数进行互转 性别应使用CHAR(1)，即定长的字符串类型 … … 尽可能避免使用TEXT、BLOB、ENUM数据类型 MySQL 内存临时表不支持TEXT、BLOB 这样的大数据类型，如果查询中包含这样的数据，在排序等操作时，就不能使用内存临时表，必须使用磁盘临时表进行，毋庸置疑会降低查询的效率。MySQL对索引字段长度是有限制的，TEXT或BLOB类型只能使用前缀索引。 避免ENUM数据类型 在MySQL中，存储枚举类型的数据在库中，字段列中保存的值实际为整数，特别容易导致开发者混乱，同时在查询使用排序是基于数值整型的，虽然可以使用ORDER BY FIELD(),但是会导致索引失效，尽量避免这么做。 尽可能将所有的数据列定义为NOT NULL类型 NULL列比较特殊，需要额外的空间来保存，同时会造成索引失效。 使用TIMESTAMP与INT替换DATETIME存储时间 很明显，TIMESTAMP与INT占4位字节，而DATETIME占8位字节。那么存储时间应该如何选择TIMESTAMP与INT呢？TIMESTAMP的可读性高而INT的灵活性高，因而经常需要使用计算操作的应当使用INT存储，否则使用TIMESTAMP。 金额相关的数据必须使用DECIMAL数据类型 谈到钱这个东西呢，精确是非常重要的，即便要浪费存储空间、笑]]></content>
+      <categories>
+        <category>Mysql</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Redis 异步消息队列与延时队列]]></title>
+    <url>%2F2020%2F04%2F22%2FRedis-%E5%BC%82%E6%AD%A5%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%B8%8E%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97%2F</url>
+    <content type="text"><![CDATA[Redis 异步消息队列与延时队列 消息中间件，大家都会想到 Rabbitmq 和 Kafka 作为消息队列中间件，来给应用程序之间增加异步消息传递功能。这两个中间件都是专业的消息队列中间件，特性之多超出了大多数人的理解能力。但是这种属于重量级的应用，使用比较麻烦点。如果是轻量级的，使用 Redis就可以。比如对于那些只有一组消费者的消息队列，使用 Redis 就可以非常轻松的搞定。Redis 的消息队列不是专业的消息队列，它没有非常多的高级特性，没有 ack 保证，如果对消息的可靠性没有极致的要求，那么它可以拿来使用。 异步消息队列Redis 的 list(列表) 数据结构常用来作为异步消息队列使用，使用rpush/lpush操作入队列，使用lpop 和 rpop来出队列。rpush 和 lpop 结合 或者lpush 和rpop 结合； 客户端是通过队列的 pop 操作来获取消息，然后进行处理。处理完了再接着获取消息，再进行处理。如此循环往复，这便是作为队列消费者的客户端的生命周期 问题来了可是如果队列空了，客户端就会陷入 pop 的死循环，不停地 pop，没有数据，接着再 pop，又没有数据。这就是浪费生命的空轮询。空轮询不但拉高了客户端的 CPU，redis 的 QPS 也会被拉高，如果这样空轮询的客户端有几十来个，Redis 的慢查询可能会显著增多。 通常我们使用 sleep 来解决这个问题，让线程睡一会，睡个 1s 钟就可以了。不但客户端的 CPU 能降下来，Redis 的 QPS 也降下来了。 新的问题：用上面睡眠的办法可以解决问题。但是有个小问题，那就是睡眠会导致消息的延迟增大。如果只有 1 个消费者，那么这个延迟就是 1s。如果有多个消费者，这个延迟会有所下降，因为每个消费者的睡觉时间是岔开来的。 有没有什么办法能显著降低延迟呢？你当然可以很快想到：那就把睡觉的时间缩短点。这种方式当然可以，不过有没有更好的解决方案呢？当然也有，那就是 blpop/brpop。 这两个指令的前缀字符b代表的是blocking，也就是阻塞读。 阻塞读在队列没有数据的时候，会立即进入休眠状态，一旦数据到来，则立刻醒过来。消息的延迟几乎为零。用blpop/brpop替代前面的lpop/rpop，就完美解决了上面的问题。 问题喋喋不休：空闲连接自动断开 你以为上面的方案真的很完美么？先别急着开心，其实他还有个问题需要解决。 什么问题？—— 空闲连接的问题。 如果线程一直阻塞在哪里，Redis 的客户端连接就成了闲置连接，闲置过久，服务器一般会主动断开连接，减少闲置资源占用。这个时候blpop/brpop会抛出异常来。 所以编写客户端消费者的时候要小心，注意捕获异常，还要重试。 消息延时队列​ 延时队列可以通过 Redis 的 zset(有序列表) 来实现。我们将消息序列化成一个字符串作为 zset 的value，这个消息的到期处理时间作为score，然后用多个线程轮询 zset 获取到期的任务进行处理，多个线程是为了保障可用性，万一挂了一个线程还有其它线程可以继续处理。因为有多个线程，所以需要考虑并发争抢任务，确保任务不能被多次执行。 Redis 的 zrem 方法是多线程多进程争抢任务的关键，它的返回值决定了当前实例有没有抢到任务，因为 loop 方法可能会被多个线程、多个进程调用，同一个任务可能会被多个进程线程抢到，通过 zrem 来决定唯一的属主。 同时，我们要注意一定要对 handle_msg 进行异常捕获，避免因为个别任务处理问题导致循环异常退出。 问题来了：同一个任务可能会被多个进程取到之后再使用 zrem 进行争抢，那些没抢到的进程都是白取了一次任务，这是浪费。解决办法：Lua是Redis内置脚本，执行Lua脚本时，Redis线程会依次执行脚本中的语句，对于客户端来说操作是原子性的，将 zrangebyscore 和 zrem 一同挪到服务器端进行原子化操作，这样多个进程之间争抢任务时就不会出现这种浪费了。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 安装 docker 社区版]]></title>
+    <url>%2F2020%2F04%2F22%2FLinux-%E5%AE%89%E8%A3%85-docker-%E7%A4%BE%E5%8C%BA%E7%89%88%2F</url>
+    <content type="text"><![CDATA[参考官网地址：https://docs.docker.com/install/linux/docker-ce/centos/#prerequisites 安装命令：yum install docker-ce docker-ce-cli containerd.io 设置开启自启systemctl enable docker 启动 dockersystemctl start docker 通过运行hello-world 映像来验证是否正确安装了Docker。 docker run hello-world报错处理搜索报错 解决方式：更改镜像源为中国的]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[UTF-8 和 Unicode 有何区别？]]></title>
+    <url>%2F2020%2F04%2F22%2FUTF-8-%E5%92%8C-Unicode-%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB%EF%BC%9F%2F</url>
+    <content type="text"><![CDATA[Unicode 与 ASCII 类似，都是一种字符集。 字符集为每个字符分配一个唯一的 ID，我们使用到的所有字符在 Unicode 字符集中都有一个唯一的 ID，例如上面例子中的 a 在 Unicode 与 ASCII 中的编码都是 97。汉字“你”在 Unicode 中的编码为 20320，在不同国家的字符集中，字符所对应的 ID 也会不同。而无论任何情况下，Unicode 中的字符的 ID 都是不会变化的。 UTF-8 是编码规则，将 Unicode 中字符的 ID 以某种方式进行编码，UTF-8 的是一种变长编码规则，从 1 到 4 个字节不等。编码规则如下： 0xxxxxx 表示文字符号 0～127，兼容 ASCII 字符集。 从 128 到 0x10ffff 表示其他字符。 根据这个规则，拉丁文语系的字符编码一般情况下每个字符占用一个字节，而中文每个字符占用 3 个字节。 广义的 Unicode 指的是一个标准，它定义了字符集及编码规则，即 Unicode 字符集和 UTF-8、UTF-16 编码等。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[解决连接MySql 8.x 出现安装问题]]></title>
+    <url>%2F2020%2F04%2F22%2F%E8%A7%A3%E5%86%B3%E8%BF%9E%E6%8E%A5MySql-8-x-%E5%87%BA%E7%8E%B0%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[解决连接MySql 8.x 出现 The server requested authentication method unknown to the client1、原因：​ 因为 mysql 8 升级了密码的验证方式 caching_sha2_password， 之前一直是mysql_native_password方式，而php都升级到7.2+不支持caching_sha2_password ， 2、解决方法：找到mysql的配置文件my.cnf，我的配置文件位置在 /usr/local/etc/my.cnf (请自行找到自己的电脑的配置文件地址)。(docker容器是在/etc/mysql/my.conf) 1.在 [mysqld]下加入 一行default_authentication_plugin=mysql_native_password 2.重启mysql（Docker容器直接重启MySql容器即可） 3.进入mysql 修改登入mysql用户的登录验证方式 use mysql; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;; FLUSH PRIVILEGES;#刷新权限 提示：最好在创建用户的时候就加上： CREATE USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;; 完成以上就可以进行客户端连接测试，如果还是不成功，则继续向下执行：4.对远程连接进行授权：mysql&gt; GRANT ALL ON *.* TO &#39;root&#39;@&#39;%&#39;; 5.更改密码的加密规则：mysql&gt; ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39; PASSWORD EXPIRE NEVER; 6.更改root的密码：mysql&gt; ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED WITH mysql_native_password BY &#39;123456&#39;; 7.刷新权限：mysql&gt; flush privileges; 8.使用客户端测试;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker 容器安装各种 Linux命令]]></title>
+    <url>%2F2020%2F04%2F22%2FDocker-%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D-Linux%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[这里举例安装 Vi命令（其他命令类似） 在使用docker容器时，有时候里边没有安装vim，敲vim命令时提示说： vim: command not found 1、执行命令：apt-get update 这个命令的作用是：同步 /etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引，这样才能获取到最新的软件包。 2、 等更新完毕以后再敲命令：apt-get install vim 即可。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux ping通端口]]></title>
+    <url>%2F2020%2F04%2F22%2FLinux-ping%E9%80%9A%E7%AB%AF%E5%8F%A3%2F</url>
+    <content type="text"><![CDATA[例如打开端口 9100 外部ping通1、查看已打开端口nmap ip 2、如果 ping 不通查看防火墙是否开通此端口规则 firewall-cmd –query-port=9100/tcp 如果显示 no 则打开防火墙的该端口 firewall-cmd –add-port=9100/tcp /sbin/iptables -I INPUT -p tcp –dport 9503 -j ACCEPT]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[CentOS 7 彻底清理 Docker 环境]]></title>
+    <url>%2F2020%2F04%2F22%2FCentOS-7-%E5%BD%BB%E5%BA%95%E6%B8%85%E7%90%86-Docker-%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[杀死所有运行容器 docker kill $(docker ps -a -q) 删除所有容器 docker rm $(docker ps -a -q) 删除所有镜像 docker rmi $(docker images -q) 停止 docker 服务 systemctl stop docker 删除存储目录 # rm -rf /etc/docker # rm -rf /run/docker # rm -rf /var/lib/dockershim # rm -rf /var/lib/docker如果发现删除不掉，需要先 umount，如umount /var/lib/docker/devicemapper 卸载 docker 查看已安装的 docker 包 yum list installed | grep docker7.卸载相关包yum remove docker-engine docker-engine-selinux.noarch]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Redis之开篇必读]]></title>
+    <url>%2F2019%2F11%2F27%2FRedis%E4%B9%8B%E5%BC%80%E7%AF%87%E5%BF%85%E8%AF%BB%2F</url>
+    <content type="text"><![CDATA[Redis 与其他 key - value 缓存产品比较 Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。 Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。 Redis支持数据的备份，即master-slave模式的数据备份。 Redis 优势 性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。 丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。 原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和E XEC指令包起来。 丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。 Redis与其他key-value存储有什么不同 Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明， 无需进行额外的抽象。 Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相 比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生 的，因为他们并不需要进行随机访问。 redis 特性 速度快 Redis采用的是基于内存的采用的是单进程单线程模型的 KV 数据库，由C语言编写，官方提供的数据是可以达到100000+的QPS（每秒内查询次数）； 完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)； 数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的； 采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操 作，没有因为可能出现死锁而导致的性能消耗； 使用多路I/O复用模型，非阻塞IO； 使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话， 会浪费一定的时间去移动和请求； 持久化 RDB：在指定的时间间隔能对你的数据进行快照存储。 机制： 在Redis运行时，RDB程序将当前内存中的数据库快照保存到磁盘文件中，在Redis重启动时，RDB程序可以通过载入RDB文件来还原数据库的 状态。RDB机制最主要的就是rdbSave和rdbLoad函数，前者将redis内存中数据加载到磁盘上，后者将在Redis重启时将数据恢复到redis 内存中，注意rdbSave会阻塞主进程。 优势： 一旦采用该方式，那么你的整个Redis数据库将只包含一个文件，这样非常方便进行备份。比如你可能打算没1天归档一些数据。 方便备份，我们可以很容易的将一个一个RDB文件移动到其他的存储介质上 - RDB 在恢复大数据集时的速度比 AOF 的恢复速度要快。 - RDB 可以最大化 Redis 的性能：父进程在保存 RDB 文件时唯一要做的就是 fork 出一个子进程，然后这个子进程就会处理接下来的所有 保存工作，父进程无须执行任何磁盘操作。 劣势： 如果你需要尽量避免在服务器故障时丢失数据，那么 RDB 不适合你。 虽然 Redis 允许你设置不同的保存点（save point）来控制保存 RDB 文件的频率， 但是， 因为RDB 文件需要保存整个数据集的状态， 所以它并不是一个轻松的操作。 因此你可能会至少 5 分钟才保存一次 RDB 文件。 在这种情况下， 一旦发生故障停机， 你就可能会丢失好几分钟的数据。每次保存 RDB 的时候，Redis 都要 fork() 出一个子进程， 并由子进程来进行实际的持久化工作。 在数据集比较庞大时， fork() 可能会非常耗时，造成服务器在某某毫秒内停止处理客户端； 如果数据 集非常巨大，并且 CPU 时间非常紧张的话，那么这种停止时间甚至可能会长达整整一秒。 虽然 AOF 重写也需要进行 fork() ，但无论 AOF 重写的执行间隔有多长，数据的耐久性都不会有任何损失 AOF: 记录每次对服务器写的操作,当服务器重启的时候会重新执行这些命令来恢复原始的数据 机制： AOF 则以协议文本的方式，将所有对数据库进行过写入的命令（及其参数）记录到AOF文件，以此达到记录数据库状态的目的。AOF文件其实可以 认为是Redis写操作的日志记录文件。 - 具体过程： - redis调用fork ，现在有父子两个进程 - 子进程根据内存中的数据库快照，往临时文件中写入重建数据库状态的命令 - 父进程继续处理client请求，除了把写命令写入到原来的aof文件中。同时把收到的写命令缓存起来。这样就能保证如果子进程重写失败的话并不会出问题。 - 当子进程把快照内容写入已命令方式写到临时文件中后，子进程发信号通知父进程。然后父进程把缓存的写命令也写入到临时文件。 - 现在父进程可以使用临时文件替换老的aof文件，并重命名，后面收到的写命令也开始往新的aof文件中追加 - （注意到是重写aof文件的操作，并没有读取旧的aof文件，而是将整个内存中的数据库内容用命令的方式重写了一个新的aof文件） 优势： 使用 AOF 持久化会让 Redis 变得非常耐久（much more durable）：你可以设置不同的 fsync 策略，比如无 fsync ，每秒钟一 次 fsync ，或者每次执行写入命令时 fsync 。 AOF 的默认策略为每秒钟 fsync 一次，在这种配置下，Redis 仍然可以保持良好的 性能，并且就算发生故障停机，也最多只会丢失一秒钟的数据（ fsync 会在后台线程执行，所以主线程可以继续努力地处理命令请求）。 劣势： 对于相同的数据集来说，AOF 文件的体积通常要大于 RDB 文件的体积。根据所使用的 fsync 策略，AOF 的速度可能会慢于 RDB 。 在一般情况下， 每秒 fsync 的性能依然非常高， 而关闭 fsync 可以让 AOF 的速度和 RDB 一样快， 即使在高负荷之下也是如此。 不过在处理巨大的写入载入时，RDB 可以提供更有保证的最大延迟时间（latency） （有待实践） 多种数据结构 String（字符串）/Blobs/Bitmaps（位图） Hash Tables（哈希） Linked Lists（列表） Sets（集合） Sorted Sets（有序集合） 主从复制（后续更新） 高可用、分布式]]></content>
+      <categories>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Redis之命令篇]]></title>
+    <url>%2F2019%2F11%2F26%2FRedis%E4%B9%8B%E5%91%BD%E4%BB%A4%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[redis常用数据结构 string 字符串 hash 哈希 list 列表 set 集合 zset 有序集合通用API 失效时间相关设置 key 的过期时间， 成功返回 1，key 不存在或设置失败，返回 0 EXPIRE key seconds 以秒计 EXPIREAT key timestamp 参数是 UNIX 时间戳(unixtimestamp) PEXPIRE key milliseconds 以毫秒计 PEXPIREAT key milliseconds-timestamp 过期时间的时间戳(unix timestamp) 以毫秒计 MOVE key db 将当前数据库的 key 移动到给定的数据库 db 当中 PERSIST key 移除 key 的过期时间，key 将持久保持 PTTL key 以毫秒为单位返回 key 的剩余的过期时间 RANDOMKEY 从当前数据库中随机返回一个 key RENAME key newkey 修改 key 的名称 RENAMENX key newkey 仅当 newkey 不存在时，将 key 改名为 newkey TYPE key 返回 key 所储存的值的类型 以下时间复杂度 O(N)* keys 遍历所有 key (线上不用) KEYS pattern 查找所有符合给定模式( pattern)的 key (线上不用) dbsize 计算 key 的总数(线上不用) String类型API 以下时间复杂度 O(1)* get、set、del 获取、设置、删除 EXISTS key 检查给定 key 是否存在，若 key 存在返回 1 ，否则返回 0 incr key key 自增 1，如果 key 不存在，自增后 get(key)=1 decr key incrby key k decrby key k set key value 不管 key 是否存在，都设置 setnx key value key 不存在，才设置 set key value xx key 存在，才设置 getset key newvalue set key newvalue 并返回旧的 value append key value 将 value 追加到旧的 value strlen key 返回字符串的长度（注意中文） incrbyfloat key 3.5 增加 key 对应的值 3.5（没有自减命令，可用 - 号） getrange key start end 获取字符串指定下标所有的值 setrange key index value 设置指定下标所有对应的值 以下 API 时间复杂度 O(N) mget key1 key2 key3… 批量获取 key，原子操作 mset key1 value1 key2 value2 key3 value3 批量设置 n 次 get = n 次网络时间 + n 次命令时间 1 次 mget = 1 次网络时间 + n 次命令时间 hash哈希 特点：Mapmap、Small redis、field 不能相同，value 可用相同 hget key field 获取 hash key 对应的 field 的 value hset key field value 设置 对应的 field 的 value hexists key field 判断 hash key 是否有 field hlen key 获取 hash key field 的数量 hmget key field1 field2 … fieldN 批量获取 hash key 的一批 field 对应的值 O(n) hmset key field1 value1 field2 批量设置 hash key 的一批 field value valueN O(n) hgetall key 返回 hash key 对应所有的 field 和 value O(n) （谨慎使用） havals key 返回 hash key 对应所有的 value O(n) hkeys key 返回 hash key 对应所有的 field O(n) hsetnx key field value 设置 hash key 对应 field 的 value（如 field 已经存在，则失败） hincrby key field intCounter hash key 对应的 field 的 value 自增 intCounter hincrbyfloat key field floatCounter hincrby 浮点数版 list队列 特点：有序、重复、左右两边插入弹出(一个列表最多存储 2 ^ 32 -1 个元素)* push key value1 value2 … valueN 从列表右端插入值（1-N 个） O(1~n) lpush key value1 value2 … valueN 从列表左端插入值（1-N 个）O(n) linsert key before|after value newValue 在 list 指定的值前|后插入 newValue lpop key 从列表左侧弹出一个 item O(1) rpop key 从列表右侧弹出一个 item lrem key count value O(n) 根据 count 值，从列表中删除所有 value 相等的项 count &gt; 0，从左到右，删除最多 count 个 value 相等的项 count &lt; 0，从右到左，删除最多 Math.abs(count) 个 value 相等的项 count = 0，删除所有 value 相等的项 ltrim key start end 按照索引范围修剪列表 O(n) lrange key start end（包含 end） 获取列表指定索引范围所有 item （获取全部（0 -1））O(n) lindex key index 获取列表指定索引的 item O(n) blpop key timeout O(n) lpop 阻塞版本，timeout 是阻塞超时时间，timeout = 0 为永远不阻塞（一直等） brpop key timeout rpop 阻塞版本，timeout 是阻塞超时时间，timeout = 0 为永远不阻塞 set集合API 特点：无序、无重复、集合间操作* Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。 Redis 中集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。 集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。 假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合 常用API sadd key element 向集合添加一个(O(1) )或多个成员(O(N) ) srem key element 移除集合中一个成员 O(1) SCARD key 获取集合的成员数 sismember 集合中是否存在某个元素 spop 从集合中弹出一个 sdiff 差集 sinter 交集 sunion 并集 谨慎使用 srandmember 返回多个元素(谨慎使用) SMEMBERS key 小心使用,数量太多不行，可scan迭代 SSCAN key cursor 迭代集合中的元素 zset集合(有序)API 特定：无重复元素、有序、element + score zadd key score element 添加 score(可以重复) 和 element（不可以重复） O(logN) zrem key element 删除元素 O(1) zscore key element 返回元素的分数 O(1) zrevrange key start stop 返回有序集中指定区间内的成员，通过索引，分数从高到低 zrevrank key member 返回有序集中指定区间内的成员，通过索引，分数从高到低 zincrby key score 增加或减少元素的分数 O(1) zcard key 返回元素的总个数 O(1) zrank key element 按分数排名 zrevrangebyscore key max min 返回有序集中指定分数区间内的成员，分数从高到低排序 zrange key start end 返回指定索引范围内的升序元素(分值) O(log(n)+m) zrangebyscore key minScore maxScore 返回指定分数范围内的升序元素 O(log(n)+m) zcount key minScore maxScore 返回有序集合内在指定分数范围内的个数 O(log(n)+m) zremrangebyrank key start end 删除指定排名内的升序元素 O(log(n)+m zremrangebyscore key minScore maxScore 删除指定分数内的升序元素 O(log(n)+m 使用场景 set 兴趣标签、粉丝集合、共同好友、适合用于聚合分类 zset 与排序有关的、榜单、排行榜、最新记录等 string 网站访问量、文章浏览量、点赞量、等计数场景(或者普通缓存) hash 商品、用户等基本信息 list 消息系统、通知 LPUSH + LPOP = Stack（堆栈） LPUSH + RPOP = Queue（队列） LPUSH + LTRIM = Capped Collection（上限集合-环形） LPUSH + BRPOP = Message Queue(消息队列)]]></content>
+      <categories>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[换电脑后如何继续写博客-hexo]]></title>
+    <url>%2F2019%2F10%2F11%2F%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E5%86%99%E5%8D%9A%E5%AE%A2-hexo%2F</url>
+    <content type="text"><![CDATA[在博客的GitHub仓库新建一个分支hexo &emsp;&emsp;在红色箭头处输入一个新的分支名称，以下就是我添加好的分支展示情况 &emsp;&emsp;这样配置的话在GitHub上的http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一 个master分支用来存放生成的静态网页 将hexo分支git clona到一个文件夹(new_git_blog_file)中 &emsp;&emsp;此时文件夹是空的，然后将你的博客根目录下中_config.yml、theme、source、scaffolds、package.json、.gitignore文件复制到new_git_blog_file下 &emsp;&emsp;这样一来，在GitHub上的http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成 的静态网页，这里必须注意，在你复制过来的文件夹下面有可能含有.git文件，需要删除后你才能push，比如theme/next文件夹下的.git文件。删除 时需要在‘我的电脑’里面打开然后删除，然后就在这个新文件夹下(new_git_blog_file)中执行 git .add ./ git commit -m &#39;hexo code&#39; git push &emsp;&emsp;提交到hexo分支 另一台电脑上重新安装博客环境1、首先安装git 、nojs 2、然后新建一个文件夹比如：myblog 3、在myblog文件下git clone 你的GitHub仓库里面博客源码的hexo分支 4、然后进入yourblogname.github.io文件夹下面，安装hexo以及相关模块 5、依次执行 npm install hexo --save 、npm install 、npm insatll hexo-deployer-git &emsp;&emsp;然后在myblog目录中就可以执行命令 hexo s查看是否配置成功 新装的博客环境必要操作 &emsp;&emsp;在新装的博客环境中，所在分支是在hexo，而我们博客的配置是设置在master分支上的，所以当写完一篇博客后，除了执行发布命令 hexo clean &amp;&amp; hexo g -d &emsp;&emsp;还需要将博客配置更新到hexo 分支，此时则可以使用git命令提交就行 git .add ./ git commit -m &#39;hexo code&#39; git push &emsp;&emsp;至此以后再每个不同终端上面想要编辑博客时，都要先Git pull origin hexo的配置，完了之后再hexo g -d 并且git push orgin hexo 提交配置文件部分到hexo分支]]></content>
+      <categories>
+        <category>博客</category>
+        <category>hexo管理</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker常用命令]]></title>
+    <url>%2F2019%2F10%2F03%2FDocker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[service docker start |stop |restart 启动 停止 重启 docker run 镜像名称:标签 运行容器 docker -i 交互式操作 docker -t terminal操作 --rm 退出就删除容器 --name 指定容器名称 举例：docker run -it --rm ubuntu:14.04 bash docker images 列出已经下载下来的镜像portcommit 根据仓库名列出镜像 docker images &#39;仓库名&#39; 列出特定的某个镜像，也就是说指定仓库名和标签 docker images &#39;仓库名:标签名&#39; docker pull 获取镜像 docker pull ubuntu:14.04 docker exec 进入容器 docker exec -it webserver bash docker build [选项] 生成的文件名 上下文(context) 构建镜像 例如 ： docker build -t nginx:v3 . -p &lt;宿主端口&gt;:&lt;容器端口&gt; docker rmi [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...] #docker rm 命令是删除容器， docker rm $(docker ps -a -q) 删除所有容器 【docker常见问题】 Docker CE 镜像源站 https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.d88d105oY5zrn Docker 镜像加速器 https://yq.aliyun.com/articles/29941 docker mysql设置初始密码(docker mysql启动马上就自动退出) docker run 加上环境变量参数 -e MYSQL_ROOT_PASSWORD=password1 docker redis 设置初始密码 Dockerfile CMD: &#39;redis-server --requirepass &quot;password1&quot;&#39; docker cron没有执行 Dockerfile CMD: service cron start docker cron 执行的时候时区不对 RUN echo &quot;Asia/Shanghai&quot; &gt; /etc/timezone 或者 同步主机时区 docker run -v /etc/localtime:/etc/localtime &lt;IMAGE:TAG&gt; 以上两种是网上搜索到的，我都没有成功，我目前的解决方案是将crontab -e配置中的时区都往前推8个小时。 例如：你本来是要1,9点运行的，设置为1,17 docker corn 获取不了环境变量 原因：corn的bash环境变量和docker容器的环境变量不是同一个。 解决： printenv |grep -v &quot;==&quot; | grep -v &quot; &quot; | sed &#39;s/^\(.*\)$/export \1/g&#39; &gt; /project_env.sh \ &amp;&amp; chmod +x /project_env.sh \ &amp;&amp; service cron start \ &amp;&amp; bash 两个grep -v 是为了反正docker-compose link的时候变量变量污染]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker之搭建项目环境]]></title>
+    <url>%2F2019%2F09%2F15%2FDocker%E4%B9%8B%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[docker run -v D:\myphp_project\docker_project:/data/myphp_project/docker_project -p 9501:9501 -it –entrypoint /bin/sh hyperf/hyperf:7.2-alpine-cli]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker之安装]]></title>
+    <url>%2F2019%2F09%2F09%2FDocker%E4%B9%8B%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;前提说明：Docker for Windows是一个Docker Community Edition（CE）应用程序。Docker for Windows安装包包 含了在Windows系统上运行Docker所需的一切。如果你不想装虚拟机，想直接在你的Windows操作系统中安装与学习使用docker，那么 你首先得查看你的系统是否满足Docker for Windows的安装与使用要求。 Windows 中Docker安装应用安装前准备&emsp;&emsp;简单介绍： &emsp;&emsp;Docker for Windows的当前版本运行在64位Windows10 Pro，专业版、企业版和教育版（1607年纪念更新，版本14393或更高版本） 上。（Ps:家庭版是不行的，如果你是家庭版，那么一是升级到专业版，破解专业版推荐个地址：http://blog.csdn.net/SONGCHUNHON G/article/details/78006389，二是安装Docker Toolbox，自行百度） &emsp;&emsp;安装条件： &emsp;&emsp;如果你满足Docker for Windows的环境条件了，那么首先检查电脑的虚拟化开启了没有：进入任务管理器（ctrl+alt+delete）， 点击性能-&gt;cpu ,查看虚拟化是否已启用，如果虚拟化是已禁用，那么你需要重启电脑进入bios开启虚拟化（我们一般的笔记本cpu都 是支持虚拟化的，重启时进入bios按esc -&gt; 再按f12 -&gt; 去开启虚拟化，你得开机进入BIOS里把Virtualization的选项变成Enabled （不同机子的Virtualization可能在不同的选项下，去看一下advanced之类的））。 开始安装&emsp;&emsp;检测cpu虚拟化 &emsp;&emsp;开启虚拟化重启后，打开任务管理器，点击cpu查看虚拟化是否已启用 &emsp;&emsp;Hyper配置 &emsp;&emsp;入电脑的控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;把Hyper-v勾上，启用后电脑会重启，后面就可以下载并安装 Docker for Windows了。 下载docker for windows&emsp;&emsp;下载并安装 &emsp;&emsp;&emsp;进入网址https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows 下载并安装, 安装过程直接下一步下一步就Ok了。 &emsp;&emsp;注册登录启动 &emsp;&emsp;&emsp;启动以后会出现在桌面的右下角区域，鼠标放上去以后显示Docker is running表示启动成功，第一次安装启用好像 是会弹出个Docker Cloud登录界面，去注册然后登录，使用和git有点类似，可以pull图像等等 Docker使用前先测试环境&emsp;&emsp;检测检查Docker，Compose和Machine的版本 &emsp;&emsp;&emsp;进入cmd窗口，检查Docker，Compose和Machine的版本，输入以下命令，不报错即可。 &emsp;&emsp;确保docker命令正常工作 输入cmd命令：docker ps &emsp;&emsp;如果报以下错误（先稍等几十秒，有可能是docker正在启动）： &emsp;&emsp;解决方法： 一、确保开启cpu虚拟化、确认Hyper-V启动(上面Part1中2、3步) 二、进入cmd执行下面两行命令: cd &quot;C:\Program Files\Docker\Docker&quot; ./DockerCli.exe -SwitchDaemon 注：如果发现执行不了，那么你可以在windows左下角搜索PowerShell来执行&emsp;&emsp;解决后再试一次： 输入cmd命令：docker ps &emsp;&emsp;出现下面内容则成功： 开始测试&emsp;&emsp;从Docker Hub中拉取图像并启动容器 在windows PowerShell输入cmd命令：docker ps &emsp;&emsp;将会出现以下内容，等待下载完成即可 &emsp;&emsp;接着成功之后出现以下内容： 运行一个Ubuntu容器&emsp;&emsp;在windows PowerShell输入cmd命令： &emsp;&emsp;启动Ubuntu容器成功之后 &emsp;&emsp;我们先结束这个容器 在Ubuntu 容器里面直接输入： exit; &emsp;&emsp;启动一个webserver nginx 服务在windows PowerShell输入cmd命令：docker run -d -p 80:80 --name webserver nginx 注：这一步时间可能有点长，耐心稍等！ （特别注意：网上大部分教程有把&#39;... --name...&#39;写成：&#39;... -name...&#39;，简直坑死了）&emsp;&emsp;启动一个Dockerized webserver 会下载nginx容器图像并启动它，然后再打开浏览器 &emsp;&emsp;访问http://localhost时出现这个界面说明已经成功了 然后大功告成！（去闯吧少年）]]></content>
+      <categories>
+        <category>技术分享</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker之必读介绍篇]]></title>
+    <url>%2F2019%2F09%2F07%2FDocker%E4%B9%8B%E5%BF%85%E8%AF%BB%E4%BB%8B%E7%BB%8D%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[Docker是什么? Docker 最初是dotCloud公司创始人Solomon Hykes在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于2013年3月以Apache 2.0授权协议开源，主要项目 代码在GitHub上进行维护。Docker 项目后来还加入了 Linux 基金会并成立推动开放容器联盟（OCI）。 Docker 使用Google公司推出的Go语言 进行开发实现，基于Linux内核的cgroup，namespace，以及 AUFS类的Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进 程独立于宿主和其它的隔离的进程，因此也称其为容器。 Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简 化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整 操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没 有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。 Docker有什么用？Docker能带给我们什么？ 更高效的利用系统资源 由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。 无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟 机技术，一个相同配置的主机，往往可以运行更多数量的应用。 更快速的启动时间 传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核， 无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、 部署的时间。 一致的运行环境 开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有 些bug并未在开发过程中被发现。而Docker 的镜像提供了除内核外完整的运行时环境，确保了应用 运行环境一致性，从而不会再出现「这段代码在我机器上没问题啊」 这类问题。 持续交付和部署 通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试， 而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Depl oyment) 系统进行自动部署。 更轻松的迁移 由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行， 无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易 的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运 行的情况。 更轻松的维护和扩展 docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更 新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团 队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制， 大大的降低了应用服务的镜像制作成本。 对比传统虚拟机总结 特性 容器 虚拟机 启动 秒级 分钟级 硬盘使用 一般为 MB 一般为 GB 性能 接近原生 弱于 系统支持量 单机支持上千个容器 一般几十个 为什么要学习使用Docker？&emsp;&emsp;对于新手来说，可能仅仅是在工作中遇到，才会想到会学会使用，实不相瞒，我也是这样想的，所以就 这样了解了解，但是正因为作为一个新手，所以对一切都有非常浓厚的兴趣，于是想静下心来好好的去 认识这么一个知识点，说真的互联网知识体系庞大，唯有静下心来，慢慢欣赏这一路的风景，以此， 记录，一路的历程。当然也是作为提升自己的一个小小途径。 &emsp;&emsp;其次，因为不管你用的是Windows、Mac还是Ubuntu。 如果生产环境也使用的Docker的话，你甚至可以直接打包一套环境，直接丢上去就可以运行了，再也不用担心开 发-生产环境之间的差异了，尝试错误解决更方便，不会动用正式服的环境，就可以放心大胆的测试因为环境而带来的问题。 &emsp;&emsp;“相见恨晚”用来形容我对docker的热爱再合适不过了,自从用了docker,开发环境也不安装了，系统想换就换了，部署更 是一键部署，再也不用担心在这台机器上跑的好好的 然后大功告成！（去闯吧少年）]]></content>
+      <categories>
+        <category>技术分享</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[周杰伦歌词《晴天》]]></title>
+    <url>%2F2019%2F09%2F07%2F%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%AD%8C%E8%AF%8D%E3%80%8A%E6%99%B4%E5%A4%A9%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[从出生那年就飘着 童年的荡秋千 随记忆一直晃到现在 Rui sou sou xi dou xi la Sou la xi xi xi xi la xi la sou 吹着前奏望着天空 我想起花瓣试着掉落 为你翘课的那一天 花落的那一天 教室的那一间 我怎么看不见 消失的下雨天 我好想再淋一遍 没想到失去的勇气我还留着 好想再问一遍 你会等待还是离开 刮风这天我试过握着你手 但偏偏雨渐渐大到我看你不见 还要多久我才能在你身边 等到放晴的那天也许我会比较好一点 从前从前有个人爱你很久 但偏偏风渐渐把距离吹得好远 好不容易又能再多爱一天 但故事的最后你好像还是说了拜拜 为你翘课的那一天 花落的那一天 教室的那一间 我怎么看不见 消失的下雨天 我好想再淋一遍 没想到失去的勇气我还留着 好想再问一遍 你会等待还是离开 刮风这天我试过握着你手 但偏偏雨渐渐大到我看你不见 还要多久我才能在你身边 等到放晴的那天也许我会比较好一点 从前从前有个人爱你很久 偏偏风渐渐把距离吹得好远 好不容易又能再多爱一天 但故事的最后你好像还是说了拜拜 刮风这天我试过握着你手 但偏偏雨渐渐大到我看你不见 还要多久我才能够在你身边 等到放晴那天也许我会比较好一点 从前从前有个人爱你很久 但偏偏雨渐渐把距离吹得好远 好不容易又能再多爱一天 但故事的最后你好像还是说了]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>心情</tag>
+        <tag>歌词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[本博客常用命令]]></title>
+    <url>%2F2019%2F08%2F29%2F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;这是一些常用命令，用于平时写文章、美化博文、添加有趣的小东西的一些经历，怕自己记不住， 因此专门写一篇用来记录日常，正所谓好记性不如烂笔头，坚持下下，记录起来，方便下次用！ Let’s Go!!! hexo常用命令篇清除缓存、生成资源、启动本地服务 hexo clear &amp;&amp; hexo g &amp;&amp; hexo s hexo g : 生成静态文件，在public文件夹中（hexo generate的缩写） hexo s: 生成本地预览，默认情况下，访问网址为： http://localhost:4000/ hexo d: 部署并提交代码至GitHub中（ deploy缩写） hexo clean: 清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后） 如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。 hexo new draft &lt;title&gt; : 生成草稿，不会提到github hexo S --draft ：本机预览草稿 hexo P &lt;filename&gt; : 发布为正式文章 部署到线上 hhexo clear &amp;&amp; hexo d -g 创建新文件 touch filename.swig 七牛云使用 将项目使用的图片上传到七牛云 引用本地图片 &lt;img src=&quot;/images/myImage.png&quot; width=50% height=50% align=center/&gt; ！！！！！！！！！！每一项的 : 后面均有一个空格 且 : 为英文符号 ！！！！！！！！！！ title: 文章标题，可以为中文 date: 建立日期，如果自己手动添加，请按固定格式 就算不写，页面每篇文章顶部的发表于……也能显示 只要在主题配置文件中，配置了 created_at 就行 那为什么还要自己加上？ 自定义文章发布的时间 updated: 更新日期，其它与上面的建立日期类似 不过在页面每篇文章顶部，是更新于…… 在主题配置文件中，是 updated_at permalink: 若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） categories: 分类，支持多级，比如： - technology - computer - computer-aided-art 则为 technology/computer/computer-aided-art （不适用于 layout: page） tags: 标签 多个可以这样写 [标签1,标签2,标签3] （不适用于 layout: page） description: 文章的描述，在每篇文章标题下方显示 并且作为网页的 description 元数据 如果不写，则自动取 &lt;!-- more --&gt; 之前的文字作为网页的 description 元数据 keywords: 关键字，并且作为网页的 keywords 元数据 如果不写，则自动取 tags 里的项 作为网页的 keywords 元数据 comments: 是否开启评论 默认值是 true 要关闭写 false layout: 页面布局，默认值是 post，默认值可以在 站点配置文件中修改 default_layout 另：404 页面可能用到，将其值改为 false type: categories，目录页面 tags，标签页面 picture，用来生成 group-pictures quote？ https://io-oi.me/tech/test/ photos: Gallery support，用来支持画廊╱相册，用法如下： - photo_url_1 - photo_url_2 - photo_url_3 https://io-oi.me/tech/test/ link: 文章的外部链接 https://io-oi.me/tech/test/ image: 自定义的文章摘要图片，只在页面展示，文章内消失 此项只有参考本文 5.14 节配置好，否则请勿添加！ sticky: 文章置顶 此项只有参考本文 5.15 节配置好，否则请勿添加！ password: 文章密码，此项只有参考教程： http://shenzekun.cn/hexo的next主题个性化配置教程.html 第 24 节，配置好，否则请勿添加！ 发现还是有 bug 的，就是右键在新标签中打开 然后无论是否输入密码，都能看到内容]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[laravel-admin教程之安装（爬坑系列一）]]></title>
+    <url>%2F2019%2F08%2F22%2Flaravel-admin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;laravel-admin是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能， 能帮助你使用很少的代码，就实现功能完善的后台管理功能。 特别注意：当前laravel-admin版本(v1.7.+)需要安装PHP 7+和Laravel 5.5+ Θ废话不多说，直接开爬 1、搭建安装环境：安装composer&emsp;&emsp;如果没有安装composer请百度安装composer，此处默认已经安装composer,然后 新建一个文件夹，名字任意取，此处文件夹名称为laravel_demo,然后进入该文件夹。 2、安装laravel框架： --------在项目文件下的cmd窗口，执行下面命令------- #1)首先：使用 Composer 下载 Laravel 的安装程序： composer global require &quot;laravel/installer&quot; 2)接着用laravel 用安装器这样执行一句命令(建一个名字叫laravel-admin的laravel框架项目)： laravel new laravel-admin 3)在根目录下的.env文件里面把数据库信息填写好建完之后,此时就已经是一个完整的laravel项目了，3、正式安装laravel-admin： 1)此时仍然是在项目文件下的cmd窗口，执行下面命令： composer require encore/laravel-admin 2)成功后继续执行下面的命令来发布资源： php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot; 3)成功后继续执行： php artisan admin:install&emsp;&emsp;执行到这里你就应该掉坑里面了，因为这个坑我也爬过，但是爬了一些不必要的时间，下面我就让你们正确一次 性过这个坑(记得留言点个赞，爬坑不容易) 若出现错误提示：SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes (SQL: alter tableusersadd uniqueusers_email_unique(email)) 解决办法：在app\Providers\AppServiceProvider.php添加默认值 &lt;?php namespace App\Providers; use Illuminate\Support\ServiceProvider; use Illuminate\Support\Facades\Schema; class AppServiceProvider extends ServiceProvider { /** * Bootstrap any application services. * @return void */ public function boot()//在这个方法里面加上这么一句就ok（完美来起） { Schema::defaultStringLength(191); // &lt;--就是这一句 } } ?&gt;&emsp;&emsp;接下来就可以启动服务了，（此处作为一个laravel新手就不知道什么叫启动服务了，实不相瞒，我也是，不 过幸好你遇到我） 执行一下命令启动服务：php artisan serve&emsp;&emsp;接着你就可以打开http://127.0.0.1:8000来访问laravel-admin了 &emsp;&emsp;运行到此处就已经来起了（不过后面坑也跟着来了） 1)进入laravel-admin后台：http://127.0.0.1:8000/admin/auth/login，初始账户and密码都为admin 2)如果报错的话，很正常，因为我也报了很久的错（你们真好，一次性就能解决，我可是爬了很久的坑） 错误提示;SQLSTATE[HY000] [1045] Access denied for user &#39;root&#39;@&#39;localhos&#39;...... 解决办法： 如果是本地运行phpstudy跑项目，那么直接进入mysql管理把账户密码都改为你的.env里面配置的密码 服务器上同上面的操作一样然后大功告成！（去闯吧少年）]]></content>
+      <categories>
+        <category>php开发</category>
+        <category>laravel-admin</category>
+      </categories>
+      <tags>
+        <tag>laravel-admin</tag>
+        <tag>php后台框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[最艰难的时候，你始终一人]]></title>
+    <url>%2F2019%2F08%2F17%2F%E6%9C%80%E8%89%B0%E9%9A%BE%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E4%BD%A0%E5%A7%8B%E7%BB%88%E4%B8%80%E4%BA%BA%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;他说：你知道吗？曾经有一段时间我很想打电话给你，在我没有办法交房租的时候，在 我的微信钱包余额显示为0的时候，在我每天晚上睡在天桥底下被冷醒的时候。可最后我还是忍了下来， 因为我怕被你取笑，也害怕你担心我。 ◐她就不再是你爱的那个姑娘 &emsp;&emsp;那一天，北京很热，我没有钱交房租，于是就把原本不多的行李打包好。准备出门的时候，发现外面 的温度简直可以把我身体里的水分吸干，于是我又倒了回去，享受多几分钟的冷风，最后还是被房东 赶了出来。那时候，我身上只剩下40块现金，一个人拖着行李站在路边，四处张望，不知往左走还是 往右边。 &emsp;&emsp;我走过一条桥，从上面往下看，觉得水很深，不知道为什么一直就想这样跳下去，可是在一霎那，我 想到了家里的父母，我又把念头打了回去。心想，好死不如赖活着，毕竟自己已经烂了二十多年，也不差这一会。 &emsp;&emsp;我怼了他：你是蠢货吗，都快活不下去了还不找我？ &emsp;&emsp;他说：找你又有什么用，毕竟你今年也才刚毕业，身上也没有钱可以帮我。 &emsp;&emsp;电话里我一阵沉默。 &emsp;&emsp;他又继续说：那段时间是我长这么大最难熬的时光，但我什么人都没找，因为我想自己扛。 在那里没有什么朋友，住在地下室，环境很恶劣。家里人打电话给我的时候，为了不让他们担心我只 能说一切安好。没钱买新衣服，面试那会被面试官嫌弃穿着问题，最后还把我刷掉了。 &emsp;&emsp;没钱住房那一阵子，我住在一个天桥底下，一到晚上很冷，经常在半夜被几只流浪狗吓醒，后来时间 一长，我反而跟它们成为了朋友。 &emsp;&emsp;白天没事做，我就跑到附近的超市呆着，至少里面的环境很好，也不会被晒。有时候就经常跑去附近 的图书馆，一呆就是一整天，饿了就在里面接免费茶水喝，闭馆的时候会跑到附近的便利店买一个最便宜的面包吃。 &emsp;&emsp;那段时间，我一直很想放弃自己心中的梦想，北漂这一条路终究不属于我。半夜被饿醒的时候，我有 好多次想打电话给你，但是号码输进去的时候，我又按了退出。因为搞不好，你也跟我一样，你既不 能帮我什么，又会担心我。 &emsp;&emsp;有一次我路过一家超市，看到门口有发传单的兼职，我进去了店里询问，他们很委婉地拒绝了我，表 面说我不合适，但是实际上是嫌弃我形象不是很好。我死皮赖脸地求他们给我个机会，一个店员差点 把我赶了出来，我像一条狗一样在门口蹲着。 &emsp;&emsp;还好，店长最后动了恻隐之心，出来问我：你真的想做吗？我看着他点了点头说：因为我现在没钱吃 饭，快要饿死了。最后，店长把兼职给了我。 &emsp;&emsp;我抱着一大堆传单，抱着很紧，仿佛那就是我的救命稻草。我走在各条大街小道上，见到路过的人就 发，可是没有理睬我，大概是嫌弃我身上脏，不敢靠近。走了很久，才发出了好几张，最后坐在路边 的杂草里休息一会。一个十几岁的小男孩走了过来，跟我说：可以给我一些传单吗，我想拿回家折纸 飞机。 &emsp;&emsp;我一下子感觉自己被幸运之神眷顾到一样，喜极而泣，在点头之后拿了一些给他，他又问，还可以给 我多一点吗？我又点了点头。最后我借着所剩的力气发完了全部的传单，准备回去领工钱，拿到200块 钱的时候，我眼泪差一点就喷了出来。随后我在路边买了一个烧饼，给自己买了一瓶矿泉水。 &emsp;&emsp;走在北京的街道上，吃着东西，吃着吃着眼泪又掉了下来。那段时间，过得很苦，但是不知道为什么 就熬了过来。 &emsp;&emsp;我是在三个月前毕的业，但是我已经工作了四个月，因为我还没有毕业就出来找工作。我的求职之路 还不算曲折，一次面试，就顺利通过，坐标在深圳。 &emsp;&emsp;我家在一个小农村里面，那里面民风淳朴，只是经济不发达，许多人读了大学就不想继续回去了。他 们就像一群一直被困在笼子里的小鸟，挣脱开笼子之后，就没想过回头，我也一样。 &emsp;&emsp;我来深圳的时候没有告诉家里任何人，因为我知道他们一定会反对，我努力这么久，就是为了有一天 可以飞出来。所以在读大学的时候，我就一直在存钱，我深知这笔钱，可以支撑我做毕业后想做的事 情。在我工作半个月之后，我才告诉他们“我已经工作了”这个消息。 &emsp;&emsp;来深圳的时候，我人生地不熟，依靠着各种各样的手机app，找路线找房子。入职之后，我一边上班一 边找房子。这里的房子都很贵，选择了很久之后，才最终确定了一家还算便宜的单间。 &emsp;&emsp;我租的房子是一间公寓，都是空房，我一次性交了两个月的房租，还签了一年的合同。我把行李放进房 间里，随后拿着一个手机出去买东西。一个人，给自己买了一张床，一张桌子，一把椅子，一个水壶， 便开始了一个人生活之路。 &emsp;&emsp;我不是一个恋家的人，但是我又希望自己住的地方有家的感觉。可是工作那一个月，每天下班回到家 里，看着空荡荡的房间，莫名有一种孤独，疲惫地躺在床上，很饿但是没有做饭工具。想叫个外卖却 发现配送费太贵了，累了一天还要被吃饭这件事折腾，实属无奈。 &emsp;&emsp;有一次周末下了大雨，我坐在家里地上，看着外面狂风暴雨，再看看空荡荡的房间，再想想今晚的晚 饭，突然间，就想家了。那段时候，自己过得不是很辛苦，但是脱离了集体生活之后还是有点不适应， 总觉得，怎么自己会这么烂呢。 &emsp;&emsp;但是一眨眼，几个月就这样过去了。家里添置许多家具，一进门就有家的感觉。跟房东的关系也很好， 也经常回去领居家里蹭饭，有时候周末无聊，就会下楼看看附近的大爷大叔们下象棋，还跟他们打成 了一片。晚上肚子饿的时候，就会自己走几条马路，在路边的夜宵店买一碗饺子吃。 &emsp;&emsp;原来，所有我曾以为的难受，在熬过之后，竟然变得那么云淡风轻，再次说起的时候，内心竟然是如 此平静，没有波澜。 ◐纵使岁月无情无意奔驰 &emsp;&emsp;最后，他还是来了，收到了深圳这边一家公司的offer，他就过来了。 &emsp;&emsp;我从来没有想过他会来深圳，虽然都是大城市，但是始终觉得他的梦想应该还是在魔都。他的样子几 乎没有什么改变，一往的臭脾气，头发也不剪，穿着一件很老的T恤，看起来很堕落。 &emsp;&emsp;接到他的时候，他冲着我说了一句：小子现在发达了，比以前壮实了一点，发型和穿衣品味也变了， 以后可以多多照顾哥一点。 &emsp;&emsp;说完他拍了我一下，然后站在路边傻笑。我在想，要不是认识了他十几年，要不是互相清楚彼此的脾 性，不然一个文青跟一个痞子，这辈子是没有办法融合在一起的。 &emsp;&emsp;那天晚上我请了他吃饭，外面的风都是温的，我们找了一家环境还不错的餐厅。我们点了小龙虾还有 烤鱼，我不会喝酒，所以两个人就点了一瓶大可乐。吃完之后我们沿着大道往我家走去，一边看着路 灯，一边畅谈着在这座城市的未来。他庆幸自己从魔都逃了出来，我庆幸在这座城市终于不再一人。 我们各怀鬼胎，各自幻想着未来。 &emsp;&emsp;那几天我陪他去找房子，我们都不喜欢合租，最后在离我家不远的地方找一个单间。我帮他交了一个 月的房租，然后陪他去添置一点家具，他是一个很要面子的人，但是在我面前，他不会带上伪装的面 具。房间多了一点家具之后，慢慢地有了家的气息。总算稳定下来，下周开始上班。他躺在床上，舒 了一口气。 &emsp;&emsp;回家的路上，我突然心情很不好，觉得好难受，不知道是为他，还是为我了自己。 &emsp;&emsp;他很早就没读书，一开始去了广州打工，后来觉得广州那边的老板太傻逼，又跑去了上海。上海的天 气他很不适应，特别一到冬天，他的脸就一直被冻到裂开，于是趁着工资也不高的时候向那座时尚之 都说了拜拜。最后他看到很多人北漂，还混得不错，于是又独自一个人跑去了北京。 &emsp;&emsp;这些年，他一直在东奔西走，像个流浪汉一样。几年下来，身上没有存多少钱，因为性格问题也没有 多少个知心朋友。他曾今谈过一个女朋友，但是她无法跟他奔波在不同城市之间，最后分手了。他跟 我说过：如果30岁的时候自己还单身，那就不结婚了，反正到了那时候也没有哪家姑娘还要我。 &emsp;&emsp;我知道他还是会离开深圳，因为他经常抱怨这里的交通很不好，离地铁口太远，公司的老板又是一个 大傻逼，还是个老女人，自从他进了公司就一直盯着他看，他担心被潜规则，而且同事个个都是心机 婊，总有一天会被他们算计的。 &emsp;&emsp;我笑了，但我没有问他要去哪里，因为我知道，他大概也不知道吧。 ◐面对着生活抛给你的苦涩 &emsp;&emsp;其实呢，生活无非就是从一个地方换到另外一个地方，从一种难受不断跳跃到另外一种难受之中，然后 继续死撑着。 &emsp;&emsp;没有人会知道你有多累，也没有人会告诉你接下来的路要怎么走，因为我们生来就不同，我们的人生状 态也不同，所以呢，孤独就是我们学着面对的事情。 &emsp;&emsp;大二那年我有一段时间暴瘦，别人问我怎么不多吃一点，我笑着说我比较挑食。其实我没有告诉他们， 那时候自己患有轻微的厌食症，拿到报告的时候自己相信都不敢相信。有一天晚上在床上想着，要是有 一天就这么死掉了怎么办？ &emsp;&emsp;我知道其实也不算什么大病，但是那时候是我人生中第一次感到特别怕死，因为我的身上背负着很多人 的期待。那段时候，其实人很抑郁，很想告诉别人，但是又不敢，其实很我期待那些最好的朋友可以发 现。有一次很难受，想暗示他们一下，最后他们的一句“别开玩笑”让我知道，人生中有些心里话，注 定只能烂在自己心里。 &emsp;&emsp;大三那一年，我抛弃了所有的社交圈，按部就班参加实习任务，因为住在学校，下班之后就去跑步，晚 上就去图书馆看书。那段时间，我没有参加任何聚会，觉得烦。宁愿花点时间去散散步，花五块钱买一 杯奶茶，坐在湖边吹风才是自己想要的生活，觉得那才是让我感到自在的状态。 &emsp;&emsp;很多时候，我都已经忘记了自己最苦的时候是怎么熬过来的。好像也没有做很特别的努力，只是脚步一 直跟随着时间在走。 &emsp;&emsp;我从来不会去求别人，因为我知道，别人始终是别人，就算是我的父母，他们也无法护我一世安康。最 难熬的时候，都是一个人，也只能是一个人。 ◐闯过荒无人烟的地方 &emsp;&emsp;其实呀，生活也没有糟糕到什么地步，既没有患上什么癌症，也没有出门就被车撞死，更没有一醒来就 发现自己一下子老了五十岁。 &emsp;&emsp;被炒鱿鱼了就重新再找下一家，被甩了就重新再找一个真爱，被生活一直暴击那就让自己变得强大起来。 你爸妈养你那么大，是要你长大后可以来为他们遮风挡雨的，而不是要你来向生活认怂的。 &emsp;&emsp;最后，他还是离开了深圳，呆了两个月。他说他要回一趟家，看看家里父母，临走之前他把家具全都低 价卖掉了，最后请了我在路边吃了一顿麻辣烫，味道还真不错。 &emsp;&emsp;我问他以后要干嘛，又要去哪里，他说，走到哪算到哪里，人生也没有那么长，有些东西，自己熬过了， 其实也就没有那么怕的。 &emsp;&emsp;在他身上，我看到很多无奈，也看到了很多希望。我多希望他不要被这个社会束缚住，就算一个人，也 可以在以后的日子里寻得安康和快乐。 &emsp;&emsp;他二十几岁的面孔，却有着五十岁的内心，我想，这就是岁月给予给他的礼物吧。 &emsp;&emsp;他走的那一天，我心情很沉重，晚上一直睡不着。起身起来听歌，听到五月天的《倔强》，心里像打着 鸡血一样，看着窗外的泛黄的路灯，默默在心里告诉自己： &emsp;&emsp;我一定要做那种人，无论处在什么样的人生状态，不管好的，还是坏的，明天一觉醒来，都可以随时一 个人离开。 特别说明：本文原创作者来自我的好朋友邱大深，欢迎关注作者公众号、转载、分享]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>生活</tag>
+        <tag>记录</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[那个梦啊]]></title>
+    <url>%2F2019%2F08%2F09%2F%E9%82%A3%E4%B8%AA%E6%A2%A6%E5%95%8A%2F</url>
+    <content type="text"><![CDATA[我曾一直追寻 追寻着那个梦啊 到头来才发现 那永远只是梦啊 时间在慢慢逃跑 模糊了那个梦啊 我想努力了回忆 记不起那个梦啊 想要再一次寻找 寻找到那个梦啊 在老旧的街头小巷 在毕业学校的操场 找过了衣柜后面 也找了抽屉里面 去过看了夜的星空 也听过了夏日蝉鸣 可是认真的寻找 也找不到那个梦啊 到底弄丢在哪 我的那个梦啊 究竟要到哪里去 才找到那个梦啊 可能人的一生 就是寻找那个梦啊 工作了存钱后 也要继续找那个梦啊 也许有那么一天 它突然自己出现 终于能笑着对它说 原来你在这啊 特别说明：本文原创作者来自我的好兄弟刘孝天，欢迎转载、分享（请注明出处）]]></content>
+      <categories>
+        <category>美文</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>美文</tag>
+        <tag>七夕</tag>
+        <tag>情人节</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[有些人，既享受孤独，又害怕孤独]]></title>
+    <url>%2F2019%2F08%2F04%2F%E6%9C%89%E4%BA%9B%E4%BA%BA%EF%BC%8C%E6%97%A2%E4%BA%AB%E5%8F%97%E5%AD%A4%E7%8B%AC%EF%BC%8C%E5%8F%88%E5%AE%B3%E6%80%95%E5%AD%A4%E7%8B%AC%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;每到放假我几乎有一半的时间都用来睡觉，因为除了看书写文章做饭，基本不想做其他事情，不是因为懒，而是觉得不想把 生活搞得太负责，简单一点，也自在一些。工作之后，除了跟在附近上班的几个朋友有联系之外，我几乎断掉了以前所有的社交。有新的 微信号，也有新的电话号码，迫不及待想跟不堪的过去一刀两断。 &emsp;&emsp;一方面是因为，渐行渐远是人与人之间关系的常态，太拼命去维系太累，倒不如洒脱让时间冲淡。另一方面是觉得，好 的人是不会走，会走的都是一些关系一般的人，坦然接受离开才是正确的处理方式。 &emsp;&emsp;说实在话，其实我很怕维系与别人的关系，太怕。担心走得太近被别人嫌弃，走得太远又被别人抛弃，害怕对方不以为然， 也害怕时间一久自己坚持不下去。 &emsp;&emsp;很多时候，我都觉得自己是一个冷血的人，而且习惯给自己加一个盔甲，对于外人，在接受的同时也会做好防备措施， 我怕我对你有了感情，然后你又趁我不注意的时候不打招呼就离开。 &emsp;&emsp;在这个流行离别的时代，我对大部分感情其实都没有什么信心，所以现在的我不愿意花太多时间去维系。我很害怕陌生 人突然之间对我好，我知道里面有很多好意。但是当对方说出要跟我做朋友的那一刻起，我就想到与对方不再联系的那一天了。 &emsp;&emsp;以前从觉得拥有很多朋友会活得很快乐，但后来才发现，真正对你好的人其实也就那几个。所以现在我对自己的社交圈 没有那么严格，有几个知心好朋友，不至于有急事单枪匹马，一个人活得开心，这样就足够了。 &emsp;&emsp;有一次在微博收到一条私信：我既享受孤独，又害怕孤独，我是不是有病。 &emsp;&emsp;看到这句话的时候，我联想了我自己，其实也代表很多人。 &emsp;&emsp;很多时候，觉得一个人也可以活成一只队伍，特别是那些在感情区域内受过伤的人来说，他们在痛过之后大部分都选择 伪装自己，欺骗别人我也可以高傲地生活。 &emsp;&emsp;可是人毕竟是感性动物，一个人即便足够理性，在某天夜深人静的时候那颗心也会软化，你也会害怕一个人，也会觉得 孤单，也会渴望被爱，只是你习惯戴上面具，活成无坚不摧的样子。 &emsp;&emsp;但不用怕，因为其实很多人都像你一样。这世上，有太多相像的人，他们孤独地着在世界，没有很多朋友，没有太多的 自由，战战兢兢地过得无人能懂的生活。 &emsp;&emsp;有的人，早已对未来失去了信心，选择机械性的生活态度面对以后的路。可同样的，也有人懂得，其实人的一生就是一 场孤独的旅行，途中出现的人只是短暂存在的，并没有多少的人可以完整地走到最后。 &emsp;&emsp;成长这条路，走的人，其实就只有自己。 &emsp;&emsp;最后。 &emsp;&emsp;今天一个人在家里打扫卫生，看了一部电影，做了两道菜，翻了几页书，最后写了这篇文章。 &emsp;&emsp;其实你发现没有，生活其实很简单，太复杂反而显得劳累。不管如何，身边有太多的朋友，只能让你不孤单，但是孤独 对于一个人而言，是永远存在的。 &emsp;&emsp;我知道你孤独，也清楚生活的不容易，但与此同时，我希望你能耐得住寂寞，独自把迷茫无知的未来走完。 &emsp;&emsp;总有一天，那些你独自熬过的苦，流过的泪，都会像一个喷嚏一样，大声地打出来，不痛不痒。 特别说明：本文原创作者来自我的好朋友邱大深，欢迎关注作者公众号、 转载、分享]]></content>
+      <categories>
+        <category>美文</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>美文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[总以为你不会离开我]]></title>
+    <url>%2F2019%2F08%2F04%2F%E6%80%BB%E4%BB%A5%E4%B8%BA%E4%BD%A0%E4%B8%8D%E4%BC%9A%E7%A6%BB%E5%BC%80%E6%88%91%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;前一段时间我一直在放空自己于“走”和关于“离开”，从小到大都经历了不少，跟小 时候一起长大的伙伴分道扬镳，跟最好朋友从熟悉走到陌生，和无比喜欢的人从无话不说到无话可说， 目送最亲的亲人离开这个世界。 &emsp;&emsp;一切都是那么残酷但又那么自然，生活就像一潭湖水一样，被一阵风突然间地吹过湖面 荡起涟漪，等到风过之后又重新回复平静，仿佛一切从未发生过。 Part.1&emsp;&emsp;前一段时间我一直在放空自己，不给自己太多的压力，我去了其他城市走了走，在一个 陌生的地方睡觉，吃饭，喝咖啡，看书，看电影，搭地铁，工作。有一天黄昏，我路过一条隧道，上 来就是一个十字路口，旁边都是茂密的大树，我站在中间，看着路上人来人往，一个骑着三轮车的大叔 在载着一车哈密瓜，黝黑的皮肤和浑浊的双眼让人看起来很疲惫；一个穿着裙子的女生路过我身边，手 里拿着厚厚的文件袋，一边看着路，一边看着手表，应该在赶时间；还有一个骑着电动车的外卖小哥， 在马路中危险地穿梭着，时间和速度对于他来说似乎高于生命，不知道那一头是迟到的差评，还是努力 生活的希望。 &emsp;&emsp;我感受着他们的某个瞬间，臆想着他们各自的生活，也许充实，也许迷茫，也许过得 去，也许对生活丧失了希望，但又能怎么样，我也帮不了他们，因为说不定，我比他们过得还糟糕。 &emsp;&emsp;其实有那么一瞬间，我觉得我们都是可怜的人，但转过头想又不能这样去定义，搞不好那 个大叔回到家里就有热腾腾的晚饭；那个女生是在等着男朋友自己去约会看电影；而那个外卖小哥也快 乐且无比乐观地在工作着。 &emsp;&emsp;但我不同，不管在外面还是在老家，我都没有朋友，没有热爱的事情，没有坚持执着 的梦想，这时常让我感到可悲，对生活没有很满意，对身边的人没有任何期待，不过我也不怕，因为并 不是所有人，都可以像我一样自我地去活着。 Part.2&emsp;&emsp;最近发生了一些事情，关于失去，也关于珍惜。我总是在反复问自己，那些失去的事情 现在的自己后悔吗，遗憾吗？我是一个特别怀旧的人，每每想起这些事情，脑子就特别乱，想多了心里会 特别难受，习惯性沉浸在过往里，所以我常常活得不快乐。 &emsp;&emsp;不过现在，对于失去的感知已经没有年少轻狂时那么强烈，因为开始懂得，失去就是挽 回不了的事实，我努力不过，也挽回不来，那些或许遗憾的人和事已经悄悄滑过我的生活，一点一滴逃脱 掉，从此消失不见。 &emsp;&emsp;所以与其在感怀失去，不如学会珍惜，珍惜春季的鲜花，珍惜夏日的雨天，珍惜秋时里 的枯叶，珍惜冬天的暖阳，以及，那些我们知道明明知道会失去，但还是会想要拼尽全力去抓住的人。 &emsp;&emsp;有时候觉得时间很伟大，许多感情在时间的打磨下都变得坚不可摧，褪去稚嫩的外壳后 剩下的都是岁月的沉淀，它可以让一段关系变得更加牢固，让人看清彼此，到底值不值得。但时间也足够 残忍，它让人遗忘，遗忘美好，遗忘自己，反正我分不清，它是在教别人成长，还是在教别人懂得舍弃。 &emsp;&emsp;我可以喜欢一个人很久很久很久，久到连我都在怀疑自己，自己是不是还爱着，还是因 为怀念当初喜欢的那份热忱，所以产生了“我深爱着”的假象。 &emsp;&emsp;可当在跟对方在一起的时候，我发现，那些真诚和那些喜欢都是认真的，当你会设身处 地为对方着想，你的每一个顾虑都会跟对方有关，并且其中不参杂任何一丝复杂的私心，那时候我才明白 ，那种经过岁月而累积的情感，是不会因为时间的打磨而变质，反而在往后的日子变得更加真挚且可贵。 Part.3&emsp;&emsp;有些人，在生命里走过，可以成为重要的人，而有些只能成为普通朋友，其实人与人之间 的缘分是有磁场的，有的人你们见第一面的时候你就知道，他是值得的人，因为三观，因为性格，因为聊得 来，很多时候，这个人是你的另外一面，对方身上聚焦着那些跟你相仿的人格因素，你们的交往没有太多的 压力，也没有太多的隔阂，这就是遇到值得对待的人。 &emsp;&emsp;我曾经在写过一句话，有些人，真的很难再见。这句话的主题想要表达的是，那些拿真心 付出过的人，在经过环境、观念、社交等不同因素影响之后，两个人之前的情感和默契已经再也回不来。 &emsp;&emsp;那些爱而不得的人，那些因为不珍惜就转身而走的人，那些因为一些小矛盾就决定离开的 人，很多时候都是瞬间的逞强，不珍惜是事实，不爱了也是。 &emsp;&emsp;在我心里永远都有一杆秤，谁对我好，谁对我坏，我心里都有数。那些不可交的人，我都 会在对方生活里慢慢消失，我不会打扰别人，也不会声张起鼓的让全世界都知道，我的离开永远都是悄无声 息的，一旦我不认可你，你就会在我的世界里除名。 &emsp;&emsp;而至于那些永远值得期待的人，既然值得永远去期待，那就证明这些人很难会主动离开。 但往往也正是这些我们以为不会离开的人，在决定走的时候，是比任何一个人坚决，而你也比任何一次分别 都痛心。 &emsp;&emsp;伤害你的，永远都是那些你无比在乎的人，让你学会不信任的人，往往也是你无比信任的 那个。 Part.4&emsp;&emsp;人和人之间的联系真的很微妙。你以为和一些人只是短暂地分开，可离别之后竟从此杳无 音信。就像一场汹涌的雪崩，把他们来去的路途都掩埋掉了。 &emsp;&emsp;珍惜是什么？珍惜就是我被你伤害的很深，但是还是愿意放下成见去陪你；珍惜就是我明 明知道你身边有很多的缺点，我还愿意敞开心扉去接受你；珍惜就是每次我快要放弃你的时候，却总想着要 不再沟通一下，别因为不成熟而抛弃掉一段关系；珍惜就是我知道未来的日子或许不那么明朗，我还愿意义 无反顾的跟随着你；珍惜就是我想用尽我所有的一切，真心实意为你好。 &emsp;&emsp;珍惜的另外一面就是离开，一段关系的结束，不单单是失去一个人，还会让你失去了以前 的自己。你会开始怀念当初的自己，是如何的真诚，是如何的努力，是如何的不愿意放弃，时间拉回现在， 你开始不那么自信了，失败的那段关系已经让你不再信任自己。 &emsp;&emsp;其实最大的落差来源你自己太相信那个人不会离开，但是在这个分别成为常态的社会里， 哪有所谓的天长地久。你的坚持并不一定能换来好的结局，正如春天种下的树苗，会因为夏天的一场雨，就 突然死去。 &emsp;&emsp;感情里面最大的遗憾是，连离开都不能当面说清，或许一个拥抱一句“对不起”就能解决 的事情，最后却是没有任何解释的形同陌路 。 &emsp;&emsp;有时候，我在想，一个人在变得铁石心肠之前，也曾付出了全部的温柔和善意吧 。 &emsp;&emsp;“我们还会再见面吗？” &emsp;&emsp;“不会了吧。” 特别说明：本文原创作者来自我的好朋友邱大深， 欢迎关注作者公众号、转载、分享]]></content>
+      <categories>
+        <category>美文</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>美文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[一位美丽姑娘眼中的晚霞]]></title>
+    <url>%2F2019%2F07%2F27%2F%E9%9A%8F%E7%AC%94%E5%88%86%E4%BA%AB2019-7-27%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;一位非常美丽姑娘眼中的晚霞，取景于成都某地，当时看到她在朋友圈发了，觉得特别好看，当时 就把其中一种用来作为自己的电脑桌面了(偷笑)，后来写了博客，就经她同意然后放到博客上(嘻嘻)，其实非常 喜欢这样的晚霞跟自己曾经有一段时间有关。 &emsp;&emsp;我记得是高三毕业后的整整3个月，呆在老家，每天下午5、6点钟的时候都会去河边游泳，差不 多到了7点钟的时候往回家走，就会看到很美的晚霞，那时候用着nokia手机(诺基亚5233)拍了整整3个月的晚霞， 每次都是拍同一处，所以会对晚霞产生一种独特的感觉吧，因此想在这里放上几张距离我看到最近晚霞。 &emsp;&emsp;个人最喜欢第四张，这张放眼望去有一种远景视角，层次分明，给人一种就像是色彩鲜明、朦朦胧胧 的画面感，惹人心醉，因此也是我现在的电脑壁纸。后面会将此图作为博客的背景，哈哈哈哈，想想都好看，真是 超级满足啦啦啦啦啦啦啦！]]></content>
+      <categories>
+        <category>摄影</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>摄影</tag>
+        <tag>美景</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[致来者书]]></title>
+    <url>%2F2019%2F07%2F27%2F%E8%87%B4%E6%9D%A5%E8%80%85%E4%B9%A6%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;首先，非常感谢光临本博客，本站仅为个人兴趣爱好所作，记录生活的点点滴滴， 用此的方式表达一个程序员的节操、风度。本博客所有图片都经创作者本人同意或使用于网络 图片，非常感谢用于本博客展示，所有文章都经本博主巨石糖果山审核发布，如有任何疑问或 意见，请联系博主E-mail：jushitangguoshan@163.com。感谢为本博客 提供的精美图片以及文章。 &emsp;&emsp;本站是使用Hexo框架搭建，托管在Github+Coding双线部署，博客主题使用的是NexT。]]></content>
+      <categories>
+        <category>关于作者的博客</category>
+      </categories>
+      <tags>
+        <tag>关于</tag>
+        <tag>作者</tag>
+      </tags>
+  </entry>
+</search>

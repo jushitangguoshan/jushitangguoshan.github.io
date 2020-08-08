@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Big Rock Candy Mountains</title>
+  
+  <subtitle>人生那么长，可我就在你眼前——巨石糖果山x³</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.blog.heifengni.com/"/>
+  <updated>2020-04-28T04:31:15.644Z</updated>
+  <id>http://www.blog.heifengni.com/</id>
+  
+  <author>
+    <name>巨石糖果山x³</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL系列之开发规范</title>
+    <link href="http://www.blog.heifengni.com/2020/04/28/MySQL%E7%B3%BB%E5%88%97%E4%B9%8B%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.blog.heifengni.com/2020/04/28/MySQL系列之开发规范/</id>
+    <published>2020-04-28T04:28:24.000Z</published>
+    <updated>2020-04-28T04:31:15.644Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL社区开发规范"><a href="#MySQL社区开发规范" class="headerlink" title="MySQL社区开发规范"></a>MySQL社区开发规范</h1><p>###命名规范对象名称必须使用小写，多单词统一使用下划线分割</p><p>命名的单词必须做到顾名思义、简洁，表名长度不要超过16个字符，字段名称长度不要超过32个字符</p><p>禁止使用保留字并且尽量少用含有关键词来命名</p><p>临时表必须以tmp_开头、以日期结尾，备份表必须以bak_开头、以日期结尾</p><p>###基础规范尽可能地使用InnoDB作为表的存储引擎</p><p>在MySQL 5.6以后，InnoDB被设置成默认的存储引擎，支持事务和行级锁。</p><p>数据库和数据表统一使用UTF8MB4字符编码</p><p>UTF8MB4字符编码支持中文储存以及表情存储，兼容性杠杠的。</p><p>所有的表和字段必须添加注释</p><p>这个是好习惯的问题，即使做到了顾名思义，以防万一哪天健忘或理解错误，同时给后人留下后路，提高维护性。使用comment设定注释。</p><p>尽量控制表行数在500万以内</p><p>数据量越多，则查询的效率越低，同时会导致长时间占用高内存以及磁盘IO过高。数据量膨大建议采用分表、合理分区等方案。</p><p>尽可能采用冷热数据分离策略</p><p>在MySQL中，数据表列数最大限制为4096列 ，每条元祖数据总和大小不能超过65535字节，常用的字段与基本不常用的字段、细分不同业务的数据分开表设计存储，减小表宽度，保证热数据的内存缓存命中率，降低CPU使用率以及降低IO流。</p><p>禁止以图片、文件等二进制数据</p><p>MySQL虽然支持对文件对象的存储，但是开发人员是不允许、不推荐这样做的。文件通常是很大的，转成二进制数据将是一串很长的字符串，无疑占用数据库很大的存储空间，在数据库读写更是消耗内存和占用大量的IO流，最终导致查询的效率低下。一般文件是存放于文件服务器，将文件服务器的路径存储于数据库中。</p><p>###行为与流程规范禁止在线上做数据库的压力测试</p><p>对应的环境使用对应的数据库比如测试环境一定不能使用测试环境的数据库</p><p>super权限只能属于DBA，不能赋予项目程序</p><p>养成查看SQL运行性能的习惯，可以借用性能分析工具</p><p>譬如：EXPLAIN语句 | showprofile | mySQLsla等。</p><p>禁止在业务高峰期批量更新、查询数据</p><p>可以在流量比较低的凌晨跑批操作。</p><p>活动推广、系统上线以及平台上新务必对流量进行评估</p><p>防患于未然、否则可能造成数据库服务器流量瓶颈进而导致影响业务。</p><p>所有建表前都要确定字段的类型、长度以及索引方可建表</p><p>确保表结构设计为最优是前期数据库最大的优化</p><p>所有对表的结构、数据的修改务必经过DBA的审阅和同意</p><p>###表设计规范尽可能每张表的索引数量控制在5个以内</p><p>索引具有提高查询的效率的好处也有降低写操作效率的坏处，甚至会降低查询到的效率。同时索引也是占用内存空间的，因而应该合理控制索引的数量。</p><p>每一张InnoDB表都必须含有一个主键</p><p>InnoDB 是一种索引组织表：数据的存储的逻辑顺序和索引的顺序是相同的。每个表都可以有多个索引，但是表的存储顺序只能有一种 InnoDB是按照主键索引的顺序来组织表的。不要使用可能会更新的列作为主键，同时尽量不要使用UUID、MD5、HASH等无序的字符串作为主键。在没有特别的情况下，要使用自增的整型或发号器作为主键。</p><p>尽可能避免使用外键约束</p><p>外键可以保证数据的准确性、参照完整性，每次进行写操作时都会走校验数据知否正确的流程，将会有损写操作的性能，数据的参照完整性建议在业务层实现。倘若字表的写操作很少的情况下务必使用外键约束。</p><p>设置数据表架构应考虑后期扩展型</p><p>体验产品和架构师的交流和能力、对业务的熟悉度。</p><p>###遵循范式与冗余平衡原则</p><p>第一范式：具有原子性</p><p>第二范式：主键列与非主键列遵循完全函数依赖关系</p><p>第三范式：非主键列之间没有传递函数依赖关系</p><p>合理的原则能够体验出数据库的可操作性、稳定性以及性能nice。范式设计是数据结构的一种思想，但是我们应当灵活使用，一味追求三范式无疑会影响程序的性能，适当的冗余是可以提高查询的效率的，前提要保证是主键的冗余。</p><p>控制每张表的字段在20以内，否则业务分表</p><p>数据表的宽度与内存占用的大小成正比，在进行读写操作时，数据库程序将表结构与数据载入内存，当表宽度越长消耗的内存越多、越占IO流，导致操作的效率下降。将可能将字段按照业务细分、冷热的条件进行分表设计。</p><p>###字段设计规范尽可能不要在表中建立顾名思义的扩展字段</p><p>比如ext、ext_1、extend_n，时间一长，好几个这样的字段，即使每一个都有comment，也会造成SQL的可读性，特别是在构建SQL语句的时候。</p><p>优先设置占存储空间最小的类型和长度</p><p>合理设置字段的类型和长度，可以节省MySQL的表空间，是性能优化的姿势之一。同时，索引列定义空间越大也会导致建立索引的所需空间也越大。应当严禁定义字段，譬如</p><p>IP应使用UNSUGNED或者INT结构类型，在PHP中可以使用long2ip与ip2long函数进行互转</p><p>性别应使用CHAR(1)，即定长的字符串类型</p><p>… …</p><p>尽可能避免使用TEXT、BLOB、ENUM数据类型</p><p>MySQL 内存临时表不支持TEXT、BLOB 这样的大数据类型，如果查询中包含这样的数据，在排序等操作时，就不能使用内存临时表，必须使用磁盘临时表进行，毋庸置疑会降低查询的效率。MySQL对索引字段长度是有限制的，TEXT或BLOB类型只能使用前缀索引。</p><p>避免ENUM数据类型</p><p>在MySQL中，存储枚举类型的数据在库中，字段列中保存的值实际为整数，特别容易导致开发者混乱，同时在查询使用排序是基于数值整型的，虽然可以使用ORDER BY FIELD(),但是会导致索引失效，尽量避免这么做。</p><p>尽可能将所有的数据列定义为NOT NULL类型</p><p>NULL列比较特殊，需要额外的空间来保存，同时会造成索引失效。</p><p>使用TIMESTAMP与INT替换DATETIME存储时间</p><p>很明显，TIMESTAMP与INT占4位字节，而DATETIME占8位字节。那么存储时间应该如何选择TIMESTAMP与INT呢？TIMESTAMP的可读性高而INT的灵活性高，因而经常需要使用计算操作的应当使用INT存储，否则使用TIMESTAMP。</p><p>金额相关的数据必须使用DECIMAL数据类型</p><p>谈到钱这个东西呢，精确是非常重要的，即便要浪费存储空间、笑</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MySQL社区开发规范&quot;&gt;&lt;a href=&quot;#MySQL社区开发规范&quot; class=&quot;headerlink&quot; title=&quot;MySQL社区开发规范&quot;&gt;&lt;/a&gt;MySQL社区开发规范&lt;/h1&gt;&lt;p&gt;###命名规范
+对象名称必须使用小写，多单词统一使用下划线分割&lt;/p
+      
+    
+    </summary>
+    
+      <category term="Mysql" scheme="http://www.blog.heifengni.com/categories/Mysql/"/>
+    
+    
+      <category term="Mysql" scheme="http://www.blog.heifengni.com/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis 异步消息队列与延时队列</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/Redis-%E5%BC%82%E6%AD%A5%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%B8%8E%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/Redis-异步消息队列与延时队列/</id>
+    <published>2020-04-22T13:02:20.000Z</published>
+    <updated>2020-04-22T13:02:37.678Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis-异步消息队列与延时队列"><a href="#Redis-异步消息队列与延时队列" class="headerlink" title="Redis 异步消息队列与延时队列"></a>Redis 异步消息队列与延时队列</h1><p> 消息中间件，大家都会想到  Rabbitmq 和 Kafka 作为消息队列中间件，来给应用程序之间增加异步消息传递功能。这两个中间件都是专业的消息队列中间件，特性之多超出了大多数人的理解能力。但是这种属于重量级的应用，使用比较麻烦点。如果是轻量级的，使用 Redis就可以。比如对于那些只有一组消费者的消息队列，使用 Redis 就可以非常轻松的搞定。Redis 的消息队列不是专业的消息队列，它没有非常多的高级特性，没有 ack 保证，如果对消息的可靠性没有极致的要求，那么它可以拿来使用。</p><h3 id="异步消息队列"><a href="#异步消息队列" class="headerlink" title="异步消息队列"></a>异步消息队列</h3><p>Redis 的 list(列表) 数据结构常用来作为异步消息队列使用，使用rpush/lpush操作入队列，使用lpop 和 rpop来出队列。rpush 和 lpop 结合 或者lpush 和rpop 结合；</p><p><img src="https://img-blog.csdn.net/20180928123019473?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d6Ynd6aA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>客户端是通过队列的 pop 操作来获取消息，然后进行处理。处理完了再接着获取消息，再进行处理。如此循环往复，这便是作为队列消费者的客户端的生命周期</p><h3 id="问题来了"><a href="#问题来了" class="headerlink" title="问题来了"></a>问题来了</h3><p>可是如果队列空了，客户端就会陷入 pop 的死循环，不停地 pop，没有数据，接着再 pop，又没有数据。这就是浪费生命的空轮询。空轮询不但拉高了客户端的 CPU，redis 的 QPS 也会被拉高，如果这样空轮询的客户端有几十来个，Redis 的慢查询可能会显著增多。 通常我们使用 sleep 来解决这个问题，让线程睡一会，睡个 1s 钟就可以了。不但客户端的 CPU 能降下来，Redis 的 QPS 也降下来了。 </p><h3 id="新的问题："><a href="#新的问题：" class="headerlink" title="新的问题："></a>新的问题：</h3><p>用上面睡眠的办法可以解决问题。但是有个小问题，那就是睡眠会导致消息的延迟增大。如果只有 1 个消费者，那么这个延迟就是 1s。如果有多个消费者，这个延迟会有所下降，因为每个消费者的睡觉时间是岔开来的。 有没有什么办法能显著降低延迟呢？你当然可以很快想到：那就把睡觉的时间缩短点。这种方式当然可以，不过有没有更好的解决方案呢？当然也有，那就是 blpop/brpop。 这两个指令的前缀字符b代表的是blocking，也就是阻塞读。 阻塞读在队列没有数据的时候，会立即进入休眠状态，一旦数据到来，则立刻醒过来。消息的延迟几乎为零。用blpop/brpop替代前面的lpop/rpop，就完美解决了上面的问题。</p><h3 id="问题喋喋不休："><a href="#问题喋喋不休：" class="headerlink" title="问题喋喋不休："></a>问题喋喋不休：</h3><p>空闲连接自动断开 你以为上面的方案真的很完美么？先别急着开心，其实他还有个问题需要解决。 什么问题？—— 空闲连接的问题。 如果线程一直阻塞在哪里，Redis 的客户端连接就成了闲置连接，闲置过久，服务器一般会主动断开连接，减少闲置资源占用。这个时候blpop/brpop会抛出异常来。 所以编写客户端消费者的时候要小心，注意捕获异常，还要重试。</p><h3 id="消息延时队列"><a href="#消息延时队列" class="headerlink" title="消息延时队列"></a>消息延时队列</h3><p>​        延时队列可以通过 Redis 的 zset(有序列表) 来实现。我们将消息序列化成一个字符串作为 zset 的value，这个消息的到期处理时间作为score，然后用多个线程轮询 zset 获取到期的任务进行处理，多个线程是为了保障可用性，万一挂了一个线程还有其它线程可以继续处理。因为有多个线程，所以需要考虑并发争抢任务，确保任务不能被多次执行。 Redis 的 zrem 方法是多线程多进程争抢任务的关键，它的返回值决定了当前实例有没有抢到任务，因为 loop 方法可能会被多个线程、多个进程调用，同一个任务可能会被多个进程线程抢到，通过 zrem 来决定唯一的属主。 同时，我们要注意一定要对 handle_msg 进行异常捕获，避免因为个别任务处理问题导致循环异常退出。 </p><h3 id="问题来了："><a href="#问题来了：" class="headerlink" title="问题来了："></a>问题来了：</h3><p>同一个任务可能会被多个进程取到之后再使用 zrem 进行争抢，那些没抢到的进程都是白取了一次任务，这是浪费。解决办法：Lua是Redis内置脚本，执行Lua脚本时，Redis线程会依次执行脚本中的语句，对于客户端来说操作是原子性的，将 zrangebyscore 和 zrem 一同挪到服务器端进行原子化操作，这样多个进程之间争抢任务时就不会出现这种浪费了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Redis-异步消息队列与延时队列&quot;&gt;&lt;a href=&quot;#Redis-异步消息队列与延时队列&quot; class=&quot;headerlink&quot; title=&quot;Redis 异步消息队列与延时队列&quot;&gt;&lt;/a&gt;Redis 异步消息队列与延时队列&lt;/h1&gt;&lt;p&gt; 消息中间件，大家都
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 安装 docker 社区版</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/Linux-%E5%AE%89%E8%A3%85-docker-%E7%A4%BE%E5%8C%BA%E7%89%88/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/Linux-安装-docker-社区版/</id>
+    <published>2020-04-22T13:00:02.000Z</published>
+    <updated>2020-04-22T13:01:48.835Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="参考官网地址："><a href="#参考官网地址：" class="headerlink" title="参考官网地址："></a>参考官网地址：</h3><p><a href="https://docs.docker.com/install/linux/docker-ce/centos/#prerequisites" target="_blank" rel="noopener">https://docs.docker.com/install/linux/docker-ce/centos/#prerequisites</a></p><h3 id="安装命令："><a href="#安装命令：" class="headerlink" title="安装命令："></a>安装命令：</h3><p>yum install docker-ce docker-ce-cli containerd.io</p><h3 id="设置开启自启"><a href="#设置开启自启" class="headerlink" title="设置开启自启"></a>设置开启自启</h3><p>systemctl enable docker</p><h3 id="启动-docker"><a href="#启动-docker" class="headerlink" title="启动 docker"></a>启动 docker</h3><pre><code class="sh">systemctl start docker</code></pre><h3 id="通过运行hello-world-映像来验证是否正确安装了Docker。"><a href="#通过运行hello-world-映像来验证是否正确安装了Docker。" class="headerlink" title="通过运行hello-world 映像来验证是否正确安装了Docker。"></a>通过运行<code>hello-world</code> 映像来验证是否正确安装了Docker。</h3><pre><code> docker run hello-world</code></pre><h2 id="报错处理"><a href="#报错处理" class="headerlink" title="报错处理"></a>报错处理</h2><h4 id="搜索报错"><a href="#搜索报错" class="headerlink" title="搜索报错"></a>搜索报错</h4><p><img src="https://wx4.sinaimg.cn/mw690/007eXScSgy1ge2ufng6pjj30iw013jr7.jpg" alt="image-20200319133749251"></p><h4 id="解决方式："><a href="#解决方式：" class="headerlink" title="解决方式："></a>解决方式：</h4><p>更改镜像源为中国的</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;参考官网地址：&quot;&gt;&lt;a href=&quot;#参考官网地址：&quot; class=&quot;headerlink&quot; title=&quot;参考官网地址：&quot;&gt;&lt;/a&gt;参考官网地址：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/doc
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UTF-8 和 Unicode 有何区别？</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/UTF-8-%E5%92%8C-Unicode-%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB%EF%BC%9F/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/UTF-8-和-Unicode-有何区别？/</id>
+    <published>2020-04-22T12:59:25.000Z</published>
+    <updated>2020-04-22T12:59:33.697Z</updated>
+    
+    <content type="html"><![CDATA[<p>Unicode 与 ASCII 类似，都是一种字符集。</p><p>字符集为每个字符分配一个唯一的 ID，我们使用到的所有字符在 Unicode 字符集中都有一个唯一的 ID，例如上面例子中的 a 在 Unicode 与 ASCII 中的编码都是 97。汉字“你”在 Unicode 中的编码为 20320，在不同国家的字符集中，字符所对应的 ID 也会不同。而无论任何情况下，Unicode 中的字符的 ID 都是不会变化的。</p><p>UTF-8 是编码规则，将 Unicode 中字符的 ID 以某种方式进行编码，UTF-8 的是一种变长编码规则，从 1 到 4 个字节不等。编码规则如下：</p><ul><li>0xxxxxx 表示文字符号 0～127，兼容 ASCII 字符集。</li><li>从 128 到 0x10ffff 表示其他字符。</li></ul><p>根据这个规则，拉丁文语系的字符编码一般情况下每个字符占用一个字节，而中文每个字符占用 3 个字节。</p><p>广义的 Unicode 指的是一个标准，它定义了字符集及编码规则，即 Unicode 字符集和 UTF-8、UTF-16 编码等。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Unicode 与 ASCII 类似，都是一种字符集。&lt;/p&gt;
+&lt;p&gt;字符集为每个字符分配一个唯一的 ID，我们使用到的所有字符在 Unicode 字符集中都有一个唯一的 ID，例如上面例子中的 a 在 Unicode 与 ASCII 中的编码都是 97。汉字“你”在 Un
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决连接MySql 8.x 出现安装问题</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/%E8%A7%A3%E5%86%B3%E8%BF%9E%E6%8E%A5MySql-8-x-%E5%87%BA%E7%8E%B0%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/解决连接MySql-8-x-出现安装问题/</id>
+    <published>2020-04-22T12:58:48.000Z</published>
+    <updated>2020-04-22T12:59:02.774Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="解决连接MySql-8-x-出现-The-server-requested-authentication-method-unknown-to-the-client"><a href="#解决连接MySql-8-x-出现-The-server-requested-authentication-method-unknown-to-the-client" class="headerlink" title="解决连接MySql 8.x 出现 The server requested authentication method unknown to the client"></a>解决连接MySql 8.x 出现 The server requested authentication method unknown to the client</h1><h4 id="1、原因："><a href="#1、原因：" class="headerlink" title="1、原因："></a>1、原因：</h4><p>​        因为 mysql 8 升级了密码的验证方式 caching_sha2_password， 之前一直是mysql_native_password方式，而php都升级到7.2+不支持caching_sha2_password ，</p><h4 id="2、解决方法："><a href="#2、解决方法：" class="headerlink" title="2、解决方法："></a>2、解决方法：</h4><p>找到mysql的配置文件my.cnf，我的配置文件位置在   /usr/local/etc/my.cnf (请自行找到自己的电脑的配置文件地址)。(docker容器是在/etc/mysql/my.conf)</p><h5 id="1-在-mysqld-下加入-一行"><a href="#1-在-mysqld-下加入-一行" class="headerlink" title="1.在 [mysqld]下加入  一行"></a>1.在 [mysqld]下加入  一行</h5><pre><code class="mysql">default_authentication_plugin=mysql_native_password</code></pre><h5 id="2-重启mysql"><a href="#2-重启mysql" class="headerlink" title="2.重启mysql"></a>2.重启mysql</h5><p>（Docker容器直接重启MySql容器即可）</p><h5 id="3-进入mysql-修改登入mysql用户的登录验证方式"><a href="#3-进入mysql-修改登入mysql用户的登录验证方式" class="headerlink" title="3.进入mysql 修改登入mysql用户的登录验证方式"></a>3.进入mysql 修改登入mysql用户的登录验证方式</h5><pre><code class="mysql"> use mysql; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;; FLUSH PRIVILEGES;#刷新权限</code></pre><p>提示：最好在创建用户的时候就加上：</p><p><code>CREATE USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;;</code></p><h4 id="完成以上就可以进行客户端连接测试，如果还是不成功，则继续向下执行："><a href="#完成以上就可以进行客户端连接测试，如果还是不成功，则继续向下执行：" class="headerlink" title="完成以上就可以进行客户端连接测试，如果还是不成功，则继续向下执行："></a>完成以上就可以进行客户端连接测试，如果还是不成功，则继续向下执行：</h4><h5 id="4-对远程连接进行授权："><a href="#4-对远程连接进行授权：" class="headerlink" title="4.对远程连接进行授权："></a>4.对远程连接进行授权：</h5><p><code>mysql&gt; GRANT ALL ON *.* TO &#39;root&#39;@&#39;%&#39;;</code></p><h5 id="5-更改密码的加密规则："><a href="#5-更改密码的加密规则：" class="headerlink" title="5.更改密码的加密规则："></a>5.更改密码的加密规则：</h5><p><code>mysql&gt; ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39; PASSWORD EXPIRE NEVER;</code></p><h5 id="6-更改root的密码："><a href="#6-更改root的密码：" class="headerlink" title="6.更改root的密码："></a>6.更改root的密码：</h5><p><code>mysql&gt; ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED WITH mysql_native_password BY &#39;123456&#39;;</code></p><h5 id="7-刷新权限："><a href="#7-刷新权限：" class="headerlink" title="7.刷新权限："></a>7.刷新权限：</h5><p><code>mysql&gt; flush privileges;</code></p><h5 id="8-使用客户端测试"><a href="#8-使用客户端测试" class="headerlink" title="8.使用客户端测试;"></a>8.使用客户端测试;</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;解决连接MySql-8-x-出现-The-server-requested-authentication-method-unknown-to-the-client&quot;&gt;&lt;a href=&quot;#解决连接MySql-8-x-出现-The-server-requested-a
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 容器安装各种 Linux命令</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/Docker-%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D-Linux%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/Docker-容器安装各种-Linux命令/</id>
+    <published>2020-04-22T12:57:47.000Z</published>
+    <updated>2020-04-22T12:58:05.236Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里举例安装 Vi命令（其他命令类似）</p><p> 在使用docker容器时，有时候里边没有安装vim，敲vim命令时提示说：</p><p><code>vim: command not found</code></p><h5 id="1、执行命令："><a href="#1、执行命令：" class="headerlink" title="1、执行命令："></a>1、执行命令：</h5><p><code>apt-get update</code></p><p>这个命令的作用是：同步 /etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引，这样才能获取到最新的软件包。</p><h3 id="2、-等更新完毕以后再敲命令："><a href="#2、-等更新完毕以后再敲命令：" class="headerlink" title="2、 等更新完毕以后再敲命令："></a>2、 等更新完毕以后再敲命令：</h3><p><code>apt-get install vim</code></p><p>即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这里举例安装 Vi命令（其他命令类似）&lt;/p&gt;
+&lt;p&gt; 在使用docker容器时，有时候里边没有安装vim，敲vim命令时提示说：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vim: command not found&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&quot;1、执行命令：&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux ping通端口</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/Linux-ping%E9%80%9A%E7%AB%AF%E5%8F%A3/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/Linux-ping通端口/</id>
+    <published>2020-04-22T12:57:06.000Z</published>
+    <updated>2020-04-22T12:57:21.224Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="例如打开端口-9100-外部ping通"><a href="#例如打开端口-9100-外部ping通" class="headerlink" title="例如打开端口 9100 外部ping通"></a>例如打开端口 9100 外部ping通</h3><h5 id="1、查看已打开端口"><a href="#1、查看已打开端口" class="headerlink" title="1、查看已打开端口"></a>1、查看已打开端口</h5><p>nmap ip</p><h5 id="2、如果-ping-不通"><a href="#2、如果-ping-不通" class="headerlink" title="2、如果 ping 不通"></a>2、如果 ping 不通</h5><p>查看防火墙是否开通此端口规则</p><p>firewall-cmd –query-port=9100/tcp</p><p>如果显示 no</p><p>则打开防火墙的该端口</p><p>firewall-cmd –add-port=9100/tcp</p><p>/sbin/iptables -I INPUT -p tcp –dport 9503 -j ACCEPT</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;例如打开端口-9100-外部ping通&quot;&gt;&lt;a href=&quot;#例如打开端口-9100-外部ping通&quot; class=&quot;headerlink&quot; title=&quot;例如打开端口 9100 外部ping通&quot;&gt;&lt;/a&gt;例如打开端口 9100 外部ping通&lt;/h3&gt;&lt;h5 i
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS 7 彻底清理 Docker 环境</title>
+    <link href="http://www.blog.heifengni.com/2020/04/22/CentOS-7-%E5%BD%BB%E5%BA%95%E6%B8%85%E7%90%86-Docker-%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.blog.heifengni.com/2020/04/22/CentOS-7-彻底清理-Docker-环境/</id>
+    <published>2020-04-22T12:55:37.000Z</published>
+    <updated>2020-04-22T12:56:33.545Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><h3 id="杀死所有运行容器"><a href="#杀死所有运行容器" class="headerlink" title="杀死所有运行容器"></a>杀死所有运行容器</h3></li></ol><pre><code>docker kill $(docker ps -a -q)</code></pre><ol start="2"><li><h3 id="删除所有容器"><a href="#删除所有容器" class="headerlink" title="删除所有容器"></a>删除所有容器</h3></li></ol><pre><code>docker rm $(docker ps -a -q)</code></pre><ol start="3"><li>删除所有镜像</li></ol><pre><code>docker rmi $(docker images -q)</code></pre><ol start="4"><li>停止 docker 服务</li></ol><pre><code>systemctl stop docker</code></pre><ol start="5"><li>删除存储目录</li></ol><pre><code># rm -rf /etc/docker# rm -rf /run/docker# rm -rf /var/lib/dockershim# rm -rf /var/lib/docker</code></pre><h3 id="如果发现删除不掉，需要先-umount，如"><a href="#如果发现删除不掉，需要先-umount，如" class="headerlink" title="如果发现删除不掉，需要先 umount，如"></a>如果发现删除不掉，需要先 umount，如</h3><pre><code>umount /var/lib/docker/devicemapper</code></pre><ol start="6"><li><h3 id="卸载-docker-查看已安装的-docker-包"><a href="#卸载-docker-查看已安装的-docker-包" class="headerlink" title="卸载 docker 查看已安装的 docker 包"></a>卸载 docker 查看已安装的 docker 包</h3></li></ol><pre><code>yum list installed | grep docker</code></pre><h3 id="7-卸载相关包"><a href="#7-卸载相关包" class="headerlink" title="7.卸载相关包"></a>7.卸载相关包</h3><pre><code>yum remove docker-engine docker-engine-selinux.noarch</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;h3 id=&quot;杀死所有运行容器&quot;&gt;&lt;a href=&quot;#杀死所有运行容器&quot; class=&quot;headerlink&quot; title=&quot;杀死所有运行容器&quot;&gt;&lt;/a&gt;杀死所有运行容器&lt;/h3&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;docker kill $(doc
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Redis之开篇必读</title>
+    <link href="http://www.blog.heifengni.com/2019/11/27/Redis%E4%B9%8B%E5%BC%80%E7%AF%87%E5%BF%85%E8%AF%BB/"/>
+    <id>http://www.blog.heifengni.com/2019/11/27/Redis之开篇必读/</id>
+    <published>2019-11-27T08:40:56.000Z</published>
+    <updated>2020-03-30T15:31:48.664Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis-与其他-key-value-缓存产品比较"><a href="#Redis-与其他-key-value-缓存产品比较" class="headerlink" title="Redis 与其他 key - value 缓存产品比较"></a>Redis 与其他 key - value 缓存产品比较</h1><ul><li>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li><li>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。</li><li>Redis支持数据的备份，即master-slave模式的数据备份。</li></ul><h1 id="Redis-优势"><a href="#Redis-优势" class="headerlink" title="Redis 优势"></a>Redis 优势</h1><ul><li>性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。</li><li>丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。</li><li>原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。</li><li>丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li></ul><h1 id="Redis与其他key-value存储有什么不同"><a href="#Redis与其他key-value存储有什么不同" class="headerlink" title="Redis与其他key-value存储有什么不同"></a>Redis与其他key-value存储有什么不同</h1><ul><li>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象。</li><li>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问。</li></ul><h1 id="redis-特性"><a href="#redis-特性" class="headerlink" title="redis 特性"></a>redis 特性</h1><ul><li><p>速度快</p><ul><li>Redis采用的是基于内存的采用的是单进程单线程模型的 KV 数据库，由C语言编写，官方提供的数据是可以达到100000+的QPS（每秒内查询次数）；</li><li>完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；</li><li>数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的；</li><li>采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；</li><li>使用多路I/O复用模型，非阻塞IO；</li><li>使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求；</li></ul></li><li><p>持久化</p><ul><li><p>RDB：在指定的时间间隔能对你的数据进行快照存储。</p><ul><li>机制：<pre><code>  在Redis运行时，RDB程序将当前内存中的数据库快照保存到磁盘文件中，在Redis重启动时，RDB程序可以通过载入RDB文件来还原数据库的 状态。RDB机制最主要的就是rdbSave和rdbLoad函数，前者将redis内存中数据加载到磁盘上，后者将在Redis重启时将数据恢复到redis 内存中，注意rdbSave会阻塞主进程。</code></pre></li><li>优势：<pre><code>  一旦采用该方式，那么你的整个Redis数据库将只包含一个文件，这样非常方便进行备份。比如你可能打算没1天归档一些数据。   方便备份，我们可以很容易的将一个一个RDB文件移动到其他的存储介质上  - RDB 在恢复大数据集时的速度比 AOF 的恢复速度要快。  - RDB 可以最大化 Redis 的性能：父进程在保存 RDB 文件时唯一要做的就是 fork 出一个子进程，然后这个子进程就会处理接下来的所有  保存工作，父进程无须执行任何磁盘操作。</code></pre></li><li>劣势：<pre><code>  如果你需要尽量避免在服务器故障时丢失数据，那么 RDB 不适合你。 虽然 Redis 允许你设置不同的保存点（save point）来控制保存 RDB   文件的频率， 但是， 因为RDB 文件需要保存整个数据集的状态， 所以它并不是一个轻松的操作。 因此你可能会至少 5 分钟才保存一次 RDB   文件。 在这种情况下， 一旦发生故障停机， 你就可能会丢失好几分钟的数据。每次保存 RDB 的时候，Redis 都要 fork() 出一个子进程，  并由子进程来进行实际的持久化工作。 在数据集比较庞大时， fork() 可能会非常耗时，造成服务器在某某毫秒内停止处理客户端； 如果数据  集非常巨大，并且 CPU 时间非常紧张的话，那么这种停止时间甚至可能会长达整整一秒。 虽然 AOF 重写也需要进行 fork() ，但无论 AOF   重写的执行间隔有多长，数据的耐久性都不会有任何损失</code></pre></li></ul></li><li><p>AOF: 记录每次对服务器写的操作,当服务器重启的时候会重新执行这些命令来恢复原始的数据</p><ul><li>机制：<pre><code>  AOF 则以协议文本的方式，将所有对数据库进行过写入的命令（及其参数）记录到AOF文件，以此达到记录数据库状态的目的。AOF文件其实可以  认为是Redis写操作的日志记录文件。  - 具体过程：  - redis调用fork ，现在有父子两个进程  - 子进程根据内存中的数据库快照，往临时文件中写入重建数据库状态的命令  - 父进程继续处理client请求，除了把写命令写入到原来的aof文件中。同时把收到的写命令缓存起来。这样就能保证如果子进程重写失败的话并不会出问题。  - 当子进程把快照内容写入已命令方式写到临时文件中后，子进程发信号通知父进程。然后父进程把缓存的写命令也写入到临时文件。  - 现在父进程可以使用临时文件替换老的aof文件，并重命名，后面收到的写命令也开始往新的aof文件中追加  - （注意到是重写aof文件的操作，并没有读取旧的aof文件，而是将整个内存中的数据库内容用命令的方式重写了一个新的aof文件）</code></pre></li><li>优势：<pre><code>  使用 AOF 持久化会让 Redis 变得非常耐久（much more durable）：你可以设置不同的 fsync 策略，比如无 fsync ，每秒钟一  次 fsync ，或者每次执行写入命令时 fsync 。 AOF 的默认策略为每秒钟 fsync 一次，在这种配置下，Redis 仍然可以保持良好的  性能，并且就算发生故障停机，也最多只会丢失一秒钟的数据（ fsync 会在后台线程执行，所以主线程可以继续努力地处理命令请求）。</code></pre></li><li>劣势：<pre><code>  对于相同的数据集来说，AOF 文件的体积通常要大于 RDB 文件的体积。根据所使用的 fsync 策略，AOF 的速度可能会慢于 RDB 。  在一般情况下， 每秒 fsync 的性能依然非常高， 而关闭 fsync 可以让 AOF 的速度和 RDB 一样快， 即使在高负荷之下也是如此。   不过在处理巨大的写入载入时，RDB 可以提供更有保证的最大延迟时间（latency）</code></pre></li></ul></li><li><p>（有待实践）</p></li></ul></li></ul><ul><li>多种数据结构<ul><li>String（字符串）/Blobs/Bitmaps（位图）</li><li>Hash Tables（哈希）</li><li>Linked Lists（列表）</li><li>Sets（集合）</li><li>Sorted Sets（有序集合）</li></ul></li><li>主从复制（后续更新）</li><li>高可用、分布式</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;Redis是一个由Salvatore Sanfilippo写的key-value存储系统，是一个开源的使用 ANSI C语言编写、遵守BSD协议、支持 网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API，它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈 希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。使用之前我们必须了解为什么而使用。
+    
+    </summary>
+    
+      <category term="redis" scheme="http://www.blog.heifengni.com/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="http://www.blog.heifengni.com/tags/redis/"/>
+    
+      <category term="php" scheme="http://www.blog.heifengni.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis之命令篇</title>
+    <link href="http://www.blog.heifengni.com/2019/11/26/Redis%E4%B9%8B%E5%91%BD%E4%BB%A4%E7%AF%87/"/>
+    <id>http://www.blog.heifengni.com/2019/11/26/Redis之命令篇/</id>
+    <published>2019-11-26T13:50:45.000Z</published>
+    <updated>2020-03-30T15:31:48.616Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="redis常用数据结构"><a href="#redis常用数据结构" class="headerlink" title="redis常用数据结构"></a>redis常用数据结构</h2><ul><li>string 字符串</li><li>hash 哈希</li><li>list 列表</li><li>set 集合</li><li>zset 有序集合<h2 id="通用API"><a href="#通用API" class="headerlink" title="通用API"></a>通用API</h2><ul><li>失效时间相关设置 key 的过期时间， 成功返回 1，key 不存在或设置失败，返回 0<ul><li>EXPIRE key seconds 以秒计</li><li>EXPIREAT key timestamp 参数是 UNIX 时间戳(unixtimestamp)</li><li>PEXPIRE key milliseconds  以毫秒计</li><li>PEXPIREAT key milliseconds-timestamp 过期时间的时间戳(unix timestamp) 以毫秒计</li></ul></li><li>MOVE key db <blockquote><p>将当前数据库的 key 移动到给定的数据库 db 当中</p></blockquote></li><li>PERSIST key <blockquote><p>移除 key 的过期时间，key 将持久保持</p></blockquote></li><li>PTTL key <blockquote><p>以毫秒为单位返回 key 的剩余的过期时间</p></blockquote></li><li>RANDOMKEY <blockquote><p>从当前数据库中随机返回一个 key    </p></blockquote></li><li>RENAME key newkey <blockquote><p>修改 key 的名称</p></blockquote></li><li>RENAMENX key newkey <blockquote><p>仅当 newkey 不存在时，将 key 改名为 newkey </p></blockquote></li><li>TYPE key <blockquote><p>返回 key 所储存的值的类型</p></blockquote></li><li><em>以下时间复杂度 O(N)*</em></li><li>keys <blockquote><p>遍历所有 key (<font color="#dd0000">线上不用</font>)</p></blockquote></li><li>KEYS pattern <blockquote><p>查找所有符合给定模式( pattern)的 key (<font color="#dd0000">线上不用</font>)</p></blockquote></li><li>dbsize <blockquote><p>计算 key 的总数(<font color="#dd0000">线上不用</font>)  </p></blockquote><h2 id="String类型API"><a href="#String类型API" class="headerlink" title="String类型API"></a>String类型API</h2></li></ul></li><li><em>以下时间复杂度 O(1)*</em></li></ul><ul><li>get、set、del <blockquote><p>获取、设置、删除</p></blockquote></li><li>EXISTS key <blockquote><p>检查给定 key 是否存在，若 key 存在返回 1 ，否则返回 0 </p></blockquote></li><li>incr key<blockquote><p>key 自增 1，如果 key 不存在，自增后 get(key)=1</p></blockquote></li><li>decr key</li><li>incrby key k</li><li>decrby key k</li><li>set key value<blockquote><p>不管 key 是否存在，都设置</p></blockquote></li><li>setnx key value<blockquote><p>key 不存在，才设置</p></blockquote></li><li>set key value xx<blockquote><p>key 存在，才设置</p></blockquote></li><li>getset key newvalue <blockquote><p>set key newvalue 并返回旧的 value</p></blockquote></li><li>append key value <blockquote><p>将 value 追加到旧的 value</p></blockquote></li><li>strlen key <blockquote><p>返回字符串的长度（注意中文）</p></blockquote></li><li>incrbyfloat key 3.5 <blockquote><p>增加 key 对应的值 3.5（没有自减命令，可用 - 号）</p></blockquote></li><li>getrange key start end <blockquote><p>获取字符串指定下标所有的值</p></blockquote></li><li>setrange key index value <blockquote><p>设置指定下标所有对应的值</p></blockquote></li></ul><p><strong>以下 API 时间复杂度 O(N)</strong></p><ul><li>mget key1 key2 key3… <blockquote><p>批量获取 key，原子操作</p></blockquote></li><li>mset key1 value1 key2 value2 key3 value3 <blockquote><p>批量设置n 次 get = n 次网络时间 + n 次命令时间1 次 mget = 1 次网络时间 + n 次命令时间</p></blockquote><h2 id="hash哈希"><a href="#hash哈希" class="headerlink" title="hash哈希"></a>hash哈希</h2> <strong>特点：Mapmap、Small redis、field 不能相同，value 可用相同</strong><ul><li>hget key field <blockquote><p>获取 hash key 对应的 field 的 value</p></blockquote></li><li>hset key field value <blockquote><p>设置 对应的 field 的 value</p></blockquote></li><li>hexists key field <blockquote><p>判断 hash key 是否有 field</p></blockquote></li><li>hlen key <blockquote><p>获取 hash key field 的数量</p></blockquote></li><li>hmget key field1 field2 … fieldN <blockquote><p>批量获取 hash key 的一批 field 对应的值 O(n)</p></blockquote></li><li>hmset key field1 value1 field2 <blockquote><p>批量设置 hash key 的一批 field value valueN O(n)</p></blockquote></li><li>hgetall key <blockquote><p>返回 hash key 对应所有的 field 和 value O(n) <font color="#dd0000">（谨慎使用）</font></p></blockquote></li><li>havals key <blockquote><p>返回 hash key 对应所有的 value O(n)</p></blockquote></li><li>hkeys key <blockquote><p>返回 hash key 对应所有的 field O(n)</p></blockquote></li><li>hsetnx key field value <blockquote><p>设置 hash key 对应 field 的 value（如 field 已经存在，则失败）</p></blockquote></li><li>hincrby key field <blockquote><p>intCounter hash key 对应的 field 的 value 自增 intCounter</p></blockquote></li><li>hincrbyfloat key field <blockquote><p>floatCounter hincrby 浮点数版</p></blockquote><h2 id="list队列"><a href="#list队列" class="headerlink" title="list队列"></a>list队列</h2></li><li><em>特点：有序、重复、左右两边插入弹出(一个列表最多存储 2 ^ 32 -1 个元素)*</em></li><li>push key value1 value2 … valueN  <blockquote><p>从列表右端插入值（1-N 个） O(1~n)</p></blockquote></li><li>lpush key value1 value2 … valueN <blockquote><p>从列表左端插入值（1-N 个）O(n)</p></blockquote></li><li>linsert key before|after value newValue <blockquote><p>在 list 指定的值前|后插入 newValue</p></blockquote></li><li>lpop key <blockquote><p>从列表左侧弹出一个 item O(1)</p></blockquote></li><li>rpop key <blockquote><p>从列表右侧弹出一个 item    </p></blockquote></li><li>lrem key count value O(n)<ul><li>根据 count 值，从列表中删除所有 value 相等的项 </li><li>count &gt; 0，从左到右，删除最多 count 个 value 相等的项</li><li>count &lt; 0，从右到左，删除最多 Math.abs(count) 个 value 相等的项</li><li>count = 0，删除所有 value 相等的项</li></ul></li><li>ltrim key start end  <blockquote><p>按照索引范围修剪列表 O(n)</p></blockquote></li><li>lrange key start end（包含 end）<blockquote><p>获取列表指定索引范围所有 item （获取全部（0 -1））O(n)</p></blockquote></li><li>lindex key index  <blockquote><p>获取列表指定索引的 item O(n)</p></blockquote></li><li>blpop key timeout <blockquote><p>O(n) lpop 阻塞版本，timeout 是阻塞超时时间，timeout = 0 为永远不阻塞（一直等）</p></blockquote></li><li>brpop key timeout <blockquote><p>rpop 阻塞版本，timeout 是阻塞超时时间，timeout = 0 为永远不阻塞</p></blockquote><h2 id="set集合API"><a href="#set集合API" class="headerlink" title="set集合API"></a>set集合API</h2></li><li><em>特点：无序、无重复、集合间操作*</em></li></ul><ul><li>Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。</li><li>Redis 中集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。</li><li>集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。</li><li>假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合</li></ul> <strong>常用API</strong><ul><li>sadd key element <blockquote><p>向集合添加一个(O(1) )或多个成员(O(N) )</p></blockquote></li><li>srem key element <blockquote><p>移除集合中一个成员 O(1) </p></blockquote></li><li>SCARD key  <blockquote><p>获取集合的成员数</p></blockquote></li><li>sismember <blockquote><p>集合中是否存在某个元素</p></blockquote></li><li>spop <blockquote><p>从集合中弹出一个</p></blockquote></li><li>sdiff <blockquote><p>差集</p></blockquote></li><li>sinter <blockquote><p>交集</p></blockquote></li><li>sunion  <blockquote><p>并集</p></blockquote></li></ul> <strong><font color="#dd0000">谨慎使用<font></font></font></strong><ul><li>srandmember <blockquote><p>返回多个元素(谨慎使用)</p></blockquote></li><li>SMEMBERS key <blockquote><p><font color="#dd0000">小心使用,数量太多不行<font>，可scan迭代</font></font></p></blockquote></li><li>SSCAN key cursor <blockquote><p>迭代集合中的元素</p></blockquote><h2 id="zset集合-有序-API"><a href="#zset集合-有序-API" class="headerlink" title="zset集合(有序)API"></a>zset集合(有序)API</h2></li></ul> <strong>特定：无重复元素、有序、element + score</strong><ul><li>zadd key score element <blockquote><p>添加 score(可以重复) 和 element（不可以重复） O(logN)</p></blockquote></li><li>zrem key element <blockquote><p>删除元素 O(1)</p></blockquote></li><li>zscore key element <blockquote><p>返回元素的分数 O(1)</p></blockquote></li><li>zrevrange key start stop<blockquote><p>返回有序集中指定区间内的成员，通过索引，分数从高到低</p></blockquote></li><li>zrevrank key member <blockquote><p>返回有序集中指定区间内的成员，通过索引，分数从高到低</p></blockquote></li><li>zincrby key score <blockquote><p>增加或减少元素的分数 O(1)</p></blockquote></li><li>zcard key <blockquote><p>返回元素的总个数 O(1)</p></blockquote></li><li>zrank key element <blockquote><p>按分数排名</p></blockquote></li><li>zrevrangebyscore key max min <blockquote><p>返回有序集中指定分数区间内的成员，分数从高到低排序</p></blockquote></li><li>zrange key start end <blockquote><p>返回指定索引范围内的升序元素(分值) O(log(n)+m)</p></blockquote></li><li>zrangebyscore key minScore maxScore <blockquote><p>返回指定分数范围内的升序元素 O(log(n)+m)</p></blockquote></li><li>zcount key minScore maxScore <blockquote><p>返回有序集合内在指定分数范围内的个数 O(log(n)+m)</p></blockquote></li><li>zremrangebyrank key start end <blockquote><p>删除指定排名内的升序元素 O(log(n)+m</p></blockquote></li><li>zremrangebyscore key minScore maxScore <blockquote><p>删除指定分数内的升序元素 O(log(n)+m</p></blockquote></li></ul></li></ul><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul><li>set 兴趣标签、粉丝集合、共同好友、适合用于聚合分类</li><li>zset 与排序有关的、榜单、排行榜、最新记录等</li><li>string 网站访问量、文章浏览量、点赞量、等计数场景(或者普通缓存)</li><li>hash 商品、用户等基本信息</li><li>list 消息系统、通知<ul><li>LPUSH + LPOP = Stack（堆栈）</li><li>LPUSH + RPOP = Queue（队列）</li><li>LPUSH + LTRIM = Capped Collection（上限集合-环形）</li><li>LPUSH + BRPOP = Message Queue(消息队列)</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;本篇主要是梳理redis的常用的API、使用场景、优缺点、时间复杂度等。
+    
+    </summary>
+    
+      <category term="redis" scheme="http://www.blog.heifengni.com/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="http://www.blog.heifengni.com/tags/redis/"/>
+    
+      <category term="php" scheme="http://www.blog.heifengni.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>换电脑后如何继续写博客-hexo</title>
+    <link href="http://www.blog.heifengni.com/2019/10/11/%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E5%86%99%E5%8D%9A%E5%AE%A2-hexo/"/>
+    <id>http://www.blog.heifengni.com/2019/10/11/换电脑后如何继续写博客-hexo/</id>
+    <published>2019-10-11T03:34:01.000Z</published>
+    <updated>2020-03-30T15:31:48.763Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><h1 id="在博客的GitHub仓库新建一个分支hexo"><a href="#在博客的GitHub仓库新建一个分支hexo" class="headerlink" title="在博客的GitHub仓库新建一个分支hexo"></a>在博客的GitHub仓库新建一个分支hexo</h1><p>   &emsp;&emsp;在红色箭头处输入一个新的分支名称，以下就是我添加好的分支展示情况   <img title="github新建分支hexo" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/github新建分支hexo.jpg?imageView2/2/w/1000">    &emsp;&emsp;这样配置的话在GitHub上的<a href="http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一" target="_blank" rel="noopener">http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一</a>    个master分支用来存放生成的静态网页</p><h1 id="将hexo分支git-clona到一个文件夹-new-git-blog-file-中"><a href="#将hexo分支git-clona到一个文件夹-new-git-blog-file-中" class="headerlink" title="将hexo分支git clona到一个文件夹(new_git_blog_file)中"></a>将hexo分支git clona到一个文件夹(new_git_blog_file)中</h1><p>   &emsp;&emsp;此时文件夹是空的，然后将你的博客根目录下中_config.yml、theme、source、scaffolds、package.json、.gitignore文件复制到new_git_blog_file下   <br>   &emsp;&emsp;这样一来，在GitHub上的<a href="http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成" target="_blank" rel="noopener">http://yourgithubname.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成</a>   的静态网页，这里必须<strong>注意，在你复制过来的文件夹下面有可能含有.git文件，需要删除后你才能push</strong>，比如theme/next文件夹下的.git文件。删除   时需要在‘我的电脑’里面打开然后删除，然后就在这个新文件夹下(new_git_blog_file)中执行</p><pre><code>git .add ./git commit -m &#39;hexo code&#39;git push</code></pre><p>   &emsp;&emsp;提交到hexo分支</p><h1 id="另一台电脑上重新安装博客环境"><a href="#另一台电脑上重新安装博客环境" class="headerlink" title="另一台电脑上重新安装博客环境"></a>另一台电脑上重新安装博客环境</h1><pre><code>1、首先安装git 、nojs2、然后新建一个文件夹比如：myblog3、在myblog文件下git clone 你的GitHub仓库里面博客源码的hexo分支4、然后进入yourblogname.github.io文件夹下面，安装hexo以及相关模块5、依次执行 npm install hexo --save 、npm install 、npm insatll hexo-deployer-git   </code></pre><p>   &emsp;&emsp;然后在myblog目录中就可以执行命令 hexo s查看是否配置成功</p><h1 id="新装的博客环境必要操作"><a href="#新装的博客环境必要操作" class="headerlink" title="新装的博客环境必要操作"></a>新装的博客环境必要操作</h1><p>   &emsp;&emsp;在新装的博客环境中，所在分支是在hexo，而我们博客的配置是设置在master分支上的，所以当写完一篇博客后，除了执行发布命令</p><pre><code>hexo clean &amp;&amp; hexo g -d</code></pre><p>   &emsp;&emsp;还需要将博客配置更新到hexo 分支，此时则可以使用git命令提交就行</p><pre><code>git .add ./git commit -m &#39;hexo code&#39;git push</code></pre><p>  &emsp;&emsp;至此以后再每个不同终端上面想要编辑博客时，都要先Git pull origin hexo的配置，完了之后再hexo g -d <strong><em>并且git push orgin hexo  提交配置文件部分到hexo分支</em></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;平时有写博客习惯的搬运工不知道有没有这么一个苦恼，如果你的博客是通过博客工具 搭建的话，那么只能在你最初搭建的那台电脑上进行设置、编辑博客，如果某一天那台电脑系统崩了，或者重装系统了 或者你想在其他电脑上去编辑的话就很麻烦，所以本篇博文针对Hexo-github/coding来进行博客备份，完成以下流程可以 实现多终端编辑博客，再也不用担心当我想记一下博客的时候确不知道来写（此流程只能在你最开始搭建博客那台 终端上操作）。
+    
+    </summary>
+    
+      <category term="博客" scheme="http://www.blog.heifengni.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo管理" scheme="http://www.blog.heifengni.com/categories/%E5%8D%9A%E5%AE%A2/hexo%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.blog.heifengni.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://www.blog.heifengni.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker常用命令</title>
+    <link href="http://www.blog.heifengni.com/2019/10/03/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.blog.heifengni.com/2019/10/03/Docker常用命令/</id>
+    <published>2019-10-03T08:30:00.000Z</published>
+    <updated>2020-03-30T15:31:48.604Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><pre><code>service docker start |stop |restart 启动 停止 重启docker run 镜像名称:标签 运行容器 docker -i 交互式操作 docker -t terminal操作    --rm 退出就删除容器    --name 指定容器名称    举例：docker run -it --rm ubuntu:14.04 bashdocker images 列出已经下载下来的镜像portcommit    根据仓库名列出镜像 docker images  &#39;仓库名&#39;    列出特定的某个镜像，也就是说指定仓库名和标签 docker images  &#39;仓库名:标签名&#39;docker pull 获取镜像    docker pull ubuntu:14.04docker exec 进入容器    docker exec -it webserver bashdocker build [选项] 生成的文件名 上下文(context) 构建镜像    例如 ： docker build -t nginx:v3 .-p &lt;宿主端口&gt;:&lt;容器端口&gt;docker rmi [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...] #docker rm 命令是删除容器，docker rm $(docker ps -a -q) 删除所有容器【docker常见问题】Docker CE 镜像源站    https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.d88d105oY5zrnDocker 镜像加速器    https://yq.aliyun.com/articles/29941docker mysql设置初始密码(docker mysql启动马上就自动退出)    docker run 加上环境变量参数 -e MYSQL_ROOT_PASSWORD=password1docker redis 设置初始密码    Dockerfile CMD: &#39;redis-server --requirepass &quot;password1&quot;&#39;docker cron没有执行    Dockerfile CMD: service cron startdocker cron 执行的时候时区不对    RUN echo &quot;Asia/Shanghai&quot; &gt; /etc/timezone    或者 同步主机时区    docker run -v /etc/localtime:/etc/localtime &lt;IMAGE:TAG&gt;    以上两种是网上搜索到的，我都没有成功，我目前的解决方案是将crontab -e配置中的时区都往前推8个小时。    例如：你本来是要1,9点运行的，设置为1,17docker corn 获取不了环境变量    原因：corn的bash环境变量和docker容器的环境变量不是同一个。    解决：    printenv |grep -v &quot;==&quot; | grep -v &quot; &quot; | sed &#39;s/^\(.*\)$/export \1/g&#39; &gt; /project_env.sh \    &amp;&amp; chmod +x /project_env.sh \    &amp;&amp; service cron start \    &amp;&amp; bash    两个grep -v 是为了反正docker-compose link的时候变量变量污染</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;好记性不如烂笔头，笨鸟就要先飞，更何况不是很笨
+    
+    </summary>
+    
+      <category term="技术分享" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/tags/Docker/"/>
+    
+      <category term="项目管理" scheme="http://www.blog.heifengni.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker之搭建项目环境</title>
+    <link href="http://www.blog.heifengni.com/2019/09/15/Docker%E4%B9%8B%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.blog.heifengni.com/2019/09/15/Docker之搭建项目环境/</id>
+    <published>2019-09-15T10:02:56.000Z</published>
+    <updated>2020-03-30T15:31:48.514Z</updated>
+    
+    <content type="html"><![CDATA[<p>docker run -v D:\myphp_project\docker_project:/data/myphp_project/docker_project -p 9501:9501 -it –entrypoint /bin/sh hyperf/hyperf:7.2-alpine-cli</p>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;本篇博文主要是以搭建一个linux+php+nginx+mysql+redis环境教程
+    
+    </summary>
+    
+      <category term="技术分享" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/tags/Docker/"/>
+    
+      <category term="项目管理" scheme="http://www.blog.heifengni.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker之安装</title>
+    <link href="http://www.blog.heifengni.com/2019/09/09/Docker%E4%B9%8B%E5%AE%89%E8%A3%85/"/>
+    <id>http://www.blog.heifengni.com/2019/09/09/Docker之安装/</id>
+    <published>2019-09-09T14:18:29.000Z</published>
+    <updated>2020-03-30T15:31:48.554Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><p>&emsp;&emsp;前提说明：Docker for Windows是一个Docker Community Edition（CE）应用程序。Docker for Windows安装包包含了在Windows系统上运行Docker所需的一切。如果你不想装虚拟机，想直接在你的Windows操作系统中安装与学习使用docker，那么你首先得查看你的系统是否满足Docker for Windows的安装与使用要求。</p><h2 id="Windows-中Docker安装应用"><a href="#Windows-中Docker安装应用" class="headerlink" title="Windows 中Docker安装应用"></a>Windows 中Docker安装应用</h2><h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h3><h4 id="emsp-emsp-简单介绍："><a href="#emsp-emsp-简单介绍：" class="headerlink" title="&emsp;&emsp;简单介绍："></a>&emsp;&emsp;简单介绍：</h4><p>   &emsp;&emsp;Docker for Windows的当前版本运行在64位Windows10 Pro，专业版、企业版和教育版（1607年纪念更新，版本14393或更高版本）   上。（Ps:家庭版是不行的，如果你是家庭版，那么一是升级到专业版，破解专业版推荐个地址：<a href="http://blog.csdn.net/SONGCHUNHON" target="_blank" rel="noopener">http://blog.csdn.net/SONGCHUNHON</a>   G/article/details/78006389，二是安装Docker Toolbox，自行百度）   <br></p><h4 id="emsp-emsp-安装条件："><a href="#emsp-emsp-安装条件：" class="headerlink" title="&emsp;&emsp;安装条件："></a>&emsp;&emsp;安装条件：</h4><p>   &emsp;&emsp;如果你满足Docker for Windows的环境条件了，那么首先检查电脑的虚拟化开启了没有：进入任务管理器（ctrl+alt+delete），   点击性能-&gt;cpu ,查看虚拟化是否已启用，如果虚拟化是已禁用，那么你需要重启电脑进入bios开启虚拟化（我们一般的笔记本cpu都   是支持虚拟化的，重启时进入bios按esc -&gt; 再按f12 -&gt; 去开启虚拟化，你得开机进入BIOS里把Virtualization的选项变成Enabled   （不同机子的Virtualization可能在不同的选项下，去看一下advanced之类的））。</p><h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="emsp-emsp-检测cpu虚拟化"><a href="#emsp-emsp-检测cpu虚拟化" class="headerlink" title="&emsp;&emsp;检测cpu虚拟化"></a>&emsp;&emsp;检测cpu虚拟化</h4><p>   &emsp;&emsp;开启虚拟化重启后，打开任务管理器，点击cpu查看虚拟化是否已启用</p><img title="查看是否开启虚拟化" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/查看是否开启虚拟化.jpg?imageView2/2/w/1000"><h4 id="emsp-emsp-Hyper配置"><a href="#emsp-emsp-Hyper配置" class="headerlink" title="&emsp;&emsp;Hyper配置"></a>&emsp;&emsp;Hyper配置</h4><p>   &emsp;&emsp;入电脑的控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;把Hyper-v勾上，启用后电脑会重启，后面就可以下载并安装                Docker for Windows了。</p><img title="windows勾选hyper" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/windows勾选hyper.jpg?imageView2/2/w/1000"><h3 id="下载docker-for-windows"><a href="#下载docker-for-windows" class="headerlink" title="下载docker for windows"></a>下载docker for windows</h3><h4 id="emsp-emsp-下载并安装"><a href="#emsp-emsp-下载并安装" class="headerlink" title="&emsp;&emsp;下载并安装"></a>&emsp;&emsp;下载并安装</h4><p>   &emsp;&emsp;&emsp;进入网址<a href="https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows" target="_blank" rel="noopener">https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows</a> 下载并安装,                安装过程直接下一步下一步就Ok了。</p><h4 id="emsp-emsp-注册登录启动"><a href="#emsp-emsp-注册登录启动" class="headerlink" title="&emsp;&emsp;注册登录启动"></a>&emsp;&emsp;注册登录启动</h4><p>   &emsp;&emsp;&emsp;启动以后会出现在桌面的右下角区域，鼠标放上去以后显示Docker is running表示启动成功，第一次安装启用好像                是会弹出个Docker Cloud登录界面，去注册然后登录，使用和git有点类似，可以pull图像等等 </p><img title="登录docker" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/登录docker.jpg?imageView2/2/w/1000"><h3 id="Docker使用前先测试环境"><a href="#Docker使用前先测试环境" class="headerlink" title="Docker使用前先测试环境"></a>Docker使用前先测试环境</h3><h4 id="emsp-emsp-检测检查Docker，Compose和Machine的版本"><a href="#emsp-emsp-检测检查Docker，Compose和Machine的版本" class="headerlink" title="&emsp;&emsp;检测检查Docker，Compose和Machine的版本"></a>&emsp;&emsp;检测检查Docker，Compose和Machine的版本</h4><p>   &emsp;&emsp;&emsp;进入cmd窗口，检查Docker，Compose和Machine的版本，输入以下命令，不报错即可。</p><img title="docker使用前检测" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker使用前检测.jpg?imageView2/2/w/1000"><h4 id="emsp-emsp-确保docker命令正常工作"><a href="#emsp-emsp-确保docker命令正常工作" class="headerlink" title="&emsp;&emsp;确保docker命令正常工作"></a>&emsp;&emsp;确保docker命令正常工作</h4>   <pre>输入cmd命令：docker ps</pre><h4 id="emsp-emsp-如果报以下错误（先稍等几十秒，有可能是docker正在启动）："><a href="#emsp-emsp-如果报以下错误（先稍等几十秒，有可能是docker正在启动）：" class="headerlink" title="&emsp;&emsp;如果报以下错误（先稍等几十秒，有可能是docker正在启动）："></a>&emsp;&emsp;如果报以下错误（先稍等几十秒，有可能是docker正在启动）：</h4><img title="docker检测版本报错_1" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker检测版本报错_1.jpg?imageView2/2/w/1000">  <h4 id="emsp-emsp-解决方法："><a href="#emsp-emsp-解决方法：" class="headerlink" title="&emsp;&emsp;解决方法："></a>&emsp;&emsp;解决方法：</h4><pre><code> 一、确保开启cpu虚拟化、确认Hyper-V启动(上面Part1中2、3步) 二、进入cmd执行下面两行命令:    cd &quot;C:\Program Files\Docker\Docker&quot;    ./DockerCli.exe -SwitchDaemon    注：如果发现执行不了，那么你可以在windows左下角搜索PowerShell来执行</code></pre><h4 id="emsp-emsp-解决后再试一次："><a href="#emsp-emsp-解决后再试一次：" class="headerlink" title="&emsp;&emsp;解决后再试一次："></a>&emsp;&emsp;解决后再试一次：</h4>   <pre>输入cmd命令：docker ps</pre><h4 id="emsp-emsp-出现下面内容则成功："><a href="#emsp-emsp-出现下面内容则成功：" class="headerlink" title="&emsp;&emsp;出现下面内容则成功："></a>&emsp;&emsp;出现下面内容则成功：</h4>   <img title="解决docke_ps报错问题" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/解决docker_ps.jpg?imageView2/2/w/1000"> <h3 id="开始测试"><a href="#开始测试" class="headerlink" title="开始测试"></a>开始测试</h3><h4 id="emsp-emsp-从Docker-Hub中拉取图像并启动容器"><a href="#emsp-emsp-从Docker-Hub中拉取图像并启动容器" class="headerlink" title="&emsp;&emsp;从Docker Hub中拉取图像并启动容器"></a>&emsp;&emsp;从Docker Hub中拉取图像并启动容器</h4>  <pre>在windows PowerShell输入cmd命令：docker ps</pre><h4 id="emsp-emsp-将会出现以下内容，等待下载完成即可"><a href="#emsp-emsp-将会出现以下内容，等待下载完成即可" class="headerlink" title="&emsp;&emsp;将会出现以下内容，等待下载完成即可"></a>&emsp;&emsp;将会出现以下内容，等待下载完成即可</h4><img title="运行docker-run-hello-world以测试从Docker-Hub中拉取图像并启动容器" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/测试从Docker_Hub中拉取图像并启动容器.jpg?imageView2/2/w/1000"> <h4 id="emsp-emsp-接着成功之后出现以下内容："><a href="#emsp-emsp-接着成功之后出现以下内容：" class="headerlink" title="&emsp;&emsp;接着成功之后出现以下内容："></a>&emsp;&emsp;接着成功之后出现以下内容：</h4><img title="运行docker-run-hello-world以测试从Docker-Hub中拉取图像并启动容器完成后内容" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/docker_hub测试完成后内容.jpg?imageView2/2/w/1000"> <h3 id="运行一个Ubuntu容器"><a href="#运行一个Ubuntu容器" class="headerlink" title="运行一个Ubuntu容器"></a>运行一个Ubuntu容器</h3><h4 id="emsp-emsp-在windows-PowerShell输入cmd命令："><a href="#emsp-emsp-在windows-PowerShell输入cmd命令：" class="headerlink" title="&emsp;&emsp;在windows PowerShell输入cmd命令："></a>&emsp;&emsp;在windows PowerShell输入cmd命令：</h4><img title="运行一个Ubuntu容器" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/运行一个Ubuntu容器.jpg?imageView2/2/w/1000"> <h4 id="emsp-emsp-启动Ubuntu容器成功之后"><a href="#emsp-emsp-启动Ubuntu容器成功之后" class="headerlink" title="&emsp;&emsp;启动Ubuntu容器成功之后"></a>&emsp;&emsp;启动Ubuntu容器成功之后</h4><img title="启动Ubuntu容器成功之后" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动Ubuntu容器成功之后.jpg?imageView2/2/w/1000"> <h4 id="emsp-emsp-我们先结束这个容器"><a href="#emsp-emsp-我们先结束这个容器" class="headerlink" title="&emsp;&emsp;我们先结束这个容器"></a>&emsp;&emsp;我们先结束这个容器</h4>   <pre>在Ubuntu 容器里面直接输入： exit;</pre><h4 id="emsp-emsp-启动一个webserver-nginx-服务"><a href="#emsp-emsp-启动一个webserver-nginx-服务" class="headerlink" title="&emsp;&emsp;启动一个webserver nginx 服务"></a>&emsp;&emsp;启动一个webserver nginx 服务</h4><pre><code>在windows PowerShell输入cmd命令：docker run -d -p 80:80 --name webserver nginx 注：这一步时间可能有点长，耐心稍等！（特别注意：网上大部分教程有把&#39;... --name...&#39;写成：&#39;... -name...&#39;，简直坑死了）</code></pre><p>&emsp;&emsp;启动一个Dockerized webserver 会下载nginx容器图像并启动它，然后再打开浏览器</p><img title="启动webserver_nginx并检查状态" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动webserver_nginx并检查状态.jpg?imageView2/2/w/1000"> <p>&emsp;&emsp;访问<a href="http://localhost时出现这个界面说明已经成功了" target="_blank" rel="noopener">http://localhost时出现这个界面说明已经成功了</a></p><img title="启动webserver_nginx成功界面" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/启动webserver_nginx成功界面.jpg?imageView2/2/w/1000"> <h5 id="然后大功告成！（去闯吧少年）"><a href="#然后大功告成！（去闯吧少年）" class="headerlink" title="然后大功告成！（去闯吧少年）"></a>然后大功告成！（去闯吧少年）</h5>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;最近刚接触到docker，所以就边折腾边记录这个流程，便于自己或者他人参考，其中有可能会有些偏差，但都八九不离十，要声明一下，我这是第一次安装Docker，所以沿途遇到的美景都比较多，走的路也可能稍微弯了那么一点点，但还算好，结果跟过程一样在期望中，所以那就直接开始吧！
+    
+    </summary>
+    
+      <category term="技术分享" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/"/>
+    
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/tags/Docker/"/>
+    
+      <category term="项目管理" scheme="http://www.blog.heifengni.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker之必读介绍篇</title>
+    <link href="http://www.blog.heifengni.com/2019/09/07/Docker%E4%B9%8B%E5%BF%85%E8%AF%BB%E4%BB%8B%E7%BB%8D%E7%AF%87/"/>
+    <id>http://www.blog.heifengni.com/2019/09/07/Docker之必读介绍篇/</id>
+    <published>2019-09-07T15:18:29.000Z</published>
+    <updated>2020-03-30T15:31:48.558Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><h3 id="Docker是什么"><a href="#Docker是什么" class="headerlink" title="Docker是什么?"></a>Docker是什么?</h3><ul><li>Docker 最初是dotCloud公司创始人Solomon Hykes在法国期间发起的一个公司内部项目，它是基于dotCloud 公司多年云服务技术的一次革新，并于2013年3月以Apache 2.0授权协议开源，主要项目代码在GitHub上进行维护。Docker 项目后来还加入了 Linux 基金会并成立推动<strong>开放容器联盟</strong>（OCI）。</li><li>Docker 使用Google公司推出的<strong>Go语言 进行开发实现</strong>，基于<strong>Linux内核</strong>的cgroup，namespace，以及AUFS类的Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为<strong>容器</strong>。</li><li>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。</li><li>Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而<strong>容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟</strong>。因此容器要比传统虚拟机更为轻便。</li></ul><h3 id="Docker有什么用？Docker能带给我们什么？"><a href="#Docker有什么用？Docker能带给我们什么？" class="headerlink" title="Docker有什么用？Docker能带给我们什么？"></a>Docker有什么用？Docker能带给我们什么？</h3><ul><li><strong>更高效的利用系统资源</strong>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟机技术，一个相同配置的主机，往往可以运行更多数量的应用。</li><li><strong>更快速的启动时间</strong>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的<strong>启动时间</strong>。大大的节约了开发、测试、部署的时间。</li><li><strong>一致的运行环境</strong>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些bug并未在开发过程中被发现。而Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境<strong>一致性</strong>，从而不会再出现「这段代码在我机器上没问题啊」 这类问题。</li><li><strong>持续交付和部署</strong>通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行<strong>集成测试</strong>，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。</li><li><strong>更轻松的迁移</strong>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很<strong>多平台上运行</strong>，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</li><li><strong>更轻松的维护和扩展</strong>docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</li><li><strong>对比传统虚拟机总结</strong><table>  <tr>    <td>特性</td>     <td>容器</td>     <td>虚拟机</td>    </tr>  <tr>    <td>启动</td>     <td>秒级</td>     <td>分钟级</td>    </tr>  <tr>    <td>硬盘使用</td>   <td>一般为 MB</td>     <td>一般为 GB</td>     </tr>  <tr>    <td>性能</td>      <td>接近原生</td>      <td>弱于</td>         </tr> <tr>     <td>系统支持量</td>  <td>单机支持上千个容器</td>      <td>一般几十个</td>      </tr></table></li></ul><h3 id="为什么要学习使用Docker？"><a href="#为什么要学习使用Docker？" class="headerlink" title="为什么要学习使用Docker？"></a>为什么要学习使用Docker？</h3><p>&emsp;&emsp;对于新手来说，可能仅仅是在工作中遇到，才会想到会学会使用，实不相瞒，我也是这样想的，所以就这样了解了解，但是正因为作为一个新手，所以对一切都有非常浓厚的兴趣，于是想静下心来好好的去认识这么一个知识点，说真的互联网知识体系庞大，唯有静下心来，慢慢欣赏这一路的风景，以此，记录，一路的历程。当然也是作为提升自己的一个小小途径。&emsp;&emsp;其次，因为不管你用的是Windows、Mac还是Ubuntu。 如果生产环境也使用的Docker的话，你甚至可以直接打包一套环境，直接丢上去就可以运行了，再也不用担心开发-生产环境之间的差异了，尝试错误解决更方便，不会动用正式服的环境，就可以放心大胆的测试因为环境而带来的问题。&emsp;&emsp;“相见恨晚”用来形容我对docker的热爱再合适不过了,自从用了docker,开发环境也不安装了，系统想换就换了，部署更是一键部署，再也不用担心在这台机器上跑的好好的</p><blockquote><h3 id="然后大功告成！（去闯吧少年）"><a href="#然后大功告成！（去闯吧少年）" class="headerlink" title="然后大功告成！（去闯吧少年）"></a>然后大功告成！（去闯吧少年）</h3></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;刚开始认识Docker，只是觉得新奇，所以想去尝试尝试怎么玩Docker， 但你必须要有一个明确的目的去玩，才会觉得更有乐趣。本篇博文只向读者表达一个信息，也是学习 Docker里面最精华的部分：Docker是什么？Docker有什么用？Docker能带给我们什么？为什么要学习 使用Docker?
+    
+    </summary>
+    
+      <category term="技术分享" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/"/>
+    
+    
+      <category term="Docker" scheme="http://www.blog.heifengni.com/tags/Docker/"/>
+    
+      <category term="项目管理" scheme="http://www.blog.heifengni.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周杰伦歌词《晴天》</title>
+    <link href="http://www.blog.heifengni.com/2019/09/07/%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%AD%8C%E8%AF%8D%E3%80%8A%E6%99%B4%E5%A4%A9%E3%80%8B/"/>
+    <id>http://www.blog.heifengni.com/2019/09/07/周杰伦歌词《晴天》/</id>
+    <published>2019-09-07T08:59:29.000Z</published>
+    <updated>2020-03-30T15:31:48.733Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/bai.js"></script><font style="font-size:1rem;text-align:center;"><center>从出生那年就飘着</center><center>童年的荡秋千</center><center>随记忆一直晃到现在</center><center>Rui sou sou xi dou xi la</center><center>Sou la xi xi xi xi la xi la sou</center><center>吹着前奏望着天空</center><center>我想起花瓣试着掉落</center><center>为你翘课的那一天</center><center>花落的那一天</center><center>教室的那一间</center><center>我怎么看不见</center><center>消失的下雨天</center><center>我好想再淋一遍</center><center>没想到失去的勇气我还留着</center><center>好想再问一遍</center><center>你会等待还是离开</center><center>刮风这天我试过握着你手</center><center>但偏偏雨渐渐大到我看你不见</center><center>还要多久我才能在你身边</center><center>等到放晴的那天也许我会比较好一点</center><center>从前从前有个人爱你很久</center><center>但偏偏风渐渐把距离吹得好远</center><center>好不容易又能再多爱一天</center><center>但故事的最后你好像还是说了拜拜</center><center>为你翘课的那一天</center><center>花落的那一天</center><center>教室的那一间</center><center>我怎么看不见</center><center>消失的下雨天</center><center>我好想再淋一遍<center>没想到失去的勇气我还留着</center><center>好想再问一遍</center><center>你会等待还是离开</center><center>刮风这天我试过握着你手</center><center>但偏偏雨渐渐大到我看你不见</center><center>还要多久我才能在你身边</center><center>等到放晴的那天也许我会比较好一点</center><center>从前从前有个人爱你很久</center><center>偏偏风渐渐把距离吹得好远</center><center>好不容易又能再多爱一天</center><center>但故事的最后你好像还是说了拜拜</center><center>刮风这天我试过握着你手</center><center>但偏偏雨渐渐大到我看你不见</center><center>还要多久我才能够在你身边</center><center>等到放晴那天也许我会比较好一点</center><center>从前从前有个人爱你很久</center><center>但偏偏雨渐渐把距离吹得好远</center><center>好不容易又能再多爱一天</center><center>但故事的最后你好像还是说了</center></center></font><img title="周杰伦-晴天mv照" class="class1 class2" src="http://qiniu.storage.heifengni.com/qiniu_images/images/周杰伦-晴天.jpg?imageView2/2/w/800">]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;周杰伦是我那个年代比较火的歌手，那时候从听《双截棍》到《青花瓷》，从《稻香》到《发如雪》、《菊花台》，我都是从磁带复读机、mp3、小灵通一路听过来的，大学毕业时听得懂的一首《晴天》之后，再也没有认真听过了。记得大学时因为一个女生在学吉他然后自己去自学吉他也是拿这首歌瞎弹瞎唱，现在早已经忘得差不多了，那时候就会了一首圣诞歌。
+    
+    </summary>
+    
+      <category term="生活" scheme="http://www.blog.heifengni.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="心情" scheme="http://www.blog.heifengni.com/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="歌词" scheme="http://www.blog.heifengni.com/tags/%E6%AD%8C%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本博客常用命令</title>
+    <link href="http://www.blog.heifengni.com/2019/08/29/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.blog.heifengni.com/2019/08/29/本博客常用命令/</id>
+    <published>2019-08-29T15:18:29.000Z</published>
+    <updated>2020-03-30T15:31:48.811Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;这是一些常用命令，用于平时写文章、美化博文、添加有趣的小东西的一些经历，怕自己记不住，因此专门写一篇用来记录日常，正所谓好记性不如烂笔头，坚持下下，记录起来，方便下次用！<font style="text-align:center;font-size:1rem;color:green">    <center>Let’s Go!!!</center></font></p><h4 id="hexo常用命令篇"><a href="#hexo常用命令篇" class="headerlink" title="hexo常用命令篇"></a>hexo常用命令篇</h4><pre><code>清除缓存、生成资源、启动本地服务    hexo clear &amp;&amp; hexo g &amp;&amp; hexo s    hexo g : 生成静态文件，在public文件夹中（hexo generate的缩写）    hexo s: 生成本地预览，默认情况下，访问网址为： http://localhost:4000/    hexo d: 部署并提交代码至GitHub中（  deploy缩写）    hexo clean: 清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后）                如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。    hexo new draft &lt;title&gt; : 生成草稿，不会提到github    hexo S --draft ：本机预览草稿    hexo P &lt;filename&gt; : 发布为正式文章部署到线上    hhexo clear &amp;&amp; hexo d -g创建新文件    touch filename.swig 七牛云使用  将项目使用的图片上传到七牛云引用本地图片     &lt;img src=&quot;/images/myImage.png&quot; width=50% height=50% align=center/&gt;   ！！！！！！！！！！每一项的 : 后面均有一个空格 且 : 为英文符号 ！！！！！！！！！！title: 文章标题，可以为中文date: 建立日期，如果自己手动添加，请按固定格式就算不写，页面每篇文章顶部的发表于……也能显示只要在主题配置文件中，配置了 created_at 就行那为什么还要自己加上？自定义文章发布的时间updated:更新日期，其它与上面的建立日期类似不过在页面每篇文章顶部，是更新于……在主题配置文件中，是 updated_atpermalink:若站点配置文件下的 permalink 配置了 title则可以替换文章 URL 里面的 title（文章标题）categories:分类，支持多级，比如：- technology- computer- computer-aided-art则为 technology/computer/computer-aided-art（不适用于 layout: page）tags:标签多个可以这样写 [标签1,标签2,标签3]（不适用于 layout: page）description:文章的描述，在每篇文章标题下方显示并且作为网页的 description 元数据如果不写，则自动取 &lt;!-- more --&gt;之前的文字作为网页的 description 元数据keywords:关键字，并且作为网页的 keywords 元数据如果不写，则自动取 tags 里的项作为网页的 keywords 元数据comments:是否开启评论默认值是 true要关闭写 falselayout:页面布局，默认值是 post，默认值可以在站点配置文件中修改 default_layout另：404 页面可能用到，将其值改为 falsetype:categories，目录页面tags，标签页面picture，用来生成 group-picturesquote？https://io-oi.me/tech/test/photos:Gallery support，用来支持画廊╱相册，用法如下：- photo_url_1- photo_url_2- photo_url_3https://io-oi.me/tech/test/link:文章的外部链接https://io-oi.me/tech/test/image:自定义的文章摘要图片，只在页面展示，文章内消失此项只有参考本文 5.14 节配置好，否则请勿添加！sticky:文章置顶此项只有参考本文 5.15 节配置好，否则请勿添加！password:文章密码，此项只有参考教程：http://shenzekun.cn/hexo的next主题个性化配置教程.html第 24 节，配置好，否则请勿添加！发现还是有 bug 的，就是右键在新标签中打开然后无论是否输入密码，都能看到内容</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;这是一些常用命令，用于平时写文章、美化博文、添加有趣的小东西的一些经历，怕自己记不住，
+因此专门写一篇用来记录日常，正所谓好记性不如烂笔头，坚持下下，记录起来，方便下次用！
+&lt;font style=&quot;text-align:center;font-si
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="http://www.blog.heifengni.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="http://www.blog.heifengni.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="http://www.blog.heifengni.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel-admin教程之安装（爬坑系列一）</title>
+    <link href="http://www.blog.heifengni.com/2019/08/22/laravel-admin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://www.blog.heifengni.com/2019/08/22/laravel-admin安装教程/</id>
+    <published>2019-08-22T14:54:48.000Z</published>
+    <updated>2020-03-30T15:31:48.714Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;laravel-admin是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，能帮助你使用很少的代码，就实现功能完善的后台管理功能。<span style="font-size:0.8rem; background:yellow;">    特别注意：当前laravel-admin版本(v1.7.+)需要安装PHP 7+和Laravel 5.5+</span></p><font style="text-align:center;font-size:1rem;text-align:center;">    <center>Θ废话不多说，直接开爬</center></font><h4 id="1、搭建安装环境：安装composer"><a href="#1、搭建安装环境：安装composer" class="headerlink" title="1、搭建安装环境：安装composer"></a>1、搭建安装环境：安装composer</h4><p>&emsp;&emsp;如果没有安装composer请百度安装composer，此处默认已经安装composer,然后新建一个文件夹，名字任意取，此处文件夹名称为laravel_demo,然后进入该文件夹。</p><h5 id="2、安装laravel框架："><a href="#2、安装laravel框架：" class="headerlink" title="2、安装laravel框架："></a>2、安装laravel框架：</h5><pre><code>    --------在项目文件下的cmd窗口，执行下面命令-------    #1)首先：使用 Composer 下载 Laravel 的安装程序：        composer global require &quot;laravel/installer&quot;    2)接着用laravel 用安装器这样执行一句命令(建一个名字叫laravel-admin的laravel框架项目)：        laravel new laravel-admin    3)在根目录下的.env文件里面把数据库信息填写好建完之后,此时就已经是一个完整的laravel项目了，</code></pre><h5 id="3、正式安装laravel-admin："><a href="#3、正式安装laravel-admin：" class="headerlink" title="3、正式安装laravel-admin："></a>3、正式安装laravel-admin：</h5><pre><code> 1)此时仍然是在项目文件下的cmd窗口，执行下面命令：    composer require encore/laravel-admin2)成功后继续执行下面的命令来发布资源：    php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;3)成功后继续执行：    php artisan admin:install</code></pre><p>&emsp;&emsp;执行到这里你就应该掉坑里面了，因为这个坑我也爬过，但是爬了一些不必要的时间，下面我就让你们正确一次性过这个坑(记得留言点个赞，爬坑不容易)</p><pre><code>  若出现错误提示：SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long;                max key length is 1000 bytes (SQL: alter tableusersadd uniqueusers_email_unique(email))         解决办法：在app\Providers\AppServiceProvider.php添加默认值         &lt;?php                namespace App\Providers;                use Illuminate\Support\ServiceProvider;                use Illuminate\Support\Facades\Schema;                class AppServiceProvider extends ServiceProvider                {                    /**                     * Bootstrap any application services.                     * @return void                     */                    public function boot()//在这个方法里面加上这么一句就ok（完美来起）                    {                        Schema::defaultStringLength(191); //   &lt;--就是这一句                    }                }         ?&gt;</code></pre><p>&emsp;&emsp;接下来就可以启动服务了，（此处作为一个laravel新手就不知道什么叫启动服务了，实不相瞒，我也是，不过幸好你遇到我）</p><pre><code>        执行一下命令启动服务：php artisan serve</code></pre><p>&emsp;&emsp;接着你就可以打开<a href="http://127.0.0.1:8000来访问laravel-admin了" target="_blank" rel="noopener">http://127.0.0.1:8000来访问laravel-admin了</a></p><p>&emsp;&emsp;运行到此处就已经来起了（不过后面坑也跟着来了）</p><pre><code>    1)进入laravel-admin后台：http://127.0.0.1:8000/admin/auth/login，初始账户and密码都为admin    2)如果报错的话，很正常，因为我也报了很久的错（你们真好，一次性就能解决，我可是爬了很久的坑）        错误提示;SQLSTATE[HY000] [1045] Access denied for user &#39;root&#39;@&#39;localhos&#39;......        解决办法：            如果是本地运行phpstudy跑项目，那么直接进入mysql管理把账户密码都改为你的.env里面配置的密码            服务器上同上面的操作一样</code></pre><h5 id="然后大功告成！（去闯吧少年）"><a href="#然后大功告成！（去闯吧少年）" class="headerlink" title="然后大功告成！（去闯吧少年）"></a>然后大功告成！（去闯吧少年）</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;laravel-admin是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，
+能帮助你使用很少的代码，就实现功能完善的后台管理功能。
+&lt;span style=&quot;font-size:0.8rem; background:yello
+      
+    
+    </summary>
+    
+      <category term="php开发" scheme="http://www.blog.heifengni.com/categories/php%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="laravel-admin" scheme="http://www.blog.heifengni.com/categories/php%E5%BC%80%E5%8F%91/laravel-admin/"/>
+    
+    
+      <category term="laravel-admin" scheme="http://www.blog.heifengni.com/tags/laravel-admin/"/>
+    
+      <category term="php后台框架" scheme="http://www.blog.heifengni.com/tags/php%E5%90%8E%E5%8F%B0%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最艰难的时候，你始终一人</title>
+    <link href="http://www.blog.heifengni.com/2019/08/17/%E6%9C%80%E8%89%B0%E9%9A%BE%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E4%BD%A0%E5%A7%8B%E7%BB%88%E4%B8%80%E4%BA%BA/"/>
+    <id>http://www.blog.heifengni.com/2019/08/17/最艰难的时候，你始终一人/</id>
+    <published>2019-08-17T13:35:50.000Z</published>
+    <updated>2020-03-30T15:31:48.767Z</updated>
+    
+    <content type="html"><![CDATA[<p><br>&emsp;&emsp;他说：你知道吗？曾经有一段时间我很想打电话给你，在我没有办法交房租的时候，在我的微信钱包余额显示为0的时候，在我每天晚上睡在天桥底下被冷醒的时候。可最后我还是忍了下来，因为我怕被你取笑，也害怕你担心我。<font style="font-size:20px;"><center>◐她就不再是你爱的那个姑娘</center></font><br>&emsp;&emsp;那一天，北京很热，我没有钱交房租，于是就把原本不多的行李打包好。准备出门的时候，发现外面的温度简直可以把我身体里的水分吸干，于是我又倒了回去，享受多几分钟的冷风，最后还是被房东赶了出来。那时候，我身上只剩下40块现金，一个人拖着行李站在路边，四处张望，不知往左走还是往右边。<br>&emsp;&emsp;我走过一条桥，从上面往下看，觉得水很深，不知道为什么一直就想这样跳下去，可是在一霎那，我想到了家里的父母，我又把念头打了回去。心想，好死不如赖活着，毕竟自己已经烂了二十多年，也不差这一会。<br>&emsp;&emsp;我怼了他：你是蠢货吗，都快活不下去了还不找我？<br>&emsp;&emsp;他说：找你又有什么用，毕竟你今年也才刚毕业，身上也没有钱可以帮我。<br>&emsp;&emsp;电话里我一阵沉默。<br>&emsp;&emsp;他又继续说：那段时间是我长这么大最难熬的时光，但我什么人都没找，因为我想自己扛。在那里没有什么朋友，住在地下室，环境很恶劣。家里人打电话给我的时候，为了不让他们担心我只能说一切安好。没钱买新衣服，面试那会被面试官嫌弃穿着问题，最后还把我刷掉了。<br>&emsp;&emsp;没钱住房那一阵子，我住在一个天桥底下，一到晚上很冷，经常在半夜被几只流浪狗吓醒，后来时间一长，我反而跟它们成为了朋友。<img src="https://images.unsplash.com/photo-1565113652517-d6d5bc3e2dd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt><br>&emsp;&emsp;白天没事做，我就跑到附近的超市呆着，至少里面的环境很好，也不会被晒。有时候就经常跑去附近的图书馆，一呆就是一整天，饿了就在里面接免费茶水喝，闭馆的时候会跑到附近的便利店买一个最便宜的面包吃。<br>&emsp;&emsp;那段时间，我一直很想放弃自己心中的梦想，北漂这一条路终究不属于我。半夜被饿醒的时候，我有好多次想打电话给你，但是号码输进去的时候，我又按了退出。因为搞不好，你也跟我一样，你既不能帮我什么，又会担心我。<br>&emsp;&emsp;有一次我路过一家超市，看到门口有发传单的兼职，我进去了店里询问，他们很委婉地拒绝了我，表面说我不合适，但是实际上是嫌弃我形象不是很好。我死皮赖脸地求他们给我个机会，一个店员差点把我赶了出来，我像一条狗一样在门口蹲着。<br>&emsp;&emsp;还好，店长最后动了恻隐之心，出来问我：你真的想做吗？我看着他点了点头说：因为我现在没钱吃饭，快要饿死了。最后，店长把兼职给了我。<br>&emsp;&emsp;我抱着一大堆传单，抱着很紧，仿佛那就是我的救命稻草。我走在各条大街小道上，见到路过的人就发，可是没有理睬我，大概是嫌弃我身上脏，不敢靠近。走了很久，才发出了好几张，最后坐在路边的杂草里休息一会。一个十几岁的小男孩走了过来，跟我说：可以给我一些传单吗，我想拿回家折纸飞机。<br>&emsp;&emsp;我一下子感觉自己被幸运之神眷顾到一样，喜极而泣，在点头之后拿了一些给他，他又问，还可以给我多一点吗？我又点了点头。最后我借着所剩的力气发完了全部的传单，准备回去领工钱，拿到200块钱的时候，我眼泪差一点就喷了出来。随后我在路边买了一个烧饼，给自己买了一瓶矿泉水。<br>&emsp;&emsp;走在北京的街道上，吃着东西，吃着吃着眼泪又掉了下来。那段时间，过得很苦，但是不知道为什么就熬了过来。<br>&emsp;&emsp;我是在三个月前毕的业，但是我已经工作了四个月，因为我还没有毕业就出来找工作。我的求职之路还不算曲折，一次面试，就顺利通过，坐标在深圳。<br>&emsp;&emsp;我家在一个小农村里面，那里面民风淳朴，只是经济不发达，许多人读了大学就不想继续回去了。他们就像一群一直被困在笼子里的小鸟，挣脱开笼子之后，就没想过回头，我也一样。<br>&emsp;&emsp;我来深圳的时候没有告诉家里任何人，因为我知道他们一定会反对，我努力这么久，就是为了有一天可以飞出来。所以在读大学的时候，我就一直在存钱，我深知这笔钱，可以支撑我做毕业后想做的事情。在我工作半个月之后，我才告诉他们“我已经工作了”这个消息。<br>&emsp;&emsp;来深圳的时候，我人生地不熟，依靠着各种各样的手机app，找路线找房子。入职之后，我一边上班一边找房子。这里的房子都很贵，选择了很久之后，才最终确定了一家还算便宜的单间。<br>&emsp;&emsp;我租的房子是一间公寓，都是空房，我一次性交了两个月的房租，还签了一年的合同。我把行李放进房间里，随后拿着一个手机出去买东西。一个人，给自己买了一张床，一张桌子，一把椅子，一个水壶，便开始了一个人生活之路。<br>&emsp;&emsp;我不是一个恋家的人，但是我又希望自己住的地方有家的感觉。可是工作那一个月，每天下班回到家里，看着空荡荡的房间，莫名有一种孤独，疲惫地躺在床上，很饿但是没有做饭工具。想叫个外卖却发现配送费太贵了，累了一天还要被吃饭这件事折腾，实属无奈。<br>&emsp;&emsp;有一次周末下了大雨，我坐在家里地上，看着外面狂风暴雨，再看看空荡荡的房间，再想想今晚的晚饭，突然间，就想家了。那段时候，自己过得不是很辛苦，但是脱离了集体生活之后还是有点不适应，总觉得，怎么自己会这么烂呢。<br>&emsp;&emsp;但是一眨眼，几个月就这样过去了。家里添置许多家具，一进门就有家的感觉。跟房东的关系也很好，也经常回去领居家里蹭饭，有时候周末无聊，就会下楼看看附近的大爷大叔们下象棋，还跟他们打成了一片。晚上肚子饿的时候，就会自己走几条马路，在路边的夜宵店买一碗饺子吃。<br>&emsp;&emsp;原来，所有我曾以为的难受，在熬过之后，竟然变得那么云淡风轻，再次说起的时候，内心竟然是如此平静，没有波澜。<img src="https://images.unsplash.com/photo-1492448497576-45b1efcdc02c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt><font style="font-size:20px;"><center>◐纵使岁月无情无意奔驰</center></font><br>&emsp;&emsp;最后，他还是来了，收到了深圳这边一家公司的offer，他就过来了。<br>&emsp;&emsp;我从来没有想过他会来深圳，虽然都是大城市，但是始终觉得他的梦想应该还是在魔都。他的样子几乎没有什么改变，一往的臭脾气，头发也不剪，穿着一件很老的T恤，看起来很堕落。<br>&emsp;&emsp;接到他的时候，他冲着我说了一句：小子现在发达了，比以前壮实了一点，发型和穿衣品味也变了，以后可以多多照顾哥一点。<br>&emsp;&emsp;说完他拍了我一下，然后站在路边傻笑。我在想，要不是认识了他十几年，要不是互相清楚彼此的脾性，不然一个文青跟一个痞子，这辈子是没有办法融合在一起的。<br>&emsp;&emsp;那天晚上我请了他吃饭，外面的风都是温的，我们找了一家环境还不错的餐厅。我们点了小龙虾还有烤鱼，我不会喝酒，所以两个人就点了一瓶大可乐。吃完之后我们沿着大道往我家走去，一边看着路灯，一边畅谈着在这座城市的未来。他庆幸自己从魔都逃了出来，我庆幸在这座城市终于不再一人。我们各怀鬼胎，各自幻想着未来。<br>&emsp;&emsp;那几天我陪他去找房子，我们都不喜欢合租，最后在离我家不远的地方找一个单间。我帮他交了一个月的房租，然后陪他去添置一点家具，他是一个很要面子的人，但是在我面前，他不会带上伪装的面具。房间多了一点家具之后，慢慢地有了家的气息。总算稳定下来，下周开始上班。他躺在床上，舒了一口气。<br>&emsp;&emsp;回家的路上，我突然心情很不好，觉得好难受，不知道是为他，还是为我了自己。<br>&emsp;&emsp;他很早就没读书，一开始去了广州打工，后来觉得广州那边的老板太傻逼，又跑去了上海。上海的天气他很不适应，特别一到冬天，他的脸就一直被冻到裂开，于是趁着工资也不高的时候向那座时尚之都说了拜拜。最后他看到很多人北漂，还混得不错，于是又独自一个人跑去了北京。<br>&emsp;&emsp;这些年，他一直在东奔西走，像个流浪汉一样。几年下来，身上没有存多少钱，因为性格问题也没有多少个知心朋友。他曾今谈过一个女朋友，但是她无法跟他奔波在不同城市之间，最后分手了。他跟我说过：如果30岁的时候自己还单身，那就不结婚了，反正到了那时候也没有哪家姑娘还要我。<br>&emsp;&emsp;我知道他还是会离开深圳，因为他经常抱怨这里的交通很不好，离地铁口太远，公司的老板又是一个大傻逼，还是个老女人，自从他进了公司就一直盯着他看，他担心被潜规则，而且同事个个都是心机婊，总有一天会被他们算计的。<br>&emsp;&emsp;我笑了，但我没有问他要去哪里，因为我知道，他大概也不知道吧。<img src="https://images.unsplash.com/photo-1562492855-1c6e20372f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt><font style="font-size:20px;"><center>◐面对着生活抛给你的苦涩</center></font><br>&emsp;&emsp;其实呢，生活无非就是从一个地方换到另外一个地方，从一种难受不断跳跃到另外一种难受之中，然后继续死撑着。<br>&emsp;&emsp;没有人会知道你有多累，也没有人会告诉你接下来的路要怎么走，因为我们生来就不同，我们的人生状态也不同，所以呢，孤独就是我们学着面对的事情。<br>&emsp;&emsp;大二那年我有一段时间暴瘦，别人问我怎么不多吃一点，我笑着说我比较挑食。其实我没有告诉他们，那时候自己患有轻微的厌食症，拿到报告的时候自己相信都不敢相信。有一天晚上在床上想着，要是有一天就这么死掉了怎么办？<br>&emsp;&emsp;我知道其实也不算什么大病，但是那时候是我人生中第一次感到特别怕死，因为我的身上背负着很多人的期待。那段时候，其实人很抑郁，很想告诉别人，但是又不敢，其实很我期待那些最好的朋友可以发现。有一次很难受，想暗示他们一下，最后他们的一句“别开玩笑”让我知道，人生中有些心里话，注定只能烂在自己心里。<br>&emsp;&emsp;大三那一年，我抛弃了所有的社交圈，按部就班参加实习任务，因为住在学校，下班之后就去跑步，晚上就去图书馆看书。那段时间，我没有参加任何聚会，觉得烦。宁愿花点时间去散散步，花五块钱买一杯奶茶，坐在湖边吹风才是自己想要的生活，觉得那才是让我感到自在的状态。<br>&emsp;&emsp;很多时候，我都已经忘记了自己最苦的时候是怎么熬过来的。好像也没有做很特别的努力，只是脚步一直跟随着时间在走。<br>&emsp;&emsp;我从来不会去求别人，因为我知道，别人始终是别人，就算是我的父母，他们也无法护我一世安康。最难熬的时候，都是一个人，也只能是一个人。<img src="https://images.unsplash.com/photo-1559865662-7e42f2e2fc81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt><font style="font-size:20px;"><center>◐闯过荒无人烟的地方</center></font>&emsp;&emsp;其实呀，生活也没有糟糕到什么地步，既没有患上什么癌症，也没有出门就被车撞死，更没有一醒来就发现自己一下子老了五十岁。<br>&emsp;&emsp;被炒鱿鱼了就重新再找下一家，被甩了就重新再找一个真爱，被生活一直暴击那就让自己变得强大起来。你爸妈养你那么大，是要你长大后可以来为他们遮风挡雨的，而不是要你来向生活认怂的。<br>&emsp;&emsp;最后，他还是离开了深圳，呆了两个月。他说他要回一趟家，看看家里父母，临走之前他把家具全都低价卖掉了，最后请了我在路边吃了一顿麻辣烫，味道还真不错。<br>&emsp;&emsp;我问他以后要干嘛，又要去哪里，他说，走到哪算到哪里，人生也没有那么长，有些东西，自己熬过了，其实也就没有那么怕的。<br>&emsp;&emsp;在他身上，我看到很多无奈，也看到了很多希望。我多希望他不要被这个社会束缚住，就算一个人，也可以在以后的日子里寻得安康和快乐。<br>&emsp;&emsp;他二十几岁的面孔，却有着五十岁的内心，我想，这就是岁月给予给他的礼物吧。<br>&emsp;&emsp;他走的那一天，我心情很沉重，晚上一直睡不着。起身起来听歌，听到五月天的《倔强》，心里像打着鸡血一样，看着窗外的泛黄的路灯，默默在心里告诉自己：<br>&emsp;&emsp;我一定要做那种人，无论处在什么样的人生状态，不管好的，还是坏的，明天一觉醒来，都可以随时一个人离开。<img src="https://images.unsplash.com/photo-1522509585149-c9cd39d1ff08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt><br><span style="font-size:0.1rem; background:yellow;"><strong>特别说明：本文原创作者来自我的好朋友邱大深，欢迎关注作者公众号、转载、分享</strong></span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;br&gt;&amp;emsp;&amp;emsp;他说：你知道吗？曾经有一段时间我很想打电话给你，在我没有办法交房租的时候，在
+我的微信钱包余额显示为0的时候，在我每天晚上睡在天桥底下被冷醒的时候。可最后我还是忍了下来，
+因为我怕被你取笑，也害怕你担心我。
+&lt;font style=&quot;font
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://www.blog.heifengni.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="分享" scheme="http://www.blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="生活" scheme="http://www.blog.heifengni.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="记录" scheme="http://www.blog.heifengni.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="随笔" scheme="http://www.blog.heifengni.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那个梦啊</title>
+    <link href="http://www.blog.heifengni.com/2019/08/09/%E9%82%A3%E4%B8%AA%E6%A2%A6%E5%95%8A/"/>
+    <id>http://www.blog.heifengni.com/2019/08/09/那个梦啊/</id>
+    <published>2019-08-09T15:52:39.000Z</published>
+    <updated>2020-03-30T15:31:48.817Z</updated>
+    
+    <content type="html"><![CDATA[<font style="text-align:center;font-size:1rem;text-align:center;">    <center>我曾一直追寻</center>    <center>追寻着那个梦啊</center>    <center>到头来才发现</center>    <center>那永远只是梦啊</center></font><br><font style="text-align:center;font-size:1rem;text-align:center;">    <center>时间在慢慢逃跑</center>    <center>模糊了那个梦啊</center>    <center>我想努力了回忆</center>    <center>记不起那个梦啊</center>    <center>想要再一次寻找</center>    <center>寻找到那个梦啊</center></font> <br><font style="text-align:center;font-size:1rem;text-align:center;">    <center>在老旧的街头小巷</center>    <center>在毕业学校的操场</center>    <center>找过了衣柜后面</center>    <center>也找了抽屉里面</center>    <center>去过看了夜的星空</center>    <center>也听过了夏日蝉鸣</center>     <center>可是认真的寻找</center>        <center>也找不到那个梦啊</center></font><br><font style="text-align:center;font-size:1rem;text-align:center;">    <center>到底弄丢在哪</center>    <center>我的那个梦啊</center>    <center>究竟要到哪里去</center>    <center>才找到那个梦啊</center></font><br> <font style="text-align:center;font-size:1rem;text-align:center;">    <center>可能人的一生</center>    <center>就是寻找那个梦啊</center>    <center>工作了存钱后</center>    <center>也要继续找那个梦啊</center></font> <font style="text-align:center;font-size:1rem;text-align:center;">    <center>也许有那么一天</center>    <center>它突然自己出现</center>    <center>终于能笑着对它说</center>    <center>原来你在这啊</center></font> <p><img src="https://images.unsplash.com/photo-1563994948744-42a28ca99458?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt><span style="font-size:0.1rem; background:yellow;"><strong>特别说明：本文原创作者来自我的好兄弟刘孝天，欢迎转载、分享（请注明出处）</strong></span></p>]]></content>
+    
+    <summary type="html">
+    
+      &amp;emsp;&amp;emsp;每年情人节都会在空间看到一篇短文，写的是同一件事，同一天，同一晚，同一个时间段，我想他也是写的同一个人。
+    
+    </summary>
+    
+      <category term="美文" scheme="http://www.blog.heifengni.com/categories/%E7%BE%8E%E6%96%87/"/>
+    
+    
+      <category term="分享" scheme="http://www.blog.heifengni.com/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="美文" scheme="http://www.blog.heifengni.com/tags/%E7%BE%8E%E6%96%87/"/>
+    
+      <category term="七夕" scheme="http://www.blog.heifengni.com/tags/%E4%B8%83%E5%A4%95/"/>
+    
+      <category term="情人节" scheme="http://www.blog.heifengni.com/tags/%E6%83%85%E4%BA%BA%E8%8A%82/"/>
+    
+  </entry>
+  
+</feed>
